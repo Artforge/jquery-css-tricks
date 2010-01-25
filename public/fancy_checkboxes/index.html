@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>demo1</title>
+	<script type="text/javascript" src="/javascripts/jquery-1.4.min.js"></script>
+	
+	<script type="text/javascript">
+	
+		$(document).ready(function() {
+			$(".checklist .checkbox-select").click(
+				function(event) {
+					event.preventDefault();
+					$(this).parent().addClass("selected");
+					$(this).parent().find(":checkbox").attr("checked","checked");
+					
+				}
+			);
+			
+			$(".checklist .checkbox-deselect").click(
+				function(event) {
+					event.preventDefault();
+					$(this).parent().removeClass("selected");
+					$(this).parent().find(":checkbox").removeAttr("checked");
+					
+				}
+			);
+			
+		});
+	
+	</script>
+	
+	
+	<style type="text/css">
+	
+		body {
+			font: 12px/1.3 "Lucida Grande","Lucida","Arial",Sans-serif;
+		}
+		
+		h4 {
+			font-size: 17px;
+		}
+	
+		fieldset {
+			border: 0;
+		}
+	
+		.checklist {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+	
+		.checklist li {
+			float: left;
+			margin-right: 10px;
+			background: url(images/checkboxbg.gif) no-repeat 0 0;
+			width: 105px;
+			height: 150px;
+			position: relative;
+			font: normal 11px/1.3 "Lucida Grande","Lucida","Arial",Sans-serif;
+		}
+		
+		.checklist li.selected {
+			background-position: -105px 0;
+		}
+		
+		.checklist li.selected .checkbox-select {
+			display: none;
+		}
+		
+		.checkbox-select {
+			display: block;
+			float: left;
+			position: absolute;
+			top: 118px;
+			left: 10px;
+			width: 85px;
+			height: 23px;
+			background: url(images/select.gif) no-repeat 0 0;
+			text-indent: -9999px;
+		}
+		
+		.checklist li input {
+			display: none;	
+		}
+		
+		a.checkbox-deselect {
+			display: none;
+			color: white;
+			font-weight: bold;
+			text-decoration: none;
+			position: absolute;
+			top: 120px;
+			right: 10px;
+		}
+		
+		.checklist li.selected a.checkbox-deselect {
+			display: block;
+		}
+		
+		.checklist li p {
+			text-align: center;
+			padding: 8px;
+		}
+		
+		.sendit {
+			display: block;
+			float: left;
+			top: 118px;
+			left: 10px;
+			width: 115px;
+			height: 34px;
+			border: 0;
+			cursor: pointer;
+			background: url(images/sendit.gif) no-repeat 0 0;
+			text-indent: -9999px;
+			margin: 20px 0;
+		}
+	
+	</style>
+	
+	
+	
+</head>
+
+<body>
+
+
+	<form>
+		<fieldset>
+			<label for="Choices">
+				<h4>Choose some stuff</h4>
+				<input name="jqdemo" value="value1" type="checkbox" /> Choice one
+				<input name="jqdemo" value="value2" type="checkbox" /> Choice two
+				<input name="jqdemo" value="value3" type="checkbox" /> Choice three
+				<input name="jqdemo" value="value4" type="checkbox" /> Choice four
+			</label>
+			<br/><br/>
+			<button type="submit" name="submitbutton" title="Submit the form" />Send it!</button>
+		</fieldset>
+	</form>
+
+
+	<form>
+		<fieldset>
+			<label for="choices">
+				<h4>Choose some stuff</h4>
+				<ul class="checklist">
+					<li>
+						<input name="jqdemo" value="value1" type="checkbox" />
+						<p>Here is the first selection</p>
+						<a class="checkbox-select" href="#">Select</a>
+						<a class="checkbox-deselect" href="#">Cancel</a>
+					</li>
+					<li>
+						<input name="jqdemo" value="value2" type="checkbox" />
+						<p>Here is the second selection</p>
+						<a class="checkbox-select" href="#">Select</a>
+						<a class="checkbox-deselect" href="#">Cancel</a>
+					</li>
+					<li>
+						<input name="jqdemo" value="value3" type="checkbox" />
+						<p>Here is the third selection</p>
+						<a class="checkbox-select" href="#">Select</a>
+						<a class="checkbox-deselect" href="#">Cancel</a>
+					</li>
+					<li>
+						<input name="jqdemo"value="value4" type="checkbox" />
+						<p>Here is the fourth selection</p>
+						<a class="checkbox-select" href="#">Select</a>
+						<a class="checkbox-deselect" href="#">Cancel</a>
+					</li>
+				</ul>
+			</label>
+			<div style="clear: both;"></div>
+			<button class="sendit" type="submit" name="submitbutton" title="Submit the form" />Send it!</button>
+		</fieldset>
+	</form>
+
+
+</body>
+</html>

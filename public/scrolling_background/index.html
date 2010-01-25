@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>index</title>
+	
+	<style>
+		*{margin:0;padding:0;border:0;outline:0;font-size:1em;vertical-align:baseline;background:transparent;}
+		p{margin-bottom:10px;}
+		body{Arial,Helvetica,Verdana,sans-serif;background-image:url(images/bg.jpg);line-height:1.6;}
+		#header {background:transparent url(images/bg-header.png) repeat-x scroll 50% 0;height:329px;}
+		#content{background:#fff;padding:25px 0;min-height:300px;opacity:0.8;}
+		#footer {background:transparent url(images/bg-footer.png) repeat-x scroll 50% 100%;height:38px;margin:0;overflow:hidden;padding:200px 0 0;}
+	</style>
+	
+	<script type="text/javascript" src="/javascripts/jquery-1.4.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquerybackgroundposition.js"></script>
+	
+	<script>
+	
+		$(function() {
+			var backgroundheight = 4000; // height of background image in pixels
+
+			// get the current minute/hour of the day
+			var now = new Date();
+			// work out how far through the day we are as a percentage - e.g. 6pm = 75%
+			var hourpercent = now.getHours() / 24 * 100;
+			var percentofday = Math.round(hourpercent);
+
+			// calculate pixel offset based on how far through the day we are
+			var offset = (backgroundheight / 100) * percentofday;
+			// graphic starts at approx 6am, so adjust offset by 1/2
+			var offset = offset - (backgroundheight / 2);
+
+			function scrollbackground() {
+		   		offset = (offset < 1) ? offset + (backgroundheight - 1) : offset - 1;
+		   		$('body').css("background-position", "50% " + offset + "px");
+		   		setTimeout(function(){scrollbackground();},100);
+		   	}
+			scrollbackground();
+		})
+		
+	</script>
+</head>
+<body>
+	
+	<div id="header"></div>
+	
+	<div id="content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit luctus dignissim. Nullam auctor mollis dolor id pellentesque. Donec id augue a nisi dictum pretium. Pellentesque sed odio eu risus faucibus aliquam id id tortor. Vivamus dapibus risus a ipsum rhoncus laoreet. Ut commodo tincidunt eros. Praesent enim tortor, adipiscing vehicula sodales eu, porttitor vel erat. Integer lacinia nibh quis enim ullamcorper eleifend. Sed consectetur felis sed augue porta bibendum in a nulla. Donec ut leo justo. Cras laoreet scelerisque orci. Suspendisse potenti.</p>
+		<p>Phasellus sit amet tellus odio. In ligula magna, dictum euismod dignissim in, aliquet non velit. Fusce vel dolor at lacus blandit auctor id at enim. Pellentesque luctus imperdiet nibh, nec tincidunt libero venenatis a. Sed pulvinar eros sit amet sapien luctus euismod. Nunc convallis viverra tortor condimentum consectetur. Cras lacus nisl, pharetra sed dictum ac, porttitor ut neque. Fusce dolor nibh, ultricies eu adipiscing a, convallis nec tellus. Donec risus augue, hendrerit in tempor in, pharetra ut diam. Cras ac quam scelerisque erat vehicula gravida at et risus. Integer laoreet, metus vel vehicula auctor, mauris sem facilisis diam, at varius justo sapien vel lacus. Ut venenatis tempor magna ut aliquet. Etiam sodales purus sed orci tincidunt a sagittis ligula suscipit. Donec commodo tortor urna, id rutrum ante. Phasellus tempus lacus a neque accumsan vulputate varius tellus convallis. Fusce lacinia luctus nisi. Proin sit amet tellus in dui gravida suscipit. Quisque dignissim dui in lacus malesuada interdum. Nullam hendrerit ornare mi, vitae tempor libero porta sit amet.</p>
+		<p>Donec ac neque turpis, quis congue ligula. Nulla et neque dui. Nullam bibendum semper ipsum a cursus. Suspendisse potenti. Suspendisse potenti. Aliquam justo ante, ultrices ut fermentum dictum, pellentesque eu nisi. Pellentesque id semper ante. Nullam aliquet, dui eu semper ullamcorper, orci augue ornare eros, vel mollis velit magna id sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur consectetur, arcu vel viverra viverra, felis orci semper sapien, non dignissim neque justo vitae erat. Sed neque erat, imperdiet eu venenatis a, ultricies ac urna. Etiam vel leo sed sem porta laoreet rutrum vel dolor. Morbi interdum nulla et justo bibendum semper.</p>
+	</div>
+	
+	<div id="footer"></div>
+
+</body>
+</html>

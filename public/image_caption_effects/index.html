@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>untitled</title>
+	<script type="text/javascript" src="/javascripts/jquery-1.4.min.js"></script>
+
+	<script>
+	$(document).ready(function () {
+
+		// transition effect
+		style = 'swing';
+
+		// if the mouse hover the image
+		$('.photo').hover(
+			function() {
+			//display heading and caption
+			$(this).children('div:first').stop(false,true).animate({top:0},{duration:200, easing: style});
+			$(this).children('div:last').stop(false,true).animate({bottom:0},{duration:200, easing: style});
+			}, 
+
+			function() {
+			//hide heading and caption
+			$(this).children('div:first').stop(false,true).animate({top:-50},{duration:200, easing: style});
+			$(this).children('div:last').stop(false,true).animate({bottom:-50},{duration:200, easing: style});	
+			}
+			);
+
+	});
+	</script>
+	<style>
+	
+	.photo {
+		position:relative;
+		font-family:arial;	
+		overflow:hidden;
+		border:5px solid #000;
+		width:350px;
+		height:233px;
+	}	
+	
+		.photo .heading, .photo .caption {
+			position:absolute;
+			background:#000;
+			height:50px;
+			width:350px;
+			opacity:0.6;
+		}
+		
+		.photo .heading { 
+			top:-50px;
+		}
+
+		.photo .caption { 		
+			bottom:-50px;		
+			left:0px;
+		}
+		
+		.photo .heading span {
+			color:#26c3e5;	
+			top:-50px;
+			font-weight:bold;
+			display:block;
+			padding:5px 0 0 10px;
+		}
+		
+		.photo .caption span{
+			color:#999;	
+			font-size:9px;
+			display:block;
+			padding:5px 10px 0 10px;
+		}
+		
+	</style>
+</head>
+<body>
+
+<div class="photo">
+	<div class="heading"><span>Telephoto Lens</span></div>
+	<img src="images/fall.jpg" width="350" height="233" alt="" />
+	<div class="caption"><span>A lens for photographing distant objects; it is designed in a compact manner so that the distance from the front of the lens to the film plane is less than the focal length of the lens. </span></div>
+</div>
+
+</body>
+</html>

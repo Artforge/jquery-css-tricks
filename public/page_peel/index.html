@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Simple Page Peel Effect with jQuery &amp; CSS</title>
+
+
+<script type="text/javascript" src="/javascripts/jquery-1.4.min.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+
+//Page Flip on hover
+
+	$("#pageflip").hover(function() {
+		$("#pageflip img , .msg_block").stop()
+			.animate({
+				width: '307px', 
+				height: '319px'
+			}, 500); 
+		} , function() {
+		$("#pageflip img").stop() 
+			.animate({
+				width: '50px', 
+				height: '52px'
+			}, 220);
+		$(".msg_block").stop() 
+			.animate({
+				width: '50px', 
+				height: '50px'
+			}, 200);
+	});
+
+	
+});
+</script> 
+<style type="text/css">
+body{margin:0;padding:0;}
+
+a img{border:none;}
+
+.header{background:lightblue;height:80px;border-bottom:3px double steelblue;}
+.header h1{padding-top:18px;margin:0px 15px 10px;}
+img { behavior: url(iepngfix.htc) }
+#pageflip {
+	position: relative;
+	right: 0; top: 0;
+	float: right; 
+}
+#pageflip img {
+	width: 50px; height: 52px;
+	z-index: 99;
+	position: absolute;
+	right: 0; top: 0;
+	-ms-interpolation-mode: bicubic;
+}
+#pageflip .msg_block {
+	width: 50px; height: 50px;
+	overflow: hidden;
+	position: absolute;
+	right: 0; top: 0;
+	background: url(images/subscribe.png) no-repeat right top;
+}
+</style>
+</head>
+
+<body id="home">
+	<div id="pageflip">
+		<a href="http://feeds.feedburner.com/sohtanaka"><img src="images/page_flip.png" alt="" /></a>
+		<div class="msg_block"></div>
+	</div>
+	<div class="header">
+		<div>
+		<h1>Cool Page Peel Effect</h1>
+		</div>
+	</div>
+	
+</body>
+</html>

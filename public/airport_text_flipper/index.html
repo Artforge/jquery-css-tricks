@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>		
+		<title>Airport - Jquery plugin demo</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script> 
+		<script type="text/javascript" src="/javascripts/jquery.airport-1.1.js"></script> 
+		
+		
+		<style>
+			body, html { padding: 0; margin: 0; }
+			body { font: bold 1.618em Helvetica; padding: 1em;}
+			#stuff span:first-child { text-transform: uppercase; }
+		</style>
+	</head>
+	
+	<body>
+		<p>I like <span id="stuff"></span></p>
+				
+		<script type="text/javascript">
+			// <![CDATA[	
+			$(document).ready(function(){				
+				$('#stuff').airport(['berlin','odessa','melbourne','moscow']);
+			});	
+			// ]]>
+		</script>
+		
+		
+		
+	</body>
+</html>
