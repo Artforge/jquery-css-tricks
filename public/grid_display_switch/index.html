@@ -121,14 +121,19 @@ ul.thumb_view li .content_block a img {
 
 a.switch_thumb {
 	width: 122px;
-	height: 26px;
+	height: 16px;
+	-moz-border-radius: 5px; -webkit-border-radius: 5px;
+/*	border:1px solid #666;*/
+	color:#999;
 	line-height: 26px;
-	padding: 0;
+	padding: 6px 0 4px 0;
 	margin: 10px 0;
 	display: block;
-	background: url(images/switch.gif) no-repeat;
+	background: #444 url(images/switch_bg.gif) no-repeat;
 	outline: none;
-	text-indent: -9999px;
+	text-decoration:none;
+	text-indent: 8px;
+	font:12px Arial;
 }
 a:hover.switch_thumb {
 	filter:alpha(opacity=75);
@@ -147,7 +152,7 @@ a.swap { background-position: left bottom; }
 
 <div class="container">
 
-<a href="#" class="switch_thumb">Switch Thumb</a> 
+<a href="#" class="switch_thumb">Switch View</a> 
 
 <ul class="display">
 	<li>

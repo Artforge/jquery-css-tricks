@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<title>Floating Clouds</title>
+	<style type="text/css">
+	body { background: #f1edd0 url('images/bg.jpg') repeat top left; margin: 0; }
+	#watercolor-bleed { width: 100%; background: url('images/top-bg.jpg') repeat-x 0 0; }
+	#wrap {width: 100%; background: url('images/header-bg.jpg') no-repeat 50% 0; margin: 0; min-height: 1039px;}
+	#clouds{ background:transparent url('images/clouds.png') repeat-x scroll 0 0; bottom: 0; left: 0; top: 0; right: 0; position:absolute; height: 210px; width: 100%; }
+	#header { margin: 0 auto; width: 943px; margin: 0 auto; position: relative; }
+	</style>
+
+	<script src="/javascripts/jquery-1.4.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+
+		// Cloud shifting animation on all page backgrounds
+		var shift = -330;
+		function shiftClouds() {
+			$('#clouds').css({
+				backgroundPosition: '' + shift + 'px 0'
+			});
+			shift -= 1;
+		}
+		var timer = setInterval(shiftClouds, 100);
+	});
+
+	</script>
+
+</head>
+<body class="home">
+	<div id="watercolor-bleed">
+		<div id="clouds" style="background-position: -75387px 0pt;"></div>
+		<div id="wrap">
+			<div id="header">
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
