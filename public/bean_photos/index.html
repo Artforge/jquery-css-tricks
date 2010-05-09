@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Silly Bean</title>
+    <style type="text/css" media="screen">
+      body {background-color: #000;}
+    </style>
+    <script type="text/javascript" src="bean.js"></script>
+    <script type="text/javascript" src="plunger.js"></script>
+
+    <script type="text/javascript" src="plungers.js"></script>
+  </head>
+  <body>
+    <canvas id="main" width="750" height="500"></canvas>
+    <script type="text/javascript" charset="utf-8">
+      var bean = new Bean({
+		interval: 1000,
+		fallDuration: 500,
+		randomize: false,
+        imageUrls: [
+          'images/4484957878_1c0abf46c4.jpg',
+          'images/81136117_a4a660bc9e.jpg',
+          // 'images/rosette_ebersole.jpg',
+          'images/3419535662_0f0b1bd4da.jpg',
+          'images/3435048633_3b5a351d65.jpg',
+          'images/86200121_aa17456516.jpg',
+          'images/88020330_6031ffaad4.jpg',
+          'images/89053817_b9d0cf8f60.jpg'
+        ],
+        canvasId : 'main',
+        fillBody : true,
+		loopSlides : false
+      });
+      
+      bean.onReady(function(bean) {
+        // setTimeout(function() {bean.start();}, 500);
+		bean.start();
+      });
+    </script>
+  </body>
+</html>

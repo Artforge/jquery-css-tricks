@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Quicksand : Examples : Sorting one set of HTML (cloning)</title>
+    
+    <link rel="stylesheet" href="http://razorjack.net/quicksand/styles/main.css" />
+    <!--[if IE 7]><link rel="stylesheet" href="../styles/ie7.css" /><![endif]-->    
+    
+    <!-- DO NOT USE THIS FILE. it is compiled for fast http access -->
+    <!-- if you’re looking for source, download or read documentation -->
+    <script src="http://razorjack.net/quicksand/scripts/assets/jquery-1.4.1-and-plugins.min.js" type="text/javascript"></script>
+    
+  </head>
+  <body>
+    
+    <div id="wrapper">
+      <div id="site">
+        
+        <div class="demo">
+        
+          <form id="filter">
+        		<fieldset>
+        			<legend>Filter by type</legend>
+        			<label><input type="radio" name="type" value="all" checked="checked">Everything</label>
+        			<label><input type="radio" name="type" value="app">Applications</label>
+        			<label><input type="radio" name="type" value="util">Utilities</label>
+        		</fieldset>
+        		<fieldset>
+        			<legend>Sort by</legend>
+        			<label><input type="radio" name="sort" value="size" checked="checked">Size</label>
+        			<label><input type="radio" name="sort" value="name">Name</label>			
+        		</fieldset>
+        	</form>
+        
+          <ul id="applications" class="image-grid">
+            <li data-id="id-1" data-type="util">
+              <img src="http://razorjack.net/quicksand/content/images/activity-monitor.png" width="128" height="128" alt="" />
+              <strong>Activity Monitor</strong>
+              <span data-type="size">348 KB</span>
+            </li>
+            <li data-id="id-2" data-type="app">
+              <img src="http://razorjack.net/quicksand/content/images/address-book.png" width="128" height="128" alt="" />
+              <strong>Address Book</strong> 
+              <span data-type="size">1904 KB</span>
+            </li>
+            <li data-id="id-3" data-type="app">
+              <img src="http://razorjack.net/quicksand/content/images/finder.png" width="128" height="128" alt="" />
+              <strong>Finder</strong> 
+              <span data-type="size">1337 KB</span>
+            </li>
+            <li data-id="id-4" data-type="app">
+              <img src="http://razorjack.net/quicksand/content/images/front-row.png" width="128" height="128" alt="" />
+              <strong>Front Row</strong> 
+              <span data-type="size">401 KB</span>
+            </li>
+            <li data-id="id-5" data-type="app">
+              <img src="http://razorjack.net/quicksand/content/images/google-pokemon.png" width="128" height="128" alt="" />
+              <strong>Google Pokémon</strong> 
+              <span data-type="size">12875 KB</span>
+            </li>
+            <li data-id="id-6" data-type="app">
+              <img src="http://razorjack.net/quicksand/content/images/ical.png" width="128" height="128" alt="" />
+              <strong>iCal</strong> 
+              <span data-type="size">5273 KB</span>
+            </li>
+            <li data-id="id-7" data-type="app">
+              <img src="http://razorjack.net/quicksand/content/images/ichat.png" width="128" height="128" alt="" />
+              <strong>iChat</strong> 
+              <span data-type="size">5437 KB</span>
+            </li>
+            <li data-id="id-8" data-type="app">
+              <img src="http://razorjack.net/quicksand/content/images/interface-builder.png" width="128" height="128" alt="" />
+              <strong>Interface Builder</strong> 
+              <span data-type="size">2764 KB</span>
+            </li>
+            <li data-id="id-9" data-type="app">
+              <img src="http://razorjack.net/quicksand/content/images/ituna.png" width="128" height="128" alt="" />
+              <strong>iTuna</strong> 
+              <span data-type="size">17612 KB</span>
+            </li>
+            <li data-id="id-10" data-type="util">
+              <img src="http://razorjack.net/quicksand/content/images/keychain-access.png" width="128" height="128" alt="" />
+              <strong>Keychain Access</strong> 
+              <span data-type="size">972 KB</span>
+            </li>
+            <li data-id="id-11" data-type="util">
+              <img src="http://razorjack.net/quicksand/content/images/network-utility.png" width="128" height="128" alt="" />
+              <strong>Network Utility</strong> 
+              <span data-type="size">245 KB</span>
+            </li>
+            <li data-id="id-12" data-type="util">
+              <img src="http://razorjack.net/quicksand/content/images/sync.png" width="128" height="128" alt="" />
+              <strong>Sync</strong> 
+              <span data-type="size">3788 KB</span>
+            </li>
+            <li data-id="id-13" data-type="app">
+              <img src="http://razorjack.net/quicksand/content/images/textedit.png" width="128" height="128" alt="" />
+              <strong>TextEdit</strong> 
+              <span data-type="size">1669 KB</span>
+            </li>
+          </ul>
+        
+        </div>
+      
+        <script type="text/javascript">
+          // Custom sorting plugin
+          (function($) {
+          	$.fn.sorted = function(customOptions) {
+          		var options = {
+          			reversed: false,
+          			by: function(a) { return a.text(); }
+          		};
+          		$.extend(options, customOptions);
+          		$data = $(this);
+          		arr = $data.get();
+          		arr.sort(function(a, b) {
+          		   	var valA = options.by($(a));
+          		   	var valB = options.by($(b));
+          			if (options.reversed) {
+          				return (valA < valB) ? 1 : (valA > valB) ? -1 : 0;				
+          			} else {		
+          				return (valA < valB) ? -1 : (valA > valB) ? 1 : 0;	
+          			}
+          		});
+          		return $(arr);
+          	};
+          })(jQuery);
+      
+          // DOMContentLoaded
+          $(function() {
+          
+            // bind radiobuttons in the form
+          	var $filterType = $('#filter input[name="type"]');
+          	var $filterSort = $('#filter input[name="sort"]');
+        	
+          	// get the first collection
+          	var $applications = $('#applications');
+        	
+          	// clone applications to get a second collection
+          	var $data = $applications.clone();
+
+            // attempt to call Quicksand on every form change
+          	$filterType.add($filterSort).change(function(e) {
+          		if ($($filterType+':checked').val() == 'all') {
+          			var $filteredData = $data.find('li');
+          		} else {
+          			var $filteredData = $data.find('li[data-type=' + $($filterType+":checked").val() + ']');
+          		}
+            
+              // if sorted by size
+          		if ($('#filter input[name="sort"]:checked').val() == "size") {
+          			var $sortedData = $filteredData.sorted({
+          				by: function(v) {
+          					return parseFloat($(v).find('span[data-type=size]').text());
+          				}
+          			});
+          		} else {
+          		// if sorted by name
+          			var $sortedData = $filteredData.sorted({
+          				by: function(v) {
+          					return $(v).find('strong').text().toLowerCase();
+          				}
+          			});
+          		}   
+        		
+          		// finally, call quicksand
+          	  $applications.quicksand($sortedData, {
+          	    duration: 800,
+          	    easing: 'easeInOutQuad'
+          	  });
+
+          	});
+          
+          });
+        </script>
+      
+      </div>
+    </div>
+    
+    
+
+  </body>
+</html>

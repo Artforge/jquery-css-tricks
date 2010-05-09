@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<title>Slide Thumbs | Demo page</title>
+	<link rel="stylesheet" href="style.css" />
+	<script type="text/javascript" src="/javascripts/jquery-1.4.min.js"></script>
+	<!--[if IE 6]>
+	<script src="DD_belatedPNG_0.0.8a-min.js"></script>
+	<script>
+		DD_belatedPNG.fix('#preview_inner div a');
+	</script>
+	<![endif]--> 
+	<style type="text/css">
+		#preview_wrap {
+			margin: 0 auto;
+			padding: 22px;
+			width: 550px; 
+			height: 400px;
+			background: url('images/bg_preview.gif') top left no-repeat;
+		}
+
+		#preview_outer {
+			overflow: hidden;
+			width: 550px;
+			height: 400px;
+			position: relative;
+		}
+
+		#preview_inner {
+			text-align: left;
+			height: 100%;
+			position: relative;
+		}
+		
+		#preview_inner div {
+			float: left;
+			width: 550px;
+			height: 400px;
+			position: relative;
+		}
+		
+		#preview_inner div a {
+			position: absolute;
+			bottom: 0;
+			left: 0;	
+			display: block;
+			width: 100%;
+			text-indent: 20px;
+			padding: 20px 0;
+			color: #fff;
+			background: url(bg_trans.png);
+			text-decoration: none;
+			font-size: 18px;
+		}
+
+		#thumbs {
+			padding-top: 30px;
+			position: relative;
+			width: 750px;
+			text-align: center;	
+		}
+
+		#thumbs span {
+			padding: 12px;
+			width: 80px;
+			height: 80px;
+			cursor: pointer;
+			background: url('images/bg_thumb.gif') top left no-repeat;
+			display: inline-block;
+		}
+
+		#arrow {
+			position: absolute;
+			top: -13px;
+			background: url('images/bg_arrow.gif') top center no-repeat;
+			width: 104px;
+			height: 39px;
+			display: none;
+		}
+
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// Save  the jQuery objects for later use.
+			var outer		= $("#preview_outer");
+			var arrow		= $("#arrow");
+			var thumbs		= $("#thumbs span");
+
+			var preview_pos;
+			var preview_els	= $("#preview_inner div");
+			var image_width	= preview_els.eq(0).width(); // Get width of imaages
+			
+			// Hook up the click event
+			thumbs.click(function() {
+				// Get position of current image
+				preview_pos = preview_els.eq( thumbs.index( this) ).position();
+
+				// Animate them!
+				outer.stop().animate( {'scrollLeft' : preview_pos.left},	500 );
+				arrow.stop().animate( {'left' : $(this).position().left },	500 );
+			});
+
+			// Reset positions on load
+			arrow.css( {'left' : thumbs.eq(0).position().left } ).show();
+			outer.animate( {'scrollLeft' : 0}, 0 );
+
+			// Set initial width
+			$("#preview_inner").css('width', preview_els.length * image_width);
+		});
+	</script>
+</head>
+<body>
+	<div id="content">
+		<h1>Slide Thumbs</h1>
+		
+		<hr />
+
+		<div id="preview_wrap">
+			<div id="preview_outer">
+				<div id="preview_inner">
+					<div>
+						<img src="images/1_b.jpg" alt="Leonardo Maia" />
+						<a href="http://www.leonardomaia.com.br/">Leonardo Maia</a>
+					</div>
+					<div>
+						<img src="images/2_b.jpg" alt="skillicorn" />
+						<a href="http://skillicorn.org/">skillicorn</a>
+					</div>
+					<div>
+						<img src="images/3_b.jpg" alt="theenergycell" />
+						<a href="http://www.energycell.co.uk/">theenergycell</a>
+					</div>
+					<div>
+						<img src="images/4_b.jpg" alt="Fred Maya" />
+						<a href="http://fredmaya.com/">Fred Maya</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="thumbs">
+			<div id="arrow"></div>
+			<span><img src="images/1_s.gif" alt="Leonardo Maia" /></span>
+			<span><img src="images/2_s.gif" alt="skillicorn" /></span>
+			<span><img src="images/3_s.gif" alt="theenergycell" /></span>
+			<span><img src="images/4_s.gif" alt="Fred Maya" /></span>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>PS3 Style Image Gallery</title>
+	<link rel="stylesheet" href="lo2k.css" type="text/css" media="screen, projection">
+	<script src="../javascripts/jquery-1.4.min.js" type="text/javascript"></script>
+	<script src="jquerycolor.js" type="text/javascript"></script>
+	<script src="reflex.js" type="text/javascript"></script>
+	<script src="boot.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+	<div>
+		<span style="font-size: 150%; color: #999">Canvas Slideshow (with HTML5 canvas)</span>
+	</div>
+
+	<!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+	
+	<div>
+		<div id="loading"></div>
+		<canvas id="canvas_port" width="1000" height="250"></canvas>
+	</div>
+
+	<div>
+		<p class="alt tips">
+			Warning. This slideshow use full Javascript/Canvas implementation instead of a Flash. For a better experience use a real internet browser like Mozilla Firefox, Opera or Safari.
+		</p>
+	</div>
+
+</body>
+
+<script>
+var j;
+j=0;
+var _nb__img;
+var _int__img = 150;
+_nb__img = 0;
+
+var loaded = 0;
+var async_img_load = 0;
+var _mover = 510;
+var _default_movement = 440;
+var _mouse_on = 0;
+
+var _selected =  'acidwave.jpg';
+
+var resources = ["http://farm3.static.flickr.com/2666/3686946460_0acfa289fa_m.jpg","http://farm4.static.flickr.com/3611/3686140905_cbf9824a49_m.jpg","http://farm4.static.flickr.com/3274/3686140135_1b83dba0c3_m.jpg","http://farm4.static.flickr.com/3051/2692672949_275253ed55_m.jpg","http://farm4.static.flickr.com/3029/2693485702_758c53f7f1_m.jpg","http://farm4.static.flickr.com/3221/2693483418_1af5714ea0_m.jpg","http://farm4.static.flickr.com/3162/2693480990_15c6619af2_m.jpg","http://farm4.static.flickr.com/3022/2615341879_7fe63af14b_m.jpg","http://farm4.static.flickr.com/3141/2615340453_d9f158bb14_m.jpg","http://farm4.static.flickr.com/3232/2615338551_0685099d6d_m.jpg","http://farm4.static.flickr.com/3124/2615336735_95b85e7999_m.jpg","http://farm3.static.flickr.com/2179/2484647604_93cdab1d6a_m.jpg","http://farm4.static.flickr.com/3259/2484647244_d3e2b2c888_m.jpg","http://farm3.static.flickr.com/2180/2484646672_0ba65db65c_m.jpg","http://farm4.static.flickr.com/3136/2434833862_7a5f7b9bed_m.jpg","http://farm4.static.flickr.com/3273/2434017625_cdec35760d_m.jpg","http://farm4.static.flickr.com/3267/2434833496_80f785180a_m.jpg","http://farm3.static.flickr.com/2243/2434833346_b4da4b35db_m.jpg","http://farm3.static.flickr.com/2371/2434017181_71d52feeae_m.jpg","http://farm3.static.flickr.com/2339/2432825807_37d5e8cc3d_m.jpg"];
+var img_src = [];
+
+
+
+jQuery.each(resources, function(index, value) {
+	img_src[_nb__img] = { 
+		img : new Image(),
+		x: Math.random() * 400 -200,
+		destx: 30+ Math.random() * 70+40,
+		y: 100+_int__img*_nb__img+Math.random()*100,
+		yoffset: 100+Math.random()*100,
+		desty: _int__img*_nb__img,
+		rot: 600-Math.random() * 1200,
+		destrot: 600-Math.random() * 1200,
+		scale: 1,
+		name: value
+	} 
+
+
+
+	img_src[_nb__img].img.src = value;
+	async_img_load++;
+
+	img_src[_nb__img].img.onload = function() {
+		async_img_load--;
+	}
+
+	_nb__img++;
+});
+
+function drawDiap(ctx,img, selected) {
+	ctx.translate(-85,-40);
+	var white_border = 5;
+	var shadow_border = 6;
+	var shadow_border_light = 8;
+
+	//console.log('%i / %i',img.width, img.height);
+	if (img.width ==0) {
+		return;
+	}
+
+	var dest_height = 170;
+	var dest_width = dest_height * img.width /  img.height;
+
+	if (dest_width > dest_height) {
+		dest_width = dest_height;
+		dest_height = dest_width *  img.height /  img.width;
+	}
+
+
+	//console.log('%i / %i',img.width, img.height);
+	ctx.fillStyle = 'rgba(30,30,30,0.1)';
+	ctx.fillRect(0-shadow_border_light,0-shadow_border_light,dest_width+shadow_border_light*2,dest_height+shadow_border_light*2);
+
+	if (selected) {
+		ctx.fillStyle = 'rgba(30,200,30,0.5)';
+		var shadow_border = 8;
+		ctx.fillRect(0-shadow_border,0-shadow_border,dest_width+shadow_border*2,dest_height+shadow_border*2);
+	} else {
+		ctx.fillStyle = 'rgba(30,30,30,0.2)';
+		ctx.fillRect(0-shadow_border,0-shadow_border,dest_width+shadow_border*2,dest_height+shadow_border*2);
+	}
+
+
+	ctx.fillStyle = 'rgb(255,255,255)';
+	ctx.fillRect(0-white_border,0-white_border,dest_width+white_border*2,dest_height+white_border*2);
+
+	if (img.width !=0) {
+		ctx.drawImage(img,0,0,dest_width,dest_height);
+	}
+
+
+}
+
+function drawBg(ctx,cw) {
+
+	var lineargradient = ctx.createLinearGradient(0, 0, 0, 250)
+	lineargradient.addColorStop(0, 'rgb(240,240,240)');
+	lineargradient.addColorStop(0.5, 'rgb(255,255,255)');
+	lineargradient.addColorStop(0.1, 'rgb(255,255,255)');
+	lineargradient.addColorStop(0.7, 'rgb(255,255,255)');
+	lineargradient.addColorStop(0.99, 'rgb(230,230,230)');
+	lineargradient.addColorStop(1, 'rgb(255,255,255)');
+	ctx.fillStyle = lineargradient;
+	ctx.fillRect(0,0,cw,400);
+}
+
+function drawCanvas(ctx,cw) {
+	j++;
+	ctx.clearRect(0, 0, cw, 400);
+	//var i = j/2;
+	var i = j%255;
+	//console.log('%i',i);
+	//ctx.restore();
+
+	ctx.save();
+
+	drawBg(ctx,cw);
+
+
+	jQuery.each(img_src, function(index, imag) {
+
+		ctx.save();
+
+		//imag.y = imag.y-1;
+		var off = _mover - 425;
+		imag.y = imag.y - off *48 / 950;
+
+
+
+		if (imag.y < -250) {
+			imag.y = _nb__img * _int__img-1;
+			imag.rot = 600-Math.random() * 1200;
+			imag.destrot = 600-Math.random() * 1200;
+			imag.x = Math.random() * 400 -200;
+			imag.yoffset = 600;
+		}
+		if (imag.y > _nb__img * _int__img) {
+			imag.y = -250;
+			imag.rot = 600-Math.random() * 1200;
+			imag.destrot = 600-Math.random() * 1200;
+			imag.x = Math.random() * 400 -200;
+			imag.yoffset = -600;
+		}
+
+
+		if (imag.y < 1000) {
+
+			ctx.translate(imag.y+imag.yoffset,imag.x);
+			ctx.rotate(imag.rot/10000*Math.PI*2);
+			ctx.scale(imag.scale, imag.scale);
+			var selected = 0;
+			if (imag.y > _mover-60 && imag.y < _mover+60 &&_mouse_on) {
+				selected =1;
+				imag.scale = (imag.scale * 10 + 1.2) / 11
+				_selected = imag.name
+
+			} else {
+				imag.scale = (imag.scale * 10 + 1) / 11
+			}
+
+			drawDiap(ctx,imag.img,selected);
+
+			if (imag.y < 900) {
+
+				imag.x = (imag.x * 25  + imag.destx) /26;
+
+				imag.rot = (imag.rot * 25  + imag.destrot) /26;
+				imag.yoffset = imag.yoffset *25 / 26;
+			}
+
+		}
+		ctx.restore();
+	});
+
+	ctx.restore();	
+
+	//smooth return to "normal" slideshow
+	if (!_mouse_on) {
+		_mover = (_mover *10 + _default_movement) / 11
+	}
+
+}
+
+function drawEvent(cw) {
+	var canvas = document.getElementById('canvas_port');
+	var load_div = document.getElementById('loading');
+	if (canvas.getContext){
+		var ctx = canvas.getContext('2d');
+		if ((async_img_load==0)) {
+			drawCanvas(ctx,canvas_width);
+			load_div.innerHTML = '';
+		} else {
+			drawBg(ctx,cw);
+			load_div.innerHTML = 'LOADING !';
+		}
+	}
+}
+
+
+$(document).ready(function(){
+	canvas_width = 1000
+	
+	$('#canvas_port').mousemove(function(e) {
+		var offset = $('#canvas_port').offset();
+		//console.log('move %s ', e.clientX- offset.left);
+
+		_mover =  e.clientX- offset.left;
+		_mouse_on = 1;
+	});
+
+	$('#canvas_port').mouseout(function(e) {
+		//_mover = _mover /2;
+		_mouse_on = 0;
+	});
+
+	$('#canvas_port').click(function(e) {
+		$('#filename').html('<p>'+_selected+'</p>');
+		$('#fileimg').html('<p><div style="overflow:none"><img src="'+_selected.replace('_m','')+'"/><br/><a href="'+_selected.replace('_m','_b')+'" target="blank">[View large]</a></div></p>');
+		e.stopPropagation();
+	});
+
+	_mover = _default_movement;
+
+	setInterval('drawEvent(' + canvas_width + ')',50);
+	//getFlickrRss();
+});
+
+
+</script>

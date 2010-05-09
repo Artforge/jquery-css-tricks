@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<head>
+	<!-- standalone page styling (can be removed)-->
+	<link rel="stylesheet" type="text/css" href="http://static.flowplayer.org/tools/css/standalone.css"/>
+	<title>jQuery Tools standalone demo</title>
+	<script type="text/javascript" src="/javascripts/jquery-1.4.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.tools.min.js"></script>
+</head>
+
+<body>
+
+<script src="http://static.flowplayer.org/js/flowplayer-3.1.4.min.js"></script>
+
+<style>
+div.overlay {
+	background:url(images/white.png) no-repeat;
+	padding:40px;	
+	/*width:576px;  */
+	display:none;
+}
+
+div.overlay div.close {
+	background:url(images/close.png) no-repeat;
+	position:absolute;
+	top:2px;
+	right:5px; 
+	width:35px;
+	height:35px;
+	cursor:pointer;
+}
+/*
+#overlay2 { 
+    background-image:url(images/apple.png); 
+padding:10px;
+    color:#fff; 
+}*/
+
+a.player { 		
+	display:block;
+	width:480px;  
+	height:320px;			
+}
+</style>
+
+<script>
+$(function() {
+
+	// setup overlay actions to buttons
+	$("button[rel]").overlay({
+
+		// use the Apple effect for overlay
+		effect: 'apple',		
+
+		expose: '#789',				
+
+		onLoad: function(content) {
+			// find the player contained inside this overlay and load it
+			this.getOverlay().find("a.player").flowplayer(0).load();
+		},
+
+		onClose: function(content) {
+			$f().unload();
+		}
+	});				
+
+	// install flowplayers
+	$("a.player").flowplayer("http://releases.flowplayer.org/swf/flowplayer-3.1.5.swf"); 
+});	
+</script>
+
+
+<h2>Multiple overlay demo</h2>
+
+<p>
+	This page shows two overlays with two different videos. Look for source code how player loading and unloading is achieved. Both overlays uses expose tool to achieve the darkening of the surroundings.
+</p>
+
+<p>
+	<button rel="#overlay1">Video 1</button> 
+	<button rel="#overlay2">Video 2</button>
+</p>
+
+<!-- overlays for both videos -->
+<div class="overlay" id="overlay1">
+	<a class="player" href="media/20081216172051-C4.flv">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay2">
+	<a class="player" href="media/20081219222955-upiu_canines.flv">
+		&nbsp;
+	</a>	
+</div>
+
+</body>

@@ -1,0 +1,260 @@
+/*@font-face { font-family: "Droid Sans"; src: url('DroidSans.ttf');}
+@font-face { font-family: "Droid Sans Bold"; src: url('DroidSans-Bold.ttf');}*/
+
+body {
+	/*background: #666 url(../images/bg.gif) repeat-y center center;*/
+	background: #222;
+	/*background: #CCC url(../images/fond.png);*/
+}
+
+p {
+	/*font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+}
+
+.bgdiv  {
+	position: absolute;
+	top: 0px;
+	margin-left:auto;
+	margin-right: auto;
+	width: 100%;
+	
+}
+
+.overall {
+	padding-top: 2em;
+	background: #666 url(../images/bg.png) repeat-y center center;
+	
+	border-bottom: 1px solid #444;
+	-moz-box-shadow: 0px 1px 25px #999;
+	padding-bottom: 2em;
+	
+}
+
+.overall .container {
+    background-color: #FFF;
+	position: relative;
+}
+
+.global_content {
+	background-color: #000;
+	
+}
+
+.block {
+	background: #FFF url(../images/separator.gif) no-repeat bottom center;
+    padding-bottom: 0.5em;
+}
+
+.banner {
+	text-align: center;
+}
+
+
+a:visited {
+	color: #67748d;
+}
+
+.menu {
+    background-color: #000;
+	/*-webkit-box-shadow:0 3px 20px -2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:0 3px 20px -2px rgba(0, 0, 0, 0.3);
+	-moz-transition-property: -moz-box-shadow, background-color; 
+	-webkit-transition: -moz-box-shadow 0.5s ease-in; 
+	-webkit-transition-duration: 0.2s; 
+	-moz-transition-duration: 0.2s; 
+	transition-duration: 0.2s;*/
+}
+
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    float: left;
+    padding: 0.6em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    background-color: #000;
+    border-right: 1px solid #CCC;
+}
+
+.menu a, .menu a:visited {
+	text-decoration: none;
+    color: #FFF;
+}
+
+.footerspan {
+	color: #666;
+	margin-bottom: 0px;
+}
+
+.footerspan a {
+	color: #FFF;
+}
+
+.tips {
+    background-color: #FFC;
+    padding: 1em;
+    padding: 1em;
+}
+
+.contact h2 {
+    padding: 0px;
+    margin: 0px;
+    color: #CCC;
+    text-align:right;
+}
+
+ul.events {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+
+ul.events li {
+	border-bottom:1px dashed #CCC;
+	display:block;
+	width:100%;
+	position: relative;
+	padding: 1em;
+	padding-bottom: 1.2em;
+	
+}
+
+ul.events li .title {
+	font-family: "Warnock Pro","Goudy Old Style","Palatino","Book Antiqua",Georgia,serif;
+	font-size: 1.5em;
+}
+
+ul.events li .date{
+	position: absolute;
+	font-family: "Warnock Pro","Goudy Old Style","Palatino","Book Antiqua",Georgia,serif;
+	color: #AAA;
+	font-size: 1em;
+	background-color: #EFEFEF;
+	right: 0em;
+	bottom: 0em;
+}
+
+.events .twitter {
+	background: url('http://www.gyminee.com/images/fu/0001/7306/twitter-logo_thumb.jpg') right top no-repeat;
+}
+
+.events .weblog {
+	background: url('http://21stcenturyed.com/wp-content/uploads/2008/04/wordpress.gif') right top no-repeat;
+}
+
+.events .deliciousxblaster {
+	background: url('http://edtags.org/images/delicious.jpg') right top no-repeat;
+}
+
+
+.events .flickr {
+	background: url('http://farm2.static.flickr.com/1419/890105679_809ec98e90.jpg?v=0') right top no-repeat;
+
+}
+
+
+ul.project_tag {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+
+ul.project_tag li {
+	border:1px solid #999;
+	background-color: #EEE;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	display:inline;
+	padding: 0.2em;
+	color: #999;
+	padding-right: 0.4em;
+	padding-left: 0.4em;
+	
+	-moz-box-shadow: 0px 1px 5px -1px #CCC;
+	-webkit-box-shadow: 0px 1px 5px -1px #CCC;
+	
+}
+
+ul.events li:hover{
+	background-color: #EEE;
+}
+
+#footer {
+	/*position: absolute;
+	bottom: -40px;*/
+	padding-bottom: 2.5em;
+	padding-top: 1em;
+}
+
+#footer .container {
+	color: #FFF;
+}
+
+#footer .colborder {
+	border-right: 1px solid #555;
+}
+
+
+#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+	text-shadow:1px 1px 2px #000;
+	color: #CCC;
+}
+
+#footer .avatar {
+	float: right;
+	-moz-box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+
+a.lab_hl, a.lab_hl:visited {
+	color: #D9FB19;
+	font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow:1px 1px 2px #AAA;
+}
+
+.contact h2 {
+	text-shadow:1px 1px 2px #EEE;
+}
+
+.presentation {
+	font-size: 200%;
+}
+
+.big_button {
+	-moz-box-shadow: 0px 0px 3px rgba(0, 0, 255, 0.5);
+	-webkit-box-shadow: 0px 0px 3px rgba(0, 0, 255, 0.5);
+	background-color:#D3D3FF;
+	border:1px solid #FFFFFF;
+	padding:0.5em;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	font-size: 300%;
+	font-weight: bold;
+	text-shadow:1px 1px 1px #FFF;
+}
+
+.big_button a {
+	color: #9393CF;
+	text-decoration: none;
+}
+
+.pretty_block {
+	-moz-box-shadow: 1px 1px 12px rgba(40, 40, 40, 0.5);
+	-webkit-box-shadow: 1px 1px 12px rgba(40, 40, 40, 0.5);
+	background-color:#F3F3F3;
+	border:1px solid #FFFFFF;
+	font-size:1.25em;
+	padding:1.25em;
+}
+
+.center {
+	text-align: center;
+}

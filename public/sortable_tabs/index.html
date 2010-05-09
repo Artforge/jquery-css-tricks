@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>index</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="Adam Singer">
+	<!-- Date: 2010-03-15 -->
+	
+	<!-- <link rel="stylesheet" href="http://static.jquery.com/ui/css/base2.css" type="text/css" media="all" /> -->
+	<link rel="stylesheet" href="http://jquery-ui.googlecode.com/svn/tags/latest/themes/base/jquery-ui.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
+	
+	<script type="text/javascript" src="/javascripts/jquery-1.4.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery-ui.js"></script>
+	
+	<style type="text/css">
+		#sortable0 li, #sortable1 li, #sortable2 li { margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; width: 120px; }
+		
+		.ui-state-pink, .ui-widget-content .ui-state-pink {
+		background: pink;
+		border:1px solid #D3D3D3;
+		color:#555555;
+		font-weight:normal;
+		}
+	</style>
+	
+	<script type="text/javascript">
+	$(function() {
+		$("#sortable0, #sortable1, #sortable2").sortable().disableSelection();
+
+		var $tabs = $("#tabs").tabs();
+
+		var $tab_items = $("ul:first li",$tabs).droppable({
+			accept: ".connectedSortable li",
+			hoverClass: "ui-state-hover",
+			drop: function(ev, ui) {
+				var $item = $(this);
+				var $list = $($item.find('a').attr('href')).find('.connectedSortable');
+
+				ui.draggable.hide('slow', function() {
+					$tabs.tabs('select', $tab_items.index($item));
+					$(this).appendTo($list).show('fast');
+					updateItem(ev,ui);
+				});
+			}
+		});
+	});
+	
+	function updateItem(evt,ui){
+		target = evt.target;
+		dropped = ui.draggable;
+		
+		console.log(target,dropped)
+		// if (target.id != "origin"){
+		// 			user_id = $(dropped).attr("user_id");
+		// 			option_id = $(target).attr("option_id");
+		// 			$.post('/members/' + user_id + '/update_demographics','_method=put&opt=' + option_id,function(data){eval(data);});
+		// 		}
+	}
+	</script>
+
+</head>
+<body>
+	<div id="sortableStuff" class="demo">
+
+		<div style="float:left;width:150px;margin-right:25px;">
+			<ul id="sortable0" class="connectedSortable ui-helper-reset">
+				<li class="ui-state-pink">Item 1</li>
+				<li class="ui-state-pink">Item 2</li>
+				<li class="ui-state-pink">Item 3</li>
+				<li class="ui-state-pink">Item 4</li>
+				<li class="ui-state-pink">Item 5</li>
+			</ul>
+		</div>
+		
+		<div id="tabs" style="float:left;width:800px;">
+		
+		
+			<ul>
+				<li><a href="#tabs-1">Nunc tincidunt</a></li>
+				<li><a href="#tabs-2">Proin dolor</a></li>
+			</ul>
+			<div id="tabs-1">
+				<ul id="sortable1" class="connectedSortable ui-helper-reset">
+					<li class="ui-state-default">Item 1</li>
+					<li class="ui-state-default">Item 2</li>
+					<li class="ui-state-default">Item 3</li>
+					<li class="ui-state-default">Item 4</li>
+					<li class="ui-state-default">Item 5</li>
+				</ul>
+			</div>
+			<div id="tabs-2">
+				<ul id="sortable2" class="connectedSortable ui-helper-reset">
+					<li class="ui-state-highlight">Item 1</li>
+					<li class="ui-state-highlight">Item 2</li>
+					<li class="ui-state-highlight">Item 3</li>
+					<li class="ui-state-highlight">Item 4</li>
+					<li class="ui-state-highlight">Item 5</li>
+				</ul>
+			</div>
+		</div>
+		
+	<div style="clear:both"></div>
+
+	</div><!-- End demo -->
+
+	<div class="demo-description">
+
+	<p>
+		Sort items from one list into another and vice versa, by dropping the list item on the appropriate tab above.
+	</p>
+
+	</div><!-- End demo-description -->
+	
+</body>
+</html>

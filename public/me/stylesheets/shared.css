@@ -1,0 +1,5132 @@
+/*
+ * IMPORTANT NOTE: This file is licensed only for use in providing the MobileMe service,
+ * or any part thereof, and is subject to the MobileMe Terms and Conditions. You may not
+ * port this file to another platform without Apple's written consent.
+ */
+
+/* Start ----------------------------------------------------- spinners.css*/
+
+/** The default spinner background color is white */
+
+img.spinner.large, img.spinner.large.bg-ffffff {
+  background-repeat: none;
+  background-image: url('/me/images/spinner_32px_ffffff.gif');
+  background-position: 0px 0px;
+  background-attachment: scroll;
+  width: 32px;
+  height: 32px;
+}
+
+img.spinner.medium, img.spinner.medium.bg-ffffff {
+  background-image:  url('/me/images/spinner_24px_ffffff.gif');
+  width: 24px;
+  height: 24px;
+}
+
+img.spinner.small, img.spinner.small.bg-ffffff {
+  background-image:  url('/me/images/spinner_16px_ffffff.gif');
+  width: 16px;
+  height: 16px;
+}
+
+/** Currently available background colors: 
+  141414
+  2e2e2e
+  464646
+  d6d6d7
+  dfe1e3
+  f3f5f5
+  fafafa
+  ffffff
+  ffffff_50pct
+  
+*/
+
+/** #141414 */
+
+img.spinner.large.bg-141414 {
+  background-image: url('/me/images/spinner_32px_141414.gif');
+}
+img.spinner.medium.bg-141414 {
+  background-image: url('/me/images/spinner_24px_141414.gif');
+}
+img.spinner.small.bg-141414 {
+  background-image: url('/me/images/spinner_16px_141414.gif');
+}
+
+
+
+/** #ffffff_50pct */
+
+img.spinner.large.bg-ffffff_50pct {
+  background-image: url('/me/images/spinner_32px_ffffff_50pct.gif');
+}
+img.spinner.medium.bg-ffffff_50pct {
+  background-image: url('/me/images/spinner_24px_ffffff_50pct.gif');
+}
+img.spinner.small.bg-ffffff_50pct {
+  background-image: url('/me/images/spinner_16px_ffffff_50pct.gif');
+}
+
+
+/** #fafafa */
+
+img.spinner.large.bg-fafafa {
+  background-image: url('/me/images/spinner_32px_fafafa.gif');
+}
+img.spinner.medium.bg-fafafa {
+  background-image: url('/me/images/spinner_24px_fafafa.gif');
+}
+img.spinner.small.bg-fafafa {
+  background-image: url('/me/images/spinner_16px_fafafa.gif');
+}
+
+/** #f3f5f5 */
+
+img.spinner.large.bg-f3f5f5 {
+  background-image: url('/me/images/spinner_32px_f3f5f5.gif');
+}
+img.spinner.medium.bg-f3f5f5 {
+  background-image: url('/me/images/spinner_24px_f3f5f5.gif');
+}
+img.spinner.small.bg-f3f5f5 {
+  background-image: url('/me/images/spinner_16px_f3f5f5.gif');
+}
+
+/** #dfe1e3 */
+
+img.spinner.large.bg-dfe1e3 {
+  background-image: url('/me/images/spinner_32px_dfe1e3.gif');
+}
+img.spinner.medium.bg-dfe1e3 {
+  background-image: url('/me/images/spinner_24px_dfe1e3.gif');
+}
+img.spinner.small.bg-dfe1e3 {
+  background-image: url('/me/images/spinner_16px_dfe1e3.gif');
+}
+
+/** #d6d6d7 */
+
+img.spinner.large.bg-d6d6d7 {
+  background-image: url('/me/images/spinner_32px_d6d6d7.gif');
+}
+img.spinner.medium.bg-d6d6d7 {
+  background-image: url('/me/images/spinner_24px_d6d6d7.gif');
+}
+img.spinner.small.bg-d6d6d7 {
+  background-image: url('/me/images/spinner_16px_d6d6d7.gif');
+}
+
+
+/** #464646 */
+
+img.spinner.large.bg-464646 {
+  background-image: url('/me/images/spinner_32px_464646.gif');
+}
+img.spinner.medium.bg-464646 {
+  background-image: url('/me/images/spinner_24px_464646.gif');
+}
+img.spinner.small.bg-464646 {
+  background-image: url('/me/images/spinner_16px_464646.gif');
+}
+
+/** #2e2e2e */
+
+img.spinner.large.bg-2e2e2e {
+  background-image: url('');
+}
+img.spinner.medium.bg-2e2e2e {
+  background-image: url('');
+}
+img.spinner.small.bg-2e2e2e {
+  background-image: url('');
+}
+
+/* End ------------------------------------------------------- spinners.css*/
+
+/* Start ----------------------------------------------------- form_fields.css*/
+
+body.login input,
+body.account input,
+body.files input,
+body.contacts input,
+body.calendar input,
+body.photos input {
+	font-family: Helvetica;
+	background:white url('/my/shared/en/198g/images/form_bg.png') repeat-x scroll top left;
+	border-top: 1px solid #707070;
+	border-bottom: 1px solid #cecece;
+	border-left: 1px solid #ababab;
+	border-right: 1px solid #ababab;
+ 	font-size: 13px;
+ 	padding: 4px 3px 1px;
+	-webkit-box-shadow: rgba(255,255,255,.65) 0px 1px 1px;
+
+}
+
+body.login input.title,
+body.account input.title,
+body.files input.title,
+body.contacts input.title,
+body.calendar input.title,
+body.photos input.title {
+	font-size: 17px;
+    padding: 5px 3px 2px;
+}
+
+body.login input.small,
+body.account input.small, 
+body.files input.small, 
+body.contacts input.small,
+body.calendar input.small,
+body.photos input.small {
+/*	font-size: 11px;*/
+	padding: 3px 3px 1px;
+}
+
+body.login.firefox input,
+body.account.firefox input,
+body.files.firefox input,
+body.contacts.firefox input,
+body.calendar.firefox input,
+body.photos.firefox input {
+	margin-top: -2px;
+	padding: 4px 3px 2px;
+	border-bottom-width: 2px;
+	border-right-width: 2px;
+	border-left-width: 2px;
+	border-top-width: 2px;
+	-moz-border-top-colors: #f9f9f9 #707070 ;
+	-moz-border-bottom-colors: #f9f9f9 #cecece ;
+	-moz-border-left-colors: #f9f9f9 #ababab ;
+	-moz-border-right-colors: #f9f9f9 #ababab ;
+}
+
+
+
+body.login input[disabled=disabled], body.login input.disabled,
+body.account input[disabled=disabled], body.login input.disabled,
+body.files input[disabled=disabled], body.files input.disabled,
+body.contacts input[disabled=disabled], body.contacts input.disabled,
+body.calendar input[disabled=disabled], body.calendar input.disabled,
+body.photos input[disabled=disabled], body.photos input.disabled {
+	color: #9a9a9a ! important;
+	background-color: #f9f9f9;
+	border-top: 1px solid #b1b1b1;
+	border-bottom: 1px solid #e0e0e0;
+	border-left: 1px solid #cecece;
+	border-right: 1px solid #cecece;
+	background-image: none;
+	
+}
+
+body.login.firefox input[disabled=disabled], body.login.firefox input.disabled,
+body.account.firefox input[disabled=disabled], body.login.firefox input.disabled,
+body.files.firefox input[disabled=disabled], body.files.firefox input.disabled,
+body.contacts.firefox input[disabled=disabled], body.contacts.firefox input.disabled,
+body.calendar.firefox input[disabled=disabled], body.calendar.firefox input.disabled,
+body.photos.firefox input[disabled=disabled], body.photos.firefox input.disabled {
+	color: #bababa;
+	border-bottom-width: 2px;
+	border-right-width: 2px;
+	border-left-width: 2px;
+	border-top-width: 2px;
+	-moz-border-top-colors: #f9f9f9 #b1b1b1 ;
+	-moz-border-bottom-colors: #f9f9f9 #e0e0e0 ;
+	-moz-border-left-colors: #f9f9f9 #cecece ;
+	-moz-border-right-colors: #f9f9f9 #cecece ;
+}
+
+body.login input:focus, body.login textarea:focus, body.login input.focus, body.login textarea.focus,
+body.account input:focus, body.login textarea:focus, body.login input.focus, body.login textarea.focus,
+body.files input:focus, body.files textarea:focus, body.files input.focus, body.files textarea.focus,
+body.photos input.focus, body.photos textarea.focus,
+body.contacts input:focus, body.contacts input.focus
+/*,
+body.contacts textarea:focus, body.contacts textarea.focus,
+body.calendar input:focus, body.calendar textarea:focus, body.calendar input.focus, body.calendar textarea.focus*/ {
+	background-color: #fefeee;
+	outline-color: #87929e;	
+}
+
+body.login.firefox input:focus, body.login.firefox textarea:focus,
+body.account.firefox input:focus, body.login.firefox textarea:focus,
+body.files.firefox input:focus, body.files.firefox textarea:focus,
+body.photos.firefox input:focus, body.photos.firefox textarea:focus,
+body.contacts.firefox input:focus, body.contacts.firefox input.focus 
+/*,
+body.contacts.firefox textarea:focus,body.contacts.firefox textarea.focus,
+body.calendar.firefox input:focus, body.calendar.firefox  textarea:focus*/ {
+  outline-color: #ced2d5;
+	outline-style: solid;
+	outline-width: 1px;
+	-moz-outline-radius: 2px;
+	-moz-outline-offset: 0px;
+	-moz-border-top-colors: #9ca5ae #7c8288 ;
+	-moz-border-bottom-colors: #b8bec4 #a8aeb4 ;
+	-moz-border-left-colors: #b8bec4 #989ea4;
+	-moz-border-right-colors: #b8bec4 #989ea4 ;
+}
+
+body.login input.invalid, body.login input.invalid:focus,
+body.account input.invalid, body.login input.invalid:focus,
+body.files input.invalid, body.files input.invalid:focus,
+body.contacts input.invalid, body.contacts input.invalid:focus,
+body.calendar input.invalid, body.calendar input.invalid:focus,
+body.photos input.invalid, body.photos input.invalid:focus,
+
+body.login textarea.invalid, body.login textarea.invalid:focus,
+body.account textarea.invalid, body.login textarea.invalid:focus,
+body.files textarea.invalid, body.files textarea.invalid:focus,
+body.contacts textarea.invalid, body.contacts textarea.invalid:focus,
+body.calendar textarea.invalid, body.calendar textarea.invalid:focus,
+body.photos textarea.invalid, body.photos textarea.invalid:focus
+
+ {
+	background-color: #fee5e5;	
+}
+
+body.login textarea,
+body.account textarea,
+body.files textarea,
+body.photos textarea
+/*,
+body.contacts textarea,
+body.calendar textarea*/ {
+		font-family: Helvetica;
+		border-top: 1px solid #707070;
+		border-bottom: 1px solid #cecece;
+		border-left: 1px solid #ababab;
+		border-right: 1px solid #ababab;
+	
+/*		font-size: 13px;*/
+		line-height: 18px;
+		padding: 0px 0px 0px 1px;
+		background:white url('/my/shared/en/198g/images/form_bg.png') repeat-x scroll top left;
+		-webkit-box-shadow: rgba(255,255,255,.65) 0px 1px 1px;
+	
+}
+
+body.login textarea.small,
+body.account textarea.small,
+body.files textarea.small,
+body.contacts textarea.small,
+body.calendar textarea.small,
+body.photos textarea.small {
+/*	font-size: 11px;*/
+	line-height: 15px;
+}
+
+body.login.firefox textarea,
+body.account.firefox textarea,
+body.files.firefox textarea,
+body.photos.firefox textarea/*,
+body.contacts.firefox textarea,
+body.calendar.firefox textarea*/ {
+	padding: 0px 0px 0px 3px ! important;
+	border-bottom-width: 2px;
+	border-right-width: 2px;
+	border-left-width: 2px;
+	border-top-width: 2px;
+	-moz-border-top-colors: #f9f9f9 #707070 ;
+	-moz-border-bottom-colors: #f9f9f9 #cecece ;
+	-moz-border-left-colors: #f9f9f9 #ababab ;
+	-moz-border-right-colors: #f9f9f9 #ababab ;
+}
+
+body.login textarea.disabled,
+body.account textarea.disabled,
+body.files textarea.disabled,
+body.contacts textarea.disabled,
+body.calendar textarea.disabled,
+body.photos textarea.disabled {
+	color: #666;
+	background-color: #f9f9f9;
+	border-top: 1px solid #b1b1b1;
+	border-bottom: 1px solid #e0e0e0;
+	border-left: 1px solid #cecece;
+	border-right: 1px solid #cecece;
+	background-image: none;
+}
+
+body.login.firefox textarea.disabled,
+body.account.firefox textarea.disabled,
+body.files.firefox textarea.disabled,
+body.contacts.firefox textarea.disabled,
+body.calendar.firefox textarea.disabled,
+body.photos.firefox textarea.disabled {
+		color: #bababa;
+		border-bottom-width: 2px;
+		border-right-width: 2px;
+		border-left-width: 2px;
+		border-top-width: 2px;
+		-moz-border-top-colors: #f9f9f9 #b1b1b1 ;
+		-moz-border-bottom-colors: #f9f9f9 #e0e0e0 ;
+		-moz-border-left-colors: #f9f9f9 #cecece ;
+		-moz-border-right-colors: #f9f9f9 #cecece ;
+}
+
+body.login .inline_editor_field,
+body.account .inline_editor_field,
+body.files .inline_editor_field,
+body.calendar .inline_editor_field,
+body.photos .inline_editor_field {
+	-webkit-box-shadow: none;
+}
+
+body.login textarea.inline_editor_field:focus, body.login textarea.inline_editor_field.focus,
+body.account textarea.inline_editor_field:focus, body.login textarea.inline_editor_field.focus,
+body.photos textarea.inline_editor_field:focus, body.photos textarea.inline_editor_field.focus,
+body.files textarea.inline_editor_field:focus, body.files textarea.inline_editor_field.focus /*,
+body.calendar textarea.inline_editor_field:focus,body.calendar textarea.inline_editor_field.focus*/ {
+/*	outline: none ! important;*/
+	padding: 0px 0px 1px! important;
+	background-image: none;
+
+}
+
+/* End ------------------------------------------------------- form_fields.css*/
+
+/* Start ----------------------------------------------------- core.css*/
+
+/* @override 
+*/
+
+/* .Mac Core Styles */
+
+/* @group Header */
+body {
+	margin: 0px;
+	font-family: "Helvetica Neue", Helvetica, Verdana, sans-seif;
+	font-size: 12px;
+	background-color: #eee ;
+	overflow: hidden ;
+}
+
+html, body{height:100%}
+
+.6Row td
+{
+  height: 16.66%; 
+}
+
+.5Row td
+{
+  height: 20%; 
+}
+
+.4Row td
+{
+  height: 25%; 
+}
+
+/* @group SC.CollectionView */
+
+.sc-collection-view .sc-collection-item {
+	cursor: default ;
+}
+
+/* @end */
+
+.calendarHeadings td
+{
+  width:14.28%;
+}
+
+#monthCanvas .calendarHeadings td
+{
+	height: 20px;
+	color: #555;
+	font-size: 11px;
+	text-align: center;
+}
+
+#monthCanvas .calendarGridLabel
+{
+  height:30px;
+	padding-top: 10px;
+	font-weight: bold;
+	font-size: 18px;
+  text-align: center;
+}
+
+.calendarGrid
+{
+  width: 100%; height: 100%; border-collapse: collapse; 
+}
+
+#monthCanvas { width: 100%; height: 100%; cursor: pointer;}
+
+#miniCalCanvas { width:209px; height: 100%; min-height: 168px; clear: both;}
+
+#monthGrid td { border: 1px solid #CCC; width: 14%; vertical-align: top;}
+
+#monthGrid .leftGridCell {
+	border-left: 0px;
+}
+
+#monthGrid .rightGridCell {
+	border-right: 0px;
+}
+
+#monthGrid .events {
+  clear: both;
+  width: 100%;
+  font-size: 10px;
+  min-height: 40px;
+}
+
+#monthGrid .event {
+  color: #000;
+}
+
+#monthGrid .eventSel
+{
+  color: #FFF;
+}
+
+#monthGrid .eventBullet
+{
+  font-weight: bold;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+#monthGrid .dateDisplay {
+  float: right;
+  padding-right: 7px;
+  padding-top: 7px;
+  font-size: 12px;
+}
+
+#miniCalCanvas .calendarHeader {
+	background: url(/static/calendar/en/mini_calendar/mini_cal_header_bg.png) top left repeat;
+	height: 23px;
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: #003459;
+	padding: 0px;
+	text-shadow: rgba(255, 255, 255, 0.75) 0 1px 0;
+/*	text-shadow: 0px 1px 1px #fff; */
+}
+
+#miniCalCanvas .calendarGridLabel {
+	padding-top: 3px;
+}
+
+#miniCalCanvas .calendarHeadings td 
+{
+  height:11px;
+	padding-bottom:2px;
+	font-size: 10px;
+	color: #365672;
+  text-align: center;
+	text-shadow: rgba(255, 255, 255, 0.75) 0 1px 0;
+/*	text-shadow: 0px 1px 1px #fff; */
+}
+
+#miniGrid td { 
+	border: 1px solid #a9bacb; 
+	width: 14.28%; 
+	background: url(/static/calendar/en/mini_calendar/bg_day.png) left repeat; 
+	text-shadow: rgba(255, 255, 255, 0.75) 0 1px 0;
+/*	text-shadow: 0px 1px 1px #fff; */
+}
+
+#miniGrid .leftGridCell {
+	border-left: 0px;
+}
+
+#miniGrid .rightGridCell {
+	border-right: 0px;
+}
+
+#miniGrid .dateDisplay {
+	width: 100%;
+	height: 100px;
+  font-size: 14px;
+	text-align: center;
+	padding-top: 3px;
+	cursor: pointer;
+	border-top: 1px solid #e3e7ec;
+	border-right: 1px solid #e3e7ec;
+}
+
+#miniGrid .todayDate {
+}
+
+#miniGrid .selectedDate {
+	color: #FFF;
+/*	background: url(/static/calendar/en/mini_calendar/mini_cal_selected_day.png) top left repeat; */
+	border: 0px;
+	text-shadow: rgba(0, 0, 0, 0.75) 0 1px 1px;
+/*	text-shadow: 2px 2px 2px #000;	*/
+}
+
+#miniGrid .offMonth {
+  color: #90a5ae;
+}
+
+.todayDate {
+  background-color: #e7edf6;
+}
+
+.selectedDate {
+  background-color: #f5f5f5; 
+}
+
+.offMonth {
+  color: #777;  
+}
+
+/* Week Canvas Classes */
+#weekCanvas { width: 100%; cursor: pointer;}
+
+#weekCanvas .weekHeadings td
+{
+	height: 23px;
+	color: #000;
+	border-right: 1px solid #CCC;
+	font-size: 11px;
+	text-align: center;
+	padding-top:8px;
+}
+
+
+#weekCanvas td.firstColumn
+{
+	width: 51px;
+	border-right: 1px solid #CCC;
+}
+
+#weekCanvas td.allDay
+{
+	border-top: 1px solid #e5e5e5;
+	color: #777;
+}
+
+#weekCanvas .headerDivider
+{
+	height:4px;
+	background: url(/static/calendar/en/canvas/bg_header_divider.png) top left repeat;
+}
+
+#weekCanvas .weekGrid
+{
+	position:relative;
+	width:100%;
+	height:100%;
+	left:0px;
+	right:0px;
+	background-color:#CCC;
+}
+
+#weekCanvas .weekGrid
+{
+	position:relative;
+	width:100%;
+	height:1500px;
+	left:0px;
+	right:0px;
+	background-color:#CCC;
+}
+
+
+button {
+	padding: 2px ;
+	font-size: 12px;
+}
+
+/* @end */
+
+
+/* @group miniCalendar */
+
+.miniPrevMonthButton {
+	float: left;
+	width: 8px;
+	height: 9px;
+	background:url(/static/calendar/en/mini_calendar/mini_cal_prev.png) center no-repeat;
+	cursor: pointer;
+	padding: 5px;
+	border:0px;
+}
+
+.miniNowButton {
+	float: left;
+	width: 73px;
+	height: 17px;
+	background:url(/static/calendar/en/mini_calendar/mini_cal_this.png) center left no-repeat;
+	cursor: pointer;
+	padding: 0px;
+	border:0px;
+}
+
+.miniNextMonthButton {
+	float: right;
+	width: 8px;
+	height: 9px;
+	background:url(/static/calendar/en/mini_calendar/mini_cal_next.png) center no-repeat;
+	cursor: pointer;
+	padding: 5px;
+	border:0px;
+}
+
+/* @end */
+
+
+
+/* End ------------------------------------------------------- core.css*/
+
+/* Start ----------------------------------------------------- unavailable.css*/
+
+.unavailable-placeholder {
+  position: absolute;
+  width: 500px;
+  height: 100px;
+  margin-left: -145px;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  margin-top: -100px;
+  
+  color: #a4aab3;
+  text-shadow: rgba(255,255,255,.75) 0px 1px 0px;
+  filter:alpha(opacity=75);
+}
+.unavailable-placeholder h1 {
+  font-size: 18px;
+  line-height: 23px;
+  color: #90959d;
+  margin-bottom: 5px;
+  font-weight: normal;
+  
+}
+
+.unavailable-placeholder p {
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+
+.unavailable-placeholder a.status_link:link,
+.unavailable-placeholder a.status_link:visited {
+ color: #a4aab3;
+ text-shadow: rgba(255,255,255,.75) 0px 1px 0px;
+ text-decoration: underline;
+}
+
+
+
+.unavailable-placeholder a.status_link:hover,
+.unavailable-placeholder a.status_link:active
+
+ {
+ color: #90959d;
+}
+
+.ie.windows .unavailable-placeholder{
+	width:575px!important;
+	height:135px!important;
+	margin-left:-190px!important;
+	filter:alpha(opacity=75);
+}
+
+.ie.windows .unavailable-placeholder h1{
+	margin-top:-3px!important;
+	background-color:#f3f3f3;
+}
+
+.ie.windows .unavailable-placeholder p{
+	margin-top:0px!important;
+	background-color:#f3f3f3;
+}
+
+.ie8.windows .unavailable-placeholder{
+	width:575px!important;
+	height:135px!important;
+	margin-left:-190px!important;
+	filter:alpha(opacity=75);
+}
+
+.ie8.windows .unavailable-placeholder h1{
+	margin-top:-3px!important;
+	background-color:#f3f3f3;
+}
+
+.ie8.windows .unavailable-placeholder p{
+	margin-top:0px!important;
+	background-color:#f3f3f3;
+}
+
+/* End ------------------------------------------------------- unavailable.css*/
+
+/* Start ----------------------------------------------------- sheet.css*/
+
+/* dotmac theme */
+/* @group Sheet */
+ 
+#panes .sheet-pane {
+	position: absolute ;
+	top: 0;
+	left:  0;
+	width: 100%;
+	height: 100%;
+}
+
+#panes .sheet-pane .pane-wrapper {
+	top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+}
+
+#panes .sheet-pane .pane-wrapper .pane-root img.panel_grad_bg {
+  position:absolute;
+  width: 100%;
+  height: 100%; 
+  z-index: 0;
+}
+
+.ie #panes .sheet-pane .pane-wrapper .pane-root img.panel_grad_bg {
+  display: none;
+}
+
+.ie8 #panes .sheet-pane .pane-wrapper .pane-root img.panel_grad_bg {
+  display: none;
+}
+
+.ie #panes .sheet-pane .shadow {
+	background: #ffffff url('/me/images/panel_grad_bg.png') repeat-x bottom left;	
+}
+
+
+#panes .sheet-pane .pane-wrapper .pane-root .sheet_content {
+    position: relative ;
+	padding: 18px 20px 14px 20px;
+}
+
+.ie #panes .sheet-pane .pane-wrapper .pane-root .sheet_content.scrollable {
+  position: relative ;
+	padding: 0px 0px 14px 0px;
+}
+ 
+#panes .sheet-pane .shadow .top-left-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px 0px;
+}
+
+#panes .sheet-pane .shadow .bottom-left-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -40px;
+}
+
+#panes .sheet-pane .shadow .top-right-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -80px;
+}
+
+#panes .sheet-pane .shadow .bottom-right-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -120px;
+}
+
+#panes .sheet-pane .shadow .top-edge {
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px 0px;
+}
+
+#panes .sheet-pane .shadow .bottom-edge {
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px -30px;
+}
+
+#panes .sheet-pane .shadow .left-edge {
+	background: url('/me/images/shadows_repeat_y.png') repeat-y 0px 0px;
+}
+
+#panes .sheet-pane .shadow .right-edge {
+	background: url('/me/images/shadows_repeat_y.png') repeat-y -30px 0px;
+}
+
+/* @end */
+
+
+/* End ------------------------------------------------------- sheet.css*/
+
+/* Start ----------------------------------------------------- pickerright.css*/
+
+/* dotmac theme */
+/* pickerright: with all css from picker-pane + the follow
+/* @group Core */
+
+#panes .picker-pane.pickerright-pane .pane-wrapper {
+  padding: 0px;
+}
+
+#panes .picker-pane.pickerright-pane .shadow {
+	background: #ececec url('/me/images/reveal_grad_bg.png') repeat-x bottom left;
+}
+
+#panes .picker-pane.pickerright-pane .shadow .top-left-edge {
+	width: 30px;
+	height: 26px;
+	top: -20px;
+	left: -20px;
+	background: url('/me/images/shadow_corners.png') no-repeat -10px -494px;
+}
+
+#panes .picker-pane.pickerright-pane .shadow .bottom-left-edge {
+	position: absolute ;
+	width: 30px;
+	height: 30px;
+	bottom: -30px;
+	left: -20px;
+	background: url('/me/images/shadow_corners.png') no-repeat -10px -520px;
+}
+
+#panes .picker-pane.pickerright-pane .shadow .top-right-edge {
+	width: 30px;
+	height: 26px;
+	top: -20px;
+	right: -21px;
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -574px;
+}
+
+#panes .picker-pane.pickerright-pane .shadow .bottom-right-edge {
+	width: 30px;
+	height: 30px;
+	bottom: -30px;
+	right: -21px;
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -600px;
+}
+
+#panes .picker-pane.pickerright-pane .shadow .top-edge {
+	height: 20px;
+	top: -20px;
+	right: 9px;
+	left: 10px;
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px -180px;
+}
+
+#panes .picker-pane.pickerright-pane .shadow .bottom-edge {
+	height: 30px;
+	bottom: -30px;
+	right: 9px;
+	left: 10px;
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px -210px;
+}
+
+#panes .picker-pane.pickerright-pane .shadow .left-edge {
+	width: 20px;
+	top: 6px;
+	bottom: 0px;
+	left: -20px;
+	background: url('/me/images/shadows_repeat_y.png') repeat-y -180px 0px;
+}
+
+#panes .picker-pane.pickerright-pane .shadow .right-edge {
+	width: 20px;
+	top: 6px;
+	bottom: 0px;
+	right: -20px;
+	background: url('/me/images/shadows_repeat_y.png') repeat-y -210px 0px;
+}
+ 
+#panes .picker-pane.pickerright-pane .shadow .pointer {
+	position: absolute;
+}
+
+#panes .picker-pane.pickerright-pane .shadow .pointer.perfectRight {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px -64px;
+	width: 25px;
+	height: 51px;
+	top: 20px;
+	left: -25px;
+}
+
+#panes .picker-pane.pickerright-pane .shadow .pointer.perfectLeft {
+	background: url('/me/images/reveal-tabs.png') no-repeat -32px -64px;
+	width: 25px;
+	height: 51px;
+	top: 20px;
+	right: -25px;
+}
+
+#panes .picker-pane.pickerright-pane .shadow .pointer.perfectTop {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px 0px;
+	width: 51px;
+	height: 31px;
+	bottom: -41px;
+	left: 50%;
+	margin-left: -25px;
+}
+
+#panes .picker-pane.pickerright-pane .shadow .pointer.perfectBottom {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px -32px;
+	width: 51px;
+	height: 19px;
+	top: -29px;
+	left: 50%;
+	margin-left: -25px;
+}
+
+/* For Quick Reply panel in Webmail */
+#panes .picker-pane.pickerright-pane .shadow .pointer.quickReplyTop {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px 0px;
+	width: 51px;
+	height: 31px;
+	bottom: -41px;
+	right: 20px;
+	margin-left: -25px;
+}
+
+/* For Quick Reply panel in Webmail */  
+#panes .picker-pane.pickerright-pane .shadow .pointer.quickReplyBottom {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px -32px;
+	width: 51px;
+	height: 19px;
+	top: -29px;
+	right: 20px;
+	margin-left: -25px;
+}
+/* @end */
+
+
+/* dotmac theme */
+/* pickerright: with all css from picker-pane + the follow
+/* @group Core */
+
+#vcfpanes .picker-pane.pickerright-pane .pane-wrapper {
+  padding: 0px;
+}
+
+#vcfpanes .picker-pane.pickerright-pane .shadow {
+	background: #ececec url('/me/images/reveal_grad_bg.png') repeat-x bottom left;
+}
+
+#vcfpanes .picker-pane.pickerright-pane .shadow .top-left-edge {
+	width: 30px;
+	height: 26px;
+	top: -20px;
+	left: -20px;
+	background: url('/me/images/shadow_corners.png') no-repeat -10px -494px;
+}
+
+#vcfpanes .picker-pane.pickerright-pane .shadow .bottom-left-edge {
+	position: absolute ;
+	width: 30px;
+	height: 30px;
+	bottom: -30px;
+	left: -20px;
+	background: url('/me/images/shadow_corners.png') no-repeat -10px -520px;
+}
+
+#vcfpanes .picker-pane.pickerright-pane .shadow .top-right-edge {
+	width: 30px;
+	height: 26px;
+	top: -20px;
+	right: -21px;
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -574px;
+}
+
+#vcfpanes .picker-pane.pickerright-pane .shadow .bottom-right-edge {
+	width: 30px;
+	height: 30px;
+	bottom: -30px;
+	right: -21px;
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -600px;
+}
+
+#vcfpanes .picker-pane.pickerright-pane .shadow .top-edge {
+	height: 20px;
+	top: -20px;
+	right: 9px;
+	left: 10px;
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px -180px;
+}
+
+#vcfpanes .picker-pane.pickerright-pane .shadow .bottom-edge {
+	height: 30px;
+	bottom: -30px;
+	right: 9px;
+	left: 10px;
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px -210px;
+}
+
+#vcfpanes .picker-pane.pickerright-pane .shadow .left-edge {
+	width: 20px;
+	top: 6px;
+	bottom: 0px;
+	left: -20px;
+	background: url('/me/images/shadows_repeat_y.png') repeat-y -180px 0px;
+}
+
+#vcfpanes .picker-pane.pickerright-pane .shadow .right-edge {
+	width: 20px;
+	top: 6px;
+	bottom: 0px;
+	right: -20px;
+	background: url('/me/images/shadows_repeat_y.png') repeat-y -210px 0px;
+}
+ 
+#vcfpanes .picker-pane.pickerright-pane .shadow .pointer {
+	position: absolute;
+}
+
+#vcfpanes .picker-pane.pickerright-pane .shadow .pointer.perfectRight {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px -64px;
+	width: 25px;
+	height: 51px;
+	top: 20px;
+	left: -25px;
+}
+
+#vcfpanes .picker-pane.pickerright-pane .shadow .pointer.perfectLeft {
+	background: url('/me/images/reveal-tabs.png') no-repeat -32px -64px;
+	width: 25px;
+	height: 51px;
+	top: 20px;
+	right: -25px;
+}
+
+#vcfpanes .picker-pane.pickerright-pane .shadow .pointer.perfectTop {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px 0px;
+	width: 51px;
+	height: 31px;
+	bottom: -41px;
+	left: 50%;
+	margin-left: -25px;
+}
+
+#vcfpanes .picker-pane.pickerright-pane .shadow .pointer.perfectBottom {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px -32px;
+	width: 51px;
+	height: 19px;
+	top: -29px;
+	left: 50%;
+	margin-left: -25px;
+}
+
+/* For Quick Reply panel in Webmail */
+#vcfpanes .picker-pane.pickerright-pane .shadow .pointer.quickReplyTop {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px 0px;
+	width: 51px;
+	height: 31px;
+	bottom: -41px;
+	right: 20px;
+	margin-left: -25px;
+}
+
+/* For Quick Reply panel in Webmail */  
+#vcfpanes .picker-pane.pickerright-pane .shadow .pointer.quickReplyBottom {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px -32px;
+	width: 51px;
+	height: 19px;
+	top: -29px;
+	right: 20px;
+	margin-left: -25px;
+}
+/* @end */
+
+
+/* dotmac theme */
+/* pickerright: with all css from picker-pane + the follow
+/* @group Core */
+
+.quick_add_panes > .picker-pane.pickerright-pane .pane-wrapper {
+  padding: 0px;
+}
+
+.quick_add_panes > .picker-pane.pickerright-pane .shadow {
+	background: #ececec url('/me/images/reveal_grad_bg.png') repeat-x bottom left;
+}
+
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .top-left-edge {
+	width: 30px;
+	height: 26px;
+	top: -20px;
+	left: -20px;
+	background: url('/me/images/shadow_corners.png') no-repeat -10px -494px;
+}
+
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .bottom-left-edge {
+	position: absolute ;
+	width: 30px;
+	height: 30px;
+	bottom: -30px;
+	left: -20px;
+	background: url('/me/images/shadow_corners.png') no-repeat -10px -520px;
+}
+
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .top-right-edge {
+	width: 30px;
+	height: 26px;
+	top: -20px;
+	right: -21px;
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -574px;
+}
+
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .bottom-right-edge {
+	width: 30px;
+	height: 30px;
+	bottom: -30px;
+	right: -21px;
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -600px;
+}
+
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .top-edge {
+	height: 20px;
+	top: -20px;
+	right: 9px;
+	left: 10px;
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px -180px;
+}
+
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .bottom-edge {
+	height: 30px;
+	bottom: -30px;
+	right: 9px;
+	left: 10px;
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px -210px;
+}
+
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .left-edge {
+	width: 20px;
+	top: 6px;
+	bottom: 0px;
+	left: -20px;
+	background: url('/me/images/shadows_repeat_y.png') repeat-y -180px 0px;
+}
+
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .right-edge {
+	width: 20px;
+	top: 6px;
+	bottom: 0px;
+	right: -20px;
+	background: url('/me/images/shadows_repeat_y.png') repeat-y -210px 0px;
+}
+ 
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .pointer {
+	position: absolute;
+}
+
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .pointer.perfectRight {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px -64px;
+	width: 25px;
+	height: 51px;
+	top: 20px;
+	left: -25px;
+}
+
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .pointer.perfectLeft {
+	background: url('/me/images/reveal-tabs.png') no-repeat -32px -64px;
+	width: 25px;
+	height: 51px;
+	top: 20px;
+	right: -25px;
+}
+
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .pointer.perfectTop {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px 0px;
+	width: 51px;
+	height: 31px;
+	bottom: -41px;
+	left: 50%;
+	margin-left: -25px;
+}
+
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .pointer.perfectBottom {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px -32px;
+	width: 51px;
+	height: 19px;
+	top: -29px;
+	left: 50%;
+	margin-left: -25px;
+}
+
+/* For Quick Reply panel in Webmail */
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .pointer.quickReplyTop {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px 0px;
+	width: 51px;
+	height: 31px;
+	bottom: -41px;
+	right: 20px;
+	margin-left: -25px;
+}
+
+/* For Quick Reply panel in Webmail */  
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .pointer.quickReplyBottom {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px -32px;
+	width: 51px;
+	height: 19px;
+	top: -29px;
+	right: 20px;
+	margin-left: -25px;
+}
+
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .pointer.perfectRight {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px -64px;
+	width: 25px;
+	height: 51px;
+	top: 20px;
+	left: 0px;
+}
+
+.quick_add_panes > .picker-pane.pickerright-pane .shadow .pointer.perfectLeft {
+	background: url('/me/images/reveal-tabs.png') no-repeat -32px -64px;
+	width: 25px;
+	height: 51px;
+	top: 20px;
+	right: -25px;
+}
+
+/* @end */
+
+
+#quickReplyPane .picker-pane.pickerright-pane .pane-wrapper {
+  padding: 0px;
+}
+
+#quickReplyPane .picker-pane.pickerright-pane .shadow {
+	background: #ececec url('/me/images/reveal_grad_bg.png') repeat-x bottom left;
+}
+
+#quickReplyPane .picker-pane.pickerright-pane .shadow .top-left-edge {
+	width: 30px;
+	height: 26px;
+	top: -20px;
+	left: -20px;
+	background: url('/me/images/shadow_corners.png') no-repeat -10px -494px;
+}
+
+#quickReplyPane .picker-pane.pickerright-pane .shadow .bottom-left-edge {
+	position: absolute ;
+	width: 30px;
+	height: 30px;
+	bottom: -30px;
+	left: -20px;
+	background: url('/me/images/shadow_corners.png') no-repeat -10px -520px;
+}
+
+#quickReplyPane .picker-pane.pickerright-pane .shadow .top-right-edge {
+	width: 30px;
+	height: 26px;
+	top: -20px;
+	right: -21px;
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -574px;
+}
+
+#quickReplyPane .picker-pane.pickerright-pane .shadow .bottom-right-edge {
+	width: 30px;
+	height: 30px;
+	bottom: -30px;
+	right: -21px;
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -600px;
+}
+
+#quickReplyPane .picker-pane.pickerright-pane .shadow .top-edge {
+	height: 20px;
+	top: -20px;
+	right: 9px;
+	left: 10px;
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px -180px;
+}
+
+#quickReplyPane .picker-pane.pickerright-pane .shadow .bottom-edge {
+	height: 30px;
+	bottom: -30px;
+	right: 9px;
+	left: 10px;
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px -210px;
+}
+
+#quickReplyPane .picker-pane.pickerright-pane .shadow .left-edge {
+	width: 20px;
+	top: 6px;
+	bottom: 0px;
+	left: -20px;
+	background: url('/me/images/shadows_repeat_y.png') repeat-y -180px 0px;
+}
+
+#quickReplyPane .picker-pane.pickerright-pane .shadow .right-edge {
+	width: 20px;
+	top: 6px;
+	bottom: 0px;
+	right: -20px;
+	background: url('/me/images/shadows_repeat_y.png') repeat-y -210px 0px;
+}
+ 
+#quickReplyPane .picker-pane.pickerright-pane .shadow .pointer {
+	position: absolute;
+}
+
+#quickReplyPane .picker-pane.pickerright-pane .shadow .pointer.perfectRight {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px -64px;
+	width: 25px;
+	height: 51px;
+	top: 20px;
+	left: -25px;
+}
+
+#quickReplyPane .picker-pane.pickerright-pane .shadow .pointer.perfectLeft {
+	background: url('/me/images/reveal-tabs.png') no-repeat -32px -64px;
+	width: 25px;
+	height: 51px;
+	top: 20px;
+	right: -25px;
+}
+
+#quickReplyPane .picker-pane.pickerright-pane .shadow .pointer.perfectTop {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px 0px;
+	width: 51px;
+	height: 31px;
+	bottom: -41px;
+	left: 50%;
+	margin-left: -25px;
+}
+
+#quickReplyPane .picker-pane.pickerright-pane .shadow .pointer.perfectBottom {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px -32px;
+	width: 51px;
+	height: 19px;
+	top: -29px;
+	left: 50%;
+	margin-left: -25px;
+}
+
+/* For Quick Reply panel in Webmail */
+#quickReplyPane .picker-pane.pickerright-pane .shadow .pointer.quickReplyTop {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px 0px;
+	width: 51px;
+	height: 31px;
+	bottom: -41px;
+	right: 20px;
+	margin-left: -25px;
+}
+
+/* For Quick Reply panel in Webmail */  
+#quickReplyPane .picker-pane.pickerright-pane .shadow .pointer.quickReplyBottom {
+	background: url('/me/images/reveal-tabs.png') no-repeat 0px -32px;
+	width: 51px;
+	height: 19px;
+	top: -29px;
+	right: 20px;
+	margin-left: -25px;
+}
+
+
+/* End ------------------------------------------------------- pickerright.css*/
+
+/* Start ----------------------------------------------------- dock.css*/
+
+/* @override http://uie1.apple.com/my/_raw/_cache/shared_1a/english.lproj/dock-1204921595.css */
+
+/* @group Main Layout */
+.no-select
+{
+  -moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+  cursor: default;
+}
+
+
+.wrapper {
+	
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	min-width: 954px;
+}
+/*TODO : cleanup .wrapper*/
+.mac .wrapper{
+  position:absolute;
+}
+
+.ie .wrapper{
+  position:absolute;
+}
+
+.firefox .wrapper{
+  position:absolute;
+}
+
+.safari .wrapper{
+  position:absolute;
+}
+
+.ie8 .wrapper{
+  position:float;
+}
+
+
+#header {
+	position: absolute;
+	height: 41px;
+	left: 0;
+	top: 0;
+	right: 0;
+}
+
+
+.wrapper .main_container {
+	position: absolute;
+	top: 43px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow: hidden;
+}
+
+.main_container_loading {
+	height:100%;
+	opacity: .75;
+	-moz-opacity: 0.75;
+	filter: alpha(opacity = 75);        
+}
+
+.firefox .main_container_loading, .safari .main_container_loading { /*TODO : fix IE7;*/
+	position: relative;
+	overflow: hidden;
+}
+
+.fake_sidebar {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	border-right: 1px solid #bcc2c7;
+	width: 209px;
+	background: #dfe1e3;
+}
+
+#loading_container {
+	position: absolute; 
+	top:50%; 
+	left:50%; 
+	margin-top:-16px;
+	filter:alpha(opacity=75);
+}
+
+.ie8 #loading_container {
+	width:100%;
+}
+
+.loading_spinner {
+	background-image: url('/me/images/spinner_32px_f3f5f5.gif'); 
+	vertical-align: middle; 
+	position: relative;
+	height: 32px;
+}
+
+.appIsStillLoadingSpinner {
+	background: url('/me/images/spinner_32px_f3f5f5.gif') no-repeat; 
+	width: 100%;
+	height:32px;
+	left:50%;
+	margin-left:-16px;
+	position:relative;
+	margin-bottom: 5px;
+}
+.loading_spinner_text {
+	margin-left: 4px; 
+	position: relative; 
+	top: 3px; 
+}
+
+.ie.windows .loading_spinner_text {
+	background-color:#f3f3f3;
+}
+
+.ie.windows #loading_container {
+	filter:alpha(opacity=75);
+}
+
+/* @end */
+
+/* @group Header */
+
+/* @group Core */
+
+#header {
+	background-color: #40404a;
+	/*border-top: 1px solid #33373a;
+		border-bottom: 1px solid #33373a;*/
+	padding: 1px 0px 1px 0px;
+	overflow: hidden ;
+	text-align: center;
+	background: url('/me/images/controls.png') repeat-x left -3696px;
+}
+
+#header .left {
+	position: absolute ;
+	height: 41px;
+	top:  0px;
+	left: 5px;
+	z-index:90;
+}
+
+#header .right {
+	position: absolute ;
+	right:  0px;
+	top:  0;
+	height: 41px;
+	z-index:90;
+}
+
+#header .toolbar_container {
+  height: 20px;
+  position:relative;
+  top: 12px;
+  z-index:89;
+}
+#header .toolbar_container .toolbar {
+	height: 20px;
+}
+
+/* @end */
+
+/* @group Toolbar Buttons */
+
+#header .toolbar_container a.button {
+	display: -moz-inline-box;
+	display: inline-block;
+	vertical-align: middle ;
+	height: 24px;
+	margin-top: -4px ! important;
+	position: relative;
+	background:  url('/me/images/controls.png') no-repeat left -2904px ;
+}
+
+#header .toolbar_container a.button.active,
+#header .toolbar_container a.button.sel {
+	background-position: left -2928px;	
+}
+
+#header .toolbar_container a.button.disabled,
+#header .toolbar_container a.button.sel.disabled {
+	background-position: left -2952px;	
+}
+
+#header .toolbar_container a.normal {
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+#header .toolbar_container a.button .button-inner {
+	display: block ;
+	position: relative;
+	height: 24px;
+	line-height: 20px;
+	width: 48px;
+	text-align: center ;
+	background:  url('/me/images/controls.png') no-repeat right -3120px ;
+}
+
+#header .toolbar_container a.button.active .button-inner,
+#header .toolbar_container a.button.sel .button-inner {
+	background-position: right -3144px;
+}
+
+#header .toolbar_container a.button.disabled .button-inner,
+#header .toolbar_container a.button.sel.disabled .button-inner {
+	background-position: right -3168px;
+}
+
+#header .toolbar_container .button img {
+	height: 16px;
+	width: 32px;
+	vertical-align: middle ;
+	position: absolute ;
+	top: 3px;
+	left: 8px;
+	z-index: 99;
+}
+
+#header .toolbar_container a.mid img {
+	left: 6px;
+}
+
+#header .toolbar_container a.mid {
+	background-position: left -2976px ;
+	margin-left: -1px;
+	margin-right: 0 ;
+}
+
+#header .toolbar_container a.mid.active,
+#header .toolbar_container a.mid.sel {
+	background-position: left -3000px ;
+}
+
+#header .toolbar_container a.mid.disabled,
+#header .toolbar_container a.mid.sel.disabled {
+	background-position: left -3024px ;
+}
+
+#header .toolbar_container a.mid .button-inner {
+	width: 44px;
+}
+
+#header .toolbar_container a.left-end {
+	margin-right: 0  ;
+}
+
+#header .toolbar_container a.right-end {
+	background-position: left -2976px ;
+	margin-left: -1px;
+}
+
+#header .toolbar_container a.right-end.active,
+#header .toolbar_container a.right-end.sel {
+	background-position: left -3000px ;
+}
+
+#header .toolbar_container a.right-end.disabled,
+#header .toolbar_container a.right-end.sel.disabled {
+	background-position: left -3024px ;
+}
+
+#header .toolbar_container a.left-end .button-inner {
+	background-position: right -3192px ;
+	width: 45px;
+}
+
+#header .toolbar_container a.left-end.active .button-inner,
+#header .toolbar_container a.left-end.sel .button-inner {
+	background-position: right -3216px ;
+}
+
+#header .toolbar_container a.left-end.disabled .button-inner,
+#header .toolbar_container a.left-end.sel.disabled .button-inner {
+	background-position: right -3240px ;
+}
+
+#header .toolbar_container a.mid .button-inner {
+	background-position: right -3192px ;
+}
+
+#header .toolbar_container a.mid.active .button-inner,
+#header .toolbar_container a.mid.sel .button-inner {
+	background-position: right -3216px ;
+}
+
+#header .toolbar_container a.mid.disabled .button-inner {
+	background-position: right -3240px ;
+}
+
+#header .toolbar_container .button .label,
+#header .toolbar_container .button.active .label {
+	background:  url('/me/images/controls.png') repeat-x left -3048px ;
+  color: #f0f0f0;
+	display: block;
+  font-size: 12px;
+	height: 24px;
+	line-height: 24px;
+	margin: 0 8px;
+  position: relative;
+	z-index: 50;
+}
+#header .toolbar_container .button.disabled .label,
+#header .toolbar_container .button.active.disabled .label {
+	background-position: left -3096px ;
+}
+#header .toolbar_container .button.sel	 .label,
+#header .toolbar_container .button.active .label {
+	background-position: left -3072px ;
+}
+
+/* Toolbar exceptions and overrulings */
+#header .toolbar_container #toolbar .today_button {
+  margin-right: 7px;
+}
+.calendar #header .toolbar_container .action_button,
+.files #header .toolbar_container a.action_button {
+  margin-left: 7px;
+}
+#header .toolbar_container #toolbar .today_button {
+	min-width: 58px;
+}
+#header .toolbar_container #toolbar .day_canvas_button,
+#header .toolbar_container #toolbar .week_canvas_button,
+#header .toolbar_container #toolbar .month_canvas_button,
+#header .toolbar_container #toolbar .today_button .button-inner,
+#header .toolbar_container #toolbar .day_canvas_button .button-inner,
+#header .toolbar_container #toolbar .week_canvas_button .button-inner,
+#header .toolbar_container #toolbar .month_canvas_button .button-inner {
+	width: 58px;
+}
+#header .toolbar_container #toolbar .prev_button,
+#header .toolbar_container #toolbar .next_button,
+#header .toolbar_container #toolbar .prev_button .button-inner,
+#header .toolbar_container #toolbar .next_button .button-inner {
+	width: 26px;
+}
+#header .toolbar_container #toolbar .prev_button img,
+#header .toolbar_container #toolbar .next_button img {
+	left: 6px;
+	width: 16px;
+}
+#header .toolbar_container #toolbar .prev_button img.prev-icon {
+	background-position: -8px -3936px;
+}
+#header .toolbar_container #toolbar .next_button img.next-icon {
+	background-position: -10px -3968px;
+}
+#header a.regular.sel.active {
+  background: none;
+}
+/* Toolbar exceptions for iDisk */
+.files #header .toolbar_container a.right-end {
+  margin-right: 7px;
+}
+/* @end */
+
+/* @group Search */
+
+#header .search_wrapper {
+	position:  absolute ;
+	height: 24px;
+	padding: 0;
+	margin:  0;
+	top: 9px;
+	width: 141px;
+}
+
+#header .search_wrapper .search-left {
+	position: absolute ;	
+	left:  0;
+	top:  0;
+	width: 19px;
+	height: 24px;
+	background:  url('/me/images/controls.png') no-repeat left -3624px ;
+}
+
+#header .search_wrapper .search-right {
+	position: absolute ;	
+	right:  0;
+	top:  0;
+	width: 10px;
+	height: 24px;
+  background:  url('/me/images/controls.png') no-repeat right -3672px ;
+}
+
+#header .search_wrapper .search-clear {
+	position: absolute ;	
+	right:  3px;
+	top:  5px;
+	width: 16px;
+	height: 16px;
+  background:  url('/me/images/controls.png') no-repeat left -5472px ;
+}
+
+#header .search_wrapper a.button {
+	display: inline ;
+	background: none ;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0;
+	padding-right: 0;
+	position: absolute ;	
+	right:  3px;
+	top:  5px;
+	width: 16px;
+	height: 16px;
+	min-width:16px;
+}
+
+#header .search_wrapper a.button img.search_clear_button {
+	position: absolute ;
+	top: 0px;
+	left: 0px;	
+	width: 16px;
+	height: 16px;
+  background:  url('/me/images/controls.png') no-repeat left -5472px ;
+}
+
+#header .search_wrapper a.button.active img.search_clear_button {
+	background-position: left -5504px ;
+}
+
+#header input.search_field {
+	position:  absolute ;
+	line-height: 16px;
+	height:  20px;
+	top: 0;
+	left: 19px;
+	right: 20px;
+	width: 108px;
+	background:  url('/me/images/controls.png') repeat-x right -3648px ;
+	border: none ;
+	outline: none ;
+	padding: 2px;
+	margin: 0;
+	color: #f0f0f0;
+	font-size: 13px;
+	text-shadow: #323232 0px 1px 1px;
+   -webkit-box-shadow: none ! important;
+}
+
+#header input.search_field.show-hint {
+  color:#b0b3b5;
+}
+
+.firefox #header input.search_field {
+  height:  18px;
+  padding-top: 4px;
+  padding-bottom:2px;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Dock */
+
+.wrapper .dock a.button {
+	display: inline ;
+	background: none ;
+	float: left;
+	height: 40px;
+	margin-right: 6px;
+	padding: 0;
+	position: relative ;
+	top: 2px;
+}
+
+.wrapper .dock a.button.disabled {
+  opacity: 0.50;
+  filter: alpha(opacity=50);
+  -moz-opacity: .50 ;
+}
+/*
+.no-demo .wrapper .dock a.button.photos_button,
+.no-demo .wrapper .dock a.button.files_button {
+  display: none;
+}
+*/
+
+.wrapper .dock a.button .inner-button {
+	display: inline ;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper .dock a.button img {
+	width: 32px;
+	height: 40px;
+	position: static;
+	vertical-align: middle;
+  cursor: pointer;
+	background-image: url('/me/images/shared_single.png') ;
+}
+
+.wrapper .dock a.button img.app-icon-webmail {
+	background-position: left -1602px ;
+}
+
+.wrapper .dock a.button.sel img.app-icon-webmail {
+	background-position: left -1642px ;
+}
+
+.wrapper .dock a.button img.app-icon-contacts {
+	background-position: left -1682px ;
+}
+
+.wrapper .dock a.button.sel img.app-icon-contacts {
+	background-position: left -1722px ;
+}
+
+.wrapper .dock a.button img.app-icon-calendar {
+	background-position: left -1762px;
+}
+
+.wrapper .dock a.button.sel img.app-icon-calendar {
+	background-position: left -1802px;
+}
+
+.wrapper .dock a.button img.app-icon-photos {
+	background-position: left -1842px ;
+}
+
+.wrapper .dock a.button.sel img.app-icon-photos {
+	background-position: left -1882px ;
+}
+
+.wrapper .dock a.button img.app-icon-files {
+	background-position: left -1922px ;
+}
+
+.wrapper .dock a.button.sel img.app-icon-files {
+	background-position: left -1962px ;
+}
+
+.wrapper .dock a.button img.app-icon-findmyiphone {
+	background-position: left -2722px ;
+}
+
+.wrapper .dock a.button.sel img.app-icon-findmyiphone {
+	background-position: left -2762px ;
+}
+
+.wrapper .dock a.button img.app-icon-account {
+	background-position: left -2002px ;
+}
+
+.wrapper .dock a.button.sel img.app-icon-account {
+	background-position: left -2042px ;
+}
+
+/* Calendar day of week states */
+.wrapper .dock a.button.sunday img.app-icon-calendar { background-position: left -2082px; }
+.wrapper .dock a.button.sunday.sel img.app-icon-calendar { background-position: left -2122px; }
+.wrapper .dock a.button.monday img.app-icon-calendar { background-position: left -2162px; }
+.wrapper .dock a.button.monday.sel img.app-icon-calendar { background-position: left -2202px; }
+.wrapper .dock a.button.tuesday img.app-icon-calendar { background-position: left -2242px; }
+.wrapper .dock a.button.tuesday.sel img.app-icon-calendar { background-position: left -2282px; }
+.wrapper .dock a.button.wednesday img.app-icon-calendar { background-position: left -2322px; }
+.wrapper .dock a.button.wednesday.sel img.app-icon-calendar { background-position: left -2362px; }
+.wrapper .dock a.button.thursday img.app-icon-calendar { background-position: left -2402px; }
+.wrapper .dock a.button.thursday.sel img.app-icon-calendar { background-position: left -2442px; }
+.wrapper .dock a.button.friday img.app-icon-calendar { background-position: left -2482px; }
+.wrapper .dock a.button.friday.sel img.app-icon-calendar { background-position: left -2522px; }
+.wrapper .dock a.button.saturday img.app-icon-calendar { background-position: left -2562px; }
+.wrapper .dock a.button.saturday.sel img.app-icon-calendar { background-position: left -2602px; }
+
+
+.wrapper .thin_client_main {
+  position: absolute ;
+  top: 0 ;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* @group Badging */
+
+.dock-badge {
+	position: absolute ;
+	width: 16px;
+	height: 16px;
+	background: url('/me/images/shared_single.png') no-repeat left top;
+  line-height: 15px;
+	text-align: center;
+	top: 5px;
+}
+
+.dock-beta-badge {
+	position: absolute;
+	width: 26px;
+	height: 15px;
+	background: url('/me/images/beta_26x15.png') no-repeat left top;
+  line-height: 15px;
+	text-align: center;
+	top: -2px;
+	left: 3px;
+}
+
+#popupPage
+{
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  opacity: 0.0;
+  z-index: 999;
+}
+
+.dock-badge.single-unread-badge {
+	background-position: left -928px ;
+	left: 19px;
+	visibility: visible;
+}
+
+.dock-badge.double-unread-badge {
+	background-position: left -960px ;
+	left: 16px;
+	visibility: visible;
+	width: 21px;
+}
+
+.dock-badge.triple-unread-badge {
+	background-position: left -992px ;
+	left: 14px;
+	visibility: visible;
+	width:  27px;
+}
+
+.dock-badge.quadruple-unread-badge {
+	background-position: -32px -960px ;
+	left: 11px;
+	visibility: visible;
+	width: 33px;
+}
+
+.dock-badge.warning-badge {
+	background-position: left -1024px ;
+	visibility: visible;
+	width:  16px;
+}
+
+.dock-badge.info-badge {
+	background-position: left -1056px ;
+	visibility: visible;
+}
+
+/* @end */
+
+
+/* End ------------------------------------------------------- dock.css*/
+
+/* Start ----------------------------------------------------- tab.css*/
+
+/* dotmac theme */
+/* @override http://home.sproutbox.com/static/_raw/vendor/plugins/sprout_core/parts/sproutcore/english.lproj/tab.css?1190700853 */
+
+/* @group Segmented Tab View */
+
+.tab.segmented {
+	border: none ;
+	margin-top: 20px;
+	padding-top:  6px;
+}
+
+.tab.segmented .segments {
+	position: relative ;
+	top: -18px;
+	height: 10px;
+	text-align: center;
+}
+
+.tab.segmented .root {
+	margin-left: 12px;
+	margin-right: 12px;
+	margin-bottom: 10px;
+}
+
+/* @end */
+
+/* End ------------------------------------------------------- tab.css*/
+
+/* Start ----------------------------------------------------- retry_progress.css*/
+
+#retry_progress_panel p {
+  margin-top: 0px;
+}
+
+#retry_progress_panel h1 {
+  margin-top: 0px;
+}
+#retry_progress_panel .progress_bar {
+  margin: 12px 0px 6px;
+}
+
+#retry_progress_panel .progress_bar.progress .outer-head{
+	left:-225px;
+}
+#retry_progress_panel .progress .inner {
+  margin-left:0;
+}
+
+
+/* End ------------------------------------------------------- retry_progress.css*/
+
+/* Start ----------------------------------------------------- progress.css*/
+
+.progress .inner
+{
+	background: url('/me/images/animation_sprite.gif') scroll repeat-x 0px 0px ;
+	position:relative;
+  margin-top:-19px;
+  height:16px;
+	width: 0px;
+    -webkit-transition-property: width;
+    -webkit-transition-duration: .2s;
+    -webkit-transition-timing-function: linear;
+}
+
+.progress.outer
+{
+	background: url('/me/images/progress_bar_sprite.png') repeat-x 0px -80px ;
+	height:20px;
+  width:auto;
+}
+
+.progress .outer-head {
+  height:19px;
+  left:-2px;
+  position:relative;
+  width:2px;
+  background: url('/me/images/progress_bar_sprite.png') no-repeat 0px 0px ;
+}
+
+.progress .outer-tail {
+  height:19px;
+  margin-left:0px;
+  margin-top:-16px;
+  position: relative;
+  right: -100%;
+  width:2px;
+  background: url('/me/images/progress_bar_sprite.png') no-repeat right -40px ;
+}
+
+.progress.small .inner
+{
+  -webkit-transition-duration: .4s;
+	background-position:  0px -20px;
+	position:relative;
+  margin-top:-12px;
+  height:10px;
+	width: 0px;
+}
+
+.progress.small.outer
+{
+	background-position: 0px -200px;
+	height:12px;
+  width:auto;
+}
+
+.progress.small .outer-head {
+  height:12px;
+  left:-1px;
+  position:relative;
+  width:1px;
+  background-position: 0px -120px ;
+}
+
+.progress.small .outer-tail {
+  height:12px;
+ 
+  margin-top:-10px;
+  position:relative;
+  right:-100%;
+  width:1px;
+  background-position: right -160px ;
+}
+
+.progress.indeterminate .inner {
+  background-position:  0px -32px;
+}
+
+.progress.indeterminate.small .inner {
+  background-position:  0px -52px;
+}
+
+.progress.disabled .inner {
+  display: none;
+}
+
+.progress.disabled.outer {
+  background-position: 0px -100px;
+}
+
+.progress.disabled.outer.small {
+  background-position: 0px -220px;
+}
+
+
+
+
+/* End ------------------------------------------------------- progress.css*/
+
+/* Start ----------------------------------------------------- icon_sprites.css*/
+
+/* @override 
+*/
+
+/* @group Shared Toolbar Icons */
+
+a.button img.shared-toolbar-sprite {
+	background: url('/me/images/controls.png') top left ;
+}
+
+a.button img.shared-toolbar-sprite.actions-icon {
+	background-position: left -3808px;
+}
+
+a.button.disabled img.shared-toolbar-sprite.actions-icon {
+	background-position: left -3824px;
+}
+
+a.button img.shared-toolbar-sprite.add-icon {
+	background-position: left -3840px;
+}
+
+a.button.disabled img.shared-toolbar-sprite.add-icon {
+	background-position: left -3856px;
+}
+
+a.button img.shared-toolbar-sprite.upload-icon {
+	background-position: left -3872px;
+}
+
+a.button.disabled img.shared-toolbar-sprite.upload-icon {
+	background-position: left -3888px;
+}
+
+a.button img.shared-toolbar-sprite.delete-icon {
+	background-position: left -3904px;
+}
+
+a.button.disabled img.shared-toolbar-sprite.delete-icon {
+	background-position: left -3920px;
+}
+
+a.button img.shared-toolbar-sprite.prev-icon {
+	background-position: left -3936px;
+}
+
+a.button.disabled img.shared-toolbar-sprite.prev-icon {
+	background-position: left -3952px;
+}
+
+a.button img.shared-toolbar-sprite.next-icon {
+	background-position: left -3968px;
+}
+
+a.button.disabled img.shared-toolbar-sprite.next-icon {
+	background-position: left -3984px;
+}
+
+a.button img.shared-toolbar-sprite.fpo-icon {
+	background-position: left -4296px;
+}
+
+a.button.disabled img.shared-toolbar-sprite.fpo-icon {
+	background-position: left -4296px;
+}
+
+
+
+
+/* @end */
+
+/* End ------------------------------------------------------- icon_sprites.css*/
+
+/* Start ----------------------------------------------------- menu.css*/
+
+/* dotmac theme */
+/* @override http://localhost/static/_raw/vendor/plugins/sprout_core/parts/sproutcore/english.lproj/menus.css */
+
+/************************ over-write sc-theme **************************/
+#panes .pane.menu-pane .shadow .top-left-edge {
+	width: 30px;
+	height: 30px;
+	background: url('/me/images/shadow_corners.png') no-repeat -10px -810px;
+}
+
+#panes .pane.menu-pane .shadow .bottom-left-edge {
+	width: 30px;
+	height: 30px;
+	bottom: -27px;
+	background: url('/me/images/shadow_corners.png') no-repeat -10px -680px;
+}
+
+#panes .pane.menu-pane .shadow .top-right-edge {
+	width: 30px;
+	height: 30px;
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -890px;
+}
+
+#panes .pane.menu-pane .shadow .bottom-right-edge {
+	width: 30px;
+	height: 30px;
+	bottom: -27px;
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -760px;
+}
+
+#panes .pane.menu-pane .shadow .top-edge {
+	right: 10px;
+	left: 10px;
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px -300px;
+}
+
+#panes .pane.menu-pane .shadow .bottom-edge {
+	right: 10px;
+	left: 10px;
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px -270px;
+}
+
+#panes .pane.menu-pane .shadow .left-edge {
+	top: 10px;
+	bottom: 3px;
+	background: url('/me/images/shadows_repeat_y.png') repeat-y -240px 0px;
+}
+
+#panes .pane.menu-pane .shadow .right-edge {
+	top: 10px;
+	bottom: 3px;
+	background: url('/me/images/shadows_repeat_y.png') repeat-y -270px 0px;
+}
+
+/* @group Core */
+#source_menu a,
+#actions_menu a,
+#new_menu a {
+  cursor: default;
+}
+
+.menu-pane {
+	position: absolute ;
+	top:  0px;
+	left:  0px;
+	width: 100%;
+	height: 100%;
+}
+
+.menu-pane .pane-root {
+	position: relative ;
+}
+
+.menu-pane ul.menu {
+	list-style-type: none ;
+	margin: 0px;
+	padding: 0px;
+	background-color: transparent;
+	position: relative ;
+}
+
+.menu-pane li.menu-item {
+	margin:  0px;
+	padding:  0px;
+	padding-top: 1px;
+	position:  relative ;
+	display: block ;
+}
+
+.menu-pane li.menu-item a:active,
+.menu-pane li.menu-item a:focus {
+	outline: none ;
+}
+
+.menu-pane li.menu-item a {
+	display: block ;
+	text-decoration: none ;
+	color:  black ;
+	margin: 0px;
+	position: relative ;
+}
+
+.menu-pane li.menu-item.active a,
+.menu-pane li.menu-item.def a {
+  background: url('/me/images/controls.png') repeat-x 0px -2352px;
+  color: #ffffff;
+	border: none;
+}
+
+.ie .menu-pane li.menu-item.active a,
+.ie .menu-pane li.menu-item.def a {
+  background: url('/me/images/controls.png') repeat-x 0px -2351px;
+}
+
+.menu-pane li.menu-item.disabled a,
+.menu-pane li.menu-item.disabled:hover a {
+	color: #999999;
+	background: transparent;
+}
+ 
+.menu-pane li.menu-item .inner {
+	display: block ;
+	line-height: 13px;
+	padding: 3px 23px 4px 23px;
+	margin: 0px;
+}
+
+.ie .menu-pane li.menu-item .inner {
+	padding: 1px 23px 2px 23px;
+}
+
+.menu-pane li.menu-item a img {
+	border: none ;
+	vertical-align: middle ;
+	position: relative ;
+	top: -1px;
+	width: 16px;
+	height: 16px;
+	margin: -2px 0px;
+	padding-right: 4px;
+}
+
+.menu-pane li.menu-item.disabled a img {
+	opacity: .50;
+	filter: alpha(opacity=50);
+	-moz-opacity: .50 ;
+}
+
+.menu-pane li.menu-item .shortcut {
+	position: absolute ;
+	right: 0px;
+	top:  0px;
+	padding: 1px 9px 5px 9px;
+	text-align: right ;
+}
+
+.menu-pane li.menu-item a span.sel,
+.menu-pane li.menu-item a span.mixed {
+	position: absolute ;
+	left: 0px;
+	top:  0px;
+	padding: 1px 7px 5px 6px;
+	padding-right: 0px;
+	display: none ;
+	text-align: center ;
+	width: 10px;
+	font-size: 13px ;
+}
+
+.menu-pane li.menu-item a span.mixed {
+	font-weight: bold ;
+	padding-top: 1px;
+}
+
+.menu-pane li.menu-item.sel a span.sel,
+.menu-pane li.menu-item.mixed a span.mixed {
+	display: block ;
+}
+
+.menu-pane li.separator {
+	height: 1px;
+	margin: 4px 0px;
+	background-color: #eaeaea;
+}
+
+.ie .menu-pane li.separator {
+	margin: -10px 0px 0px 0px;
+}
+
+.mac .menu-pane li.menu-item .shortcut .classshortcutstring,
+.windows .menu-pane li.menu-item .shortcut .classshortcutimagecross,
+.windows .menu-pane li.menu-item .shortcut .classshortcutimagearrow,
+.windows .menu-pane li.menu-item .shortcut .classshortcutimagemid,
+.windows .menu-pane li.menu-item .shortcut .classshortcutimageenter {
+  display: none;
+}
+
+.mac .menu-pane li.menu-item .shortcut  .classshortcutimagecross {
+  background-image: url('/me/images/controls.png');
+  background-repeat:no-repeat ;
+  background-position:0px -4352px;
+  width: 15px; 
+  height:11px;
+  left: -6px;
+  background-attachment:scroll;
+  position:absolute;
+  margin-top:2px;
+}
+
+.mac .menu-pane li.menu-item.def .shortcut  .classshortcutimagecross{
+  background-position:0px -4384px;
+}
+
+.mac .menu-pane li.menu-item.disabled .shortcut  .classshortcutimagecross {
+  background-position:0px -4368px;
+}
+
+.mac .menu-pane li.menu-item .shortcut .classshortcutimagearrow {
+  background-image:url('/me/images/controls.png');
+  background-repeat:no-repeat ;
+  background-position:0px -4448px;
+  width: 12px; 
+  height:12px;
+  background-attachment:scroll;
+  margin-top:0px;
+  padding-left:9px;
+}
+
+.mac .menu-pane li.menu-item.def .shortcut .classshortcutimagearrow {
+  background-position:0px -4480px;
+}
+
+.mac .menu-pane li.menu-item.disabled .shortcut .classshortcutimagearrow {
+  background-position:0px -4465px;
+}
+
+.mac .menu-pane li.menu-item .shortcut .classshortcutimagemid {
+  background-image: url('/me/images/controls.png');
+  background-repeat:no-repeat ;
+  background-position:0px -4398px;
+  width: 15px; 
+  height:11px;
+  background-attachment:scroll;
+  padding-left:10px;
+}
+
+.mac .menu-pane li.menu-item.def .shortcut .classshortcutimagemid {
+  background-position:0px -4430px;
+}
+
+.mac .menu-pane li.menu-item.disabled .shortcut .classshortcutimagemid {
+  background-position:-0px -4414px;
+}
+
+/* @end */
+
+/* @group Core : menu small*/
+.menu-pane .small li.menu-item.active a,
+.menu-pane .small li.menu-item.def a {
+  background: url('/me/images/controls.png') repeat-x 0px -2376px;
+}
+
+.ie .menu-pane .small li.menu-item.active a,
+.ie .menu-pane .small li.menu-item.def a {
+  background: url('/me/images/controls.png') repeat-x 0px -2375px;
+}
+
+.menu-pane .small li.menu-item .inner {
+	display: block ;
+	line-height: 11px;
+	padding: 3px 23px 3px 23px;
+	margin: 0px;
+}
+
+.ie .menu-pane .smal li.menu-item .inner {
+	padding: 1px 23px 1px 23px;
+}
+
+.menu-pane .smal li.menu-item a img {
+	border: none ;
+	vertical-align: middle ;
+	position: relative ;
+	top: -1px;
+	width: 16px;
+	height: 13px;
+	margin: -2px 0px;
+	padding-right: 4px;
+}
+
+
+.menu-pane .small li.menu-item .shortcut {
+	position: absolute ;
+	right: 0px;
+	top:  0px;
+	padding: 0px 8px 4px 8px;
+	text-align: right ;
+}
+
+.menu-pane .small li.menu-item a span.sel,
+.menu-pane .small li.menu-item a span.mixed {
+	position: absolute ;
+	left: 0px;
+	top:  0px;
+	padding: 0px 5px 4px 7px;
+	padding-right: 0px;
+	display: none ;
+	text-align: center ;
+	width: 9px;
+	font-size: 11px ;
+}
+
+.menu-pane .small li.separator {
+	height: 1px;
+	margin: 3px 0px;
+	background-color: #eaeaea;
+}
+
+.ie .menu-pane .small li.separator {
+	margin: -6px 0px 0px 0px;
+}
+
+
+.mac .menu-pane .small li.menu-item .shortcut  .classshortcutimagecross {
+  background-image: url('/me/images/controls.png');
+  background-repeat:no-repeat ;
+  background-position:-16px -4350px;
+  width: 11px; 
+  height:11px;
+  left: -3px;
+  background-attachment:scroll;
+  position:absolute;
+  margin-top:2px;
+}
+
+.mac .menu-pane .small li.menu-item.def .shortcut  .classshortcutimagecross{
+  background-position:-16px -4382px;
+}
+
+.mac .menu-pane .small li.menu-item.disabled .shortcut  .classshortcutimagecross {
+  background-position:-16px -4366px;
+}
+
+.mac .menu-pane .small li.menu-item .shortcut .classshortcutimagearrow {
+  background-image:url('/me/images/controls.png');
+  background-repeat:no-repeat ;
+  background-position:-16px -4447px;
+  width: 11px; 
+  height:12px;
+  background-attachment:scroll;
+  margin-top:0px;
+  padding-left:9px;
+}
+
+.mac .menu-pane .small li.menu-item.def .shortcut .classshortcutimagearrow {
+  background-position:-16px -4479px;
+}
+
+.mac .menu-pane .small li.menu-item.disabled .shortcut .classshortcutimagearrow {
+  background-position:-16px -4464px;
+}
+
+.mac .menu-pane .small li.menu-item .shortcut .classshortcutimagemid {
+  background-image: url('/me/images/controls.png');
+  background-repeat:no-repeat ;
+  background-position:-16px -4398px;
+  width: 11px; 
+  height:11px;
+  background-attachment:scroll;
+  padding-left:10px;
+}
+
+.mac .menu-pane .small li.menu-item.def .shortcut .classshortcutimagemid {
+  background-position:-16px -4430px;
+}
+
+.mac .menu-pane .small li.menu-item.disabled .shortcut .classshortcutimagemid {
+  background-position:-16px -4414px;
+}
+
+/* @end */
+
+
+/* End ------------------------------------------------------- menu.css*/
+
+/* Start ----------------------------------------------------- panelalert.css*/
+
+/* dotmac theme */
+/* panelalert: with all css from panel-pane + the follow
+/* @group Core */
+
+#panes .panel-pane.panelalert-pane .pane-wrapper {
+	top: 125px;
+}
+/* @end */
+
+
+/* End ------------------------------------------------------- panelalert.css*/
+
+/* Start ----------------------------------------------------- buttons.css*/
+
+/* dotmac theme */
+/* @override http://localhost/static/_raw/vendor/plugins/sprout_core/parts/sproutcore/english.lproj/buttons.css?1190966861 */
+/************************ over-write global setting **************************/
+a.checkbox:link, a.checkbox:visited, a.checkbox:active, a.checkbox.active,
+a.radio:link, a.radio:visited, a.radio:active, a.radio.active {
+  text-decoration:none;
+  color: #000;;
+}
+
+a.button:hover,
+a.checkbox:hover,
+a.radio:hover {
+  text-decoration:none;
+}
+/************************ fix button label center by content+languages **************************/
+a.regular.fixEnJpFrDe span.label {
+	width: 36px;
+}
+
+a.regular.small.fixEnJpFrDe span.label {
+	width: 22px;
+}
+
+a.capsule.small.fixEnJpFrDe span.label {
+	width: 28px;
+}
+
+a.regular.mini.fixEnJpFrDe span.label {
+	width: 22px;
+}
+/************************ over-write sc-theme **************************/
+/* @group Button Core */
+
+a.button:active, a.button.active,
+a.button:focus, a.button.focus {
+	outline: none ;	
+}
+
+a.button {
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+	cursor: default;
+	text-decoration: none ;
+	/*color: black ;
+	 text-shadow: white 0px 1px 1px;*/
+	border: none ;
+	padding: 0;
+	margin: 0;
+}
+
+a.button img {
+	border: none ;
+}
+
+/* @end */
+
+/* @group regular(Square) - Capsule */
+
+/* @group basic */
+
+a.regular {
+	display: -moz-inline-box;
+	display: inline-block;
+	height: 24px;
+	padding-right: 12px;
+	text-align: center;
+	margin-left: 2px;
+	margin-right: 2px ;
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -336px;
+}
+
+a.regular span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px 0px;
+	display: block ;
+	height: 24px;
+	max-height: 24px;
+}
+
+a.regular span.label {
+ 	background: transparent url('/me/images/controls.png') repeat-x 0px -192px;
+ 	display: block ;
+	text-align: center;
+	padding: 3px 0px 7px 0px;
+	height: 14px;
+	margin-left: 12px;
+	min-width: 36px;
+}
+
+a.capsule {
+	display: -moz-inline-box;
+	display: inline-block;
+	height: 24px;
+	padding-right: 16px;
+	text-align: center;
+	margin-left: 2px;
+	margin-right: 2px ;
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -816px;
+}
+
+a.capsule span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0 -672px;
+	display: block ;
+	height: 24px;
+}
+
+a.capsule span.label {
+ 	background: transparent url('/me/images/controls.png') repeat-x 0px -192px;
+ 	display: block ;
+	text-align: center;
+	padding: 3px 0px 7px 0px;
+	height: 14px;
+	margin-left: 16px;
+	min-width: 48px;
+}
+
+a.regular.small {
+	display: -moz-inline-box;
+	display: inline-block;
+	height: 19px;
+	padding-right: 9px;
+	text-align: center;
+	margin-left: 2px;
+	margin-right: 2px ;
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1296px;
+}
+
+a.regular.small span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -960px;
+	display: block ;
+	height: 19px;
+}
+
+a.regular.small span.label {
+ 	background: transparent url('/me/images/controls.png') repeat-x 0px -1152px;
+ 	display: block ;
+	text-align: center;
+	padding: 1px 0px 6px 0px;
+	height: 12px;
+	margin-left: 9px;
+	min-width: 22px;
+}
+
+a.capsule.small {
+	display: -moz-inline-box;
+	display: inline-block;
+	height: 19px;
+	padding-right: 11px;
+	text-align: center;
+	margin-left: 2px;
+	margin-right: 2px ;
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1776px;
+}
+
+a.capsule.small span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0 -1632px;
+	display: block ;
+	height: 19px;
+}
+
+a.capsule.small span.label {
+ 	background: transparent url('/me/images/controls.png') repeat-x 0px -1152px;
+ 	display: block ;
+	text-align: center;
+	padding: 1px 0px 6px 0px;
+	height: 12px;
+	margin-left: 11px;
+	min-width: 28px;
+}
+
+a.regular.mini {
+	display: -moz-inline-box;
+	display: inline-block;
+	height: 17px;
+	padding-right: 5px;
+	text-align: center;
+	margin-left: 2px;
+	margin-right: 2px ;
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -2208px;
+}
+
+a.regular.mini span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -1920px;
+	display: block ;
+	height: 17px;
+}
+
+a.regular.mini span.label {
+ 	background: transparent url('/me/images/controls.png') repeat-x 0px -2064px;
+ 	display: block ;
+	text-align: center;
+	padding: 0px 0px 5px 0px;
+	height: 12px;
+	margin-left: 5px;
+	min-width: 30px;
+}
+
+/* @end */
+
+/* @group sel - def */
+
+a.regular.sel, 
+a.regular.def {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -384px;
+}
+
+a.regular.sel span.button-inner, 
+a.regular.def span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -48px;
+}
+
+
+a.regular.sel span.label, 
+a.regular.def span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -240px;
+}
+
+a.capsule.sel,
+a.capsule.def {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -864px;
+}
+
+a.capsule.sel span.button-inner,
+a.capsule.def span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0 -720px;
+}
+
+a.capsule.sel span.label,
+a.capsule.def span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -240px;
+}
+
+a.regular.small.sel, 
+a.regular.small.def {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1344px;
+}
+
+a.regular.small.sel span.button-inner, 
+a.regular.small.def span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -1008px;
+}
+
+
+a.regular.small.sel span.label, 
+a.regular.small.def span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -1200px;
+}
+
+a.capsule.small.sel,
+a.capsule.small.def {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1824px;
+}
+
+a.capsule.small.sel span.button-inner,
+a.capsule.small.def span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0 -1680px;
+}
+
+a.capsule.small.sel span.label,
+a.capsule.small.def span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -1200px;
+}
+
+a.regular.mini.sel, 
+a.regular.mini.def {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -2256px;
+}
+
+a.regular.mini.sel span.button-inner, 
+a.regular.mini.def span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -1968px;
+}
+
+
+a.regular.mini.sel span.label, 
+a.regular.mini.def span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -2112px;
+}
+
+/* @end */
+
+/* @group disabled */
+
+a.regular.disabled {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -432px;
+}
+
+a.regular.disabled span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -96px;
+}
+
+a.regular.disabled span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -288px;
+	color: #999;
+}
+
+a.capsule.disabled {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -912px;
+}
+
+a.capsule.disabled span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0 -768px;
+}
+
+a.capsule.disabled span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -288px;
+	color: #999;
+}
+
+a.regular.small.disabled {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1392px;
+}
+
+a.regular.small.disabled span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -1056px;
+}
+
+a.regular.small.disabled span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -1248px;
+	color: #999;
+}
+
+a.capsule.small.disabled {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1872px;
+}
+
+a.capsule.small.disabled span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0 -1728px;
+}
+
+a.capsule.small.disabled span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -1248px;
+	color: #999;
+}
+
+a.regular.mini.disabled {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -2304px;
+}
+
+a.regular.mini.disabled span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -2016px;
+}
+
+a.regular.mini.disabled span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -2160px;
+	color: #999;
+}
+
+/* @end */
+
+/* @group sel.active - def.active */
+
+a.regular.sel.active, 
+a.regular.def.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -408px;
+}
+
+a.regular.sel.active span.button-inner, 
+a.regular.def.active span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -72px;
+}
+
+a.regular.sel.active span.label, 
+a.regular.def.active span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -264px;
+}
+
+a.capsule.sel.active,
+a.capsule.def.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -888px;
+}
+
+a.capsule.sel.active span.button-inner,
+a.capsule.def.active span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0 -744px;
+}
+
+a.capsule.sel.active span.label,
+a.capsule.def.active span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -264px;
+}
+
+a.regular.small.sel.active, 
+a.regular.small.def.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1368px;
+}
+
+a.regular.small.sel.active span.button-inner, 
+a.regular.small.def.active span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -1032px;
+}
+
+a.regular.small.sel.active span.label, 
+a.regular.small.def.active span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -1224px;
+}
+
+a.capsule.small.sel.active,
+a.capsule.small.def.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1848px;
+}
+
+a.capsule.small.sel.active span.button-inner,
+a.capsule.small.def.active span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0 -1704px;
+}
+
+a.capsule.small.sel.active span.label,
+a.capsule.small.def.active span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -1224px;
+}
+
+a.regular.mini.sel.active, 
+a.regular.mini.def.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -2280px;
+}
+
+a.regular.mini.sel.active span.button-inner, 
+a.regular.mini.def.active span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -1992px;
+}
+
+a.regular.mini.sel.active span.label, 
+a.regular.mini.def.active span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -2136px;
+}
+
+/* @end */
+
+/* @group active */
+
+a.regular.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -360px;
+}
+
+a.regular.active span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -24px;
+}
+
+a.regular.active span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -216px;
+}
+
+a.capsule.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -840px;
+}
+
+a.capsule.active span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0 -696px;
+}
+
+a.capsule.active span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -216px;
+}
+
+a.regular.small.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1320px;
+}
+
+a.regular.small.active span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -984px;
+}
+
+a.regular.small.active span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -1176px;
+}
+
+a.capsule.small.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1800px;
+}
+
+a.capsule.small.active span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0 -1656px;
+}
+
+a.capsule.small.active span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -1176px;
+}
+
+a.regular.mini.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -2232px;
+}
+
+a.regular.mini.active span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -1944px;
+}
+
+a.regular.mini.active span.label {
+	background: transparent url('/me/images/controls.png') repeat-x 0px -2088px;
+}
+
+/* @end */
+
+
+/* @end */
+/* @group segments */
+a.regular.segment.segment-right,
+a.regular.segment.segment-inner,
+a.regular.segment.segment-left {
+	margin-left: 0px;
+	margin-right: 0px ;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+a.regular.segment.segment-right {
+	padding-right: 12px;
+}
+
+a.regular.segment.segment-inner,
+a.regular.segment.segment-left {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -480px;
+	padding-right: 10px;
+}
+
+a.regular.segment.segment-right span.button-inner,
+a.regular.segment.segment-inner span.button-inner,
+a.regular.segment.segment-left  span.button-inner {
+	margin-left: 0px;
+	margin-right: 0px ;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+a.regular.segment.segment-right span.button-inner,
+a.regular.segment.segment-inner span.button-inner {
+	background: transparent url('/me/images/controls.png') no-repeat 0px -144px;
+}
+
+a.regular.segment.segment-right span.label,
+a.regular.segment.segment-inner span.label,
+a.regular.segment.segment-left  span.label {
+	margin-left: 0px;
+	margin-right: 0px ;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+a.regular.segment.segment-left  span.label {
+	margin-left: 12px;	
+}
+
+a.regular.segment.segment-right span.label,
+a.regular.segment.segment-inner span.label {
+	margin-left: 11px;	
+}
+
+a.regular.segment.segment-inner,
+a.regular.segment.segment-left {
+	border: none ;
+}
+
+a.regular.segment.segment-inner.sel,
+a.regular.segment.segment-inner.def,
+a.regular.segment.segment-left.sel,
+a.regular.segment.segment-left.def {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -504px;
+}
+
+a.regular.segment.segment-right.sel span.button-inner,
+a.regular.segment.segment-right.def span.button-inner,
+a.regular.segment.segment-inner.sel span.button-inner,
+a.regular.segment.segment-inner.def span.button-inner {
+	background: transparent url('/me/images/controls.png') no-repeat 0px -168px;
+}
+
+a.regular.segment.segment-inner.active,
+a.regular.segment.segment-left.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -4848px;
+}
+
+a.regular.segment.segment-right.active span.button-inner,
+a.regular.segment.segment-inner.active span.button-inner {
+	background: transparent url('/me/images/controls.png') no-repeat 0px -4800px;
+}
+
+a.regular.segment.segment-inner.sel.active,
+a.regular.segment.segment-inner.def.active,
+a.regular.segment.segment-left.sel.active,
+a.regular.segment.segment-left.def.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -4872px;
+}
+
+a.regular.segment.segment-right.sel.active span.button-inner,
+a.regular.segment.segment-right.def.active span.button-inner,
+a.regular.segment.segment-inner.sel.active span.button-inner,
+a.regular.segment.segment-inner.def.active span.button-inner {
+	background: transparent url('/me/images/controls.png') no-repeat 0px -4824px;
+}
+
+a.regular.segment.small.segment-right {
+	padding-right: 9px;
+}
+
+a.regular.segment.small.segment-inner,
+a.regular.segment.small.segment-left {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1440px;
+	padding-right: 8px;
+}
+
+a.regular.segment.small.segment-right span.button-inner,
+a.regular.segment.small.segment-inner span.button-inner {
+	background: transparent url('/me/images/controls.png') no-repeat 0px -1104px;
+}
+
+a.regular.segment.small.segment-left  span.label {
+	margin-left: 9px;	
+}
+
+a.regular.segment.small.segment-inner.sel,
+a.regular.segment.small.segment-inner.def,
+a.regular.segment.small.segment-left.sel,
+a.regular.segment.small.segment-left.def {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1464px;
+}
+
+a.regular.segment.small.segment-right.sel span.button-inner,
+a.regular.segment.small.segment-right.def span.button-inner,
+a.regular.segment.small.segment-inner.sel span.button-inner,
+a.regular.segment.small.segment-inner.def span.button-inner {
+	background: transparent url('/me/images/controls.png') no-repeat 0px -1128px;
+}
+
+a.regular.segment.small.segment-inner.active,
+a.regular.segment.small.segment-left.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -4944px;
+}
+
+a.regular.segment.small.segment-right.active span.button-inner,
+a.regular.segment.small.segment-inner.active span.button-inner {
+	background: transparent url('/me/images/controls.png') no-repeat 0px -4896px;
+}
+
+a.regular.segment.small.segment-inner.sel.active,
+a.regular.segment.small.segment-inner.def.active,
+a.regular.segment.small.segment-left.sel.active,
+a.regular.segment.small.segment-left.def.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -4968px;
+}
+
+a.regular.segment.small.segment-right.sel.active span.button-inner,
+a.regular.segment.small.segment-right.def.active span.button-inner,
+a.regular.segment.small.segment-inner.sel.active span.button-inner,
+a.regular.segment.small.segment-inner.def.active span.button-inner {
+	background: transparent url('/me/images/controls.png') no-repeat 0px -4920px;
+}
+
+a.regular.segment.small.segment-right span.label,
+a.regular.segment.small.segment-inner span.label {
+	margin-left: 8px;	
+}
+
+/* @end */
+
+/* @group checkbox */
+
+/* @group basic */
+
+a.checkbox {
+	margin-right: 4px;
+	margin-left: 4px;
+}
+
+a.checkbox img.button {
+	width: 16px;
+	height: 16px;
+	vertical-align: middle ;
+	position: relative ;
+	top: -2px;
+	background: url('/me/images/controls.png') no-repeat 0px -2400px;
+} 
+
+a.checkbox.sel img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2400px;
+}
+
+a.checkbox.mixed img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2472px;
+}
+
+a.checkbox.small {
+	margin-right: 4px;
+	margin-left: 4px;
+}
+
+a.checkbox.small img.button {
+	width: 12px;
+	height: 12px;
+	vertical-align: middle ;
+	position: relative ;
+	top: -2px;
+	margin-right: 2px;
+	background: url('/me/images/controls.png') no-repeat 0px -2544px;
+} 
+
+a.checkbox.small.sel img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2544px;
+}
+
+a.checkbox.small.mixed img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2616px;
+}
+
+/* @end */
+
+/* @group active */
+
+a.checkbox.active img.button {
+	background: url('/me/images/controls.png') no-repeat 0px -2424px;
+} 
+
+a.checkbox.sel.active img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2424px;
+}
+
+a.checkbox.mixed.active img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2496px;
+}
+
+a.checkbox.small.active img.button {
+	background: url('/me/images/controls.png') no-repeat 0px -2568px;
+} 
+
+a.checkbox.small.sel.active img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2568px;
+}
+
+a.checkbox.small.mixed.active img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2640px;
+}
+
+/* @end */
+
+/* @group disabled */
+
+a.checkbox.disabled {
+	color: #999;
+}
+
+a.checkbox.disabled img.button {
+	background: url('/me/images/controls.png') no-repeat 0px -2448px;
+} 
+
+a.checkbox.sel.disabled img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2448px;
+}
+
+a.checkbox.mixed.disabled img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2520px;
+}
+
+a.checkbox.small.disabled img.button {
+	background: url('/me/images/controls.png') no-repeat 0px -2592px;
+} 
+
+a.checkbox.small.sel.disabled img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2592px;
+}
+
+a.checkbox.small.mixed.disabled img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2664px;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group radio */
+
+/* @group basic */
+
+a.radio {
+	margin-right: 4px;
+	margin-left: 4px;
+}
+
+a.radio img.button {
+	width: 16px;
+	height: 16px;
+	vertical-align: middle ;
+	position: relative ;
+	top: -1px;
+	background: url('/me/images/controls.png') no-repeat 0px -2688px;
+} 
+
+a.radio.sel img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2688px;
+}
+
+a.radio.small {
+	margin-right: 4px;
+	margin-left: 4px;
+}
+
+a.radio.small img.button {
+	width: 12px;
+	height: 12px;
+	vertical-align: middle ;
+	position: relative ;
+	top: -1px;
+	background: url('/me/images/controls.png') no-repeat 0px -2760px;
+} 
+
+a.radio.small.sel img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2760px;
+}
+
+/* @end */
+
+/* @group active */
+
+a.radio.active img.button {
+	background: url('/me/images/controls.png') no-repeat 0px -2712px;
+} 
+
+a.radio.sel.active img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2712px;
+}
+
+a.radio.small.active img.button {
+	background: url('/me/images/controls.png') no-repeat 0px -2784px;
+} 
+
+a.radio.small.sel.active img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2784px;
+}
+
+/* @end */
+
+/* @group disabled */
+
+a.radio.disabled {
+	color: #999;
+}
+
+a.radio.disabled img.button {
+	background: url('/me/images/controls.png') no-repeat 0px -2736px;
+} 
+
+a.radio.sel.disabled img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2736px;
+}
+
+a.radio.small.disabled img.button {
+	background: url('/me/images/controls.png') no-repeat 0px -2808px;
+} 
+
+a.radio.small.sel.disabled img.button {
+	background: url('/me/images/controls.png') no-repeat -16px -2808px;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group popup - dropdown */
+
+/* @group basic */
+
+a.popup, 
+a.dropdown {
+	display: -moz-inline-box;
+	display: inline-block;
+	height: 24px;
+	padding-right: 32px;
+	text-align: center;
+	margin-left: 2px;
+	margin-right: 2px ;
+}
+
+a.dropdown {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -528px;
+}
+
+a.popup {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -600px;
+}
+
+
+a.dropdown span.button-inner,
+a.popup span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px 0px;
+	display: block ;
+	height: 24px;
+}
+
+a.dropdown span.label,
+a.popup span.label {
+ 	background: transparent url('/me/images/controls.png') repeat-x 0px -192px;
+ 	display: block ;
+	font-weight: normal;
+	text-align: left;
+	padding: 3px 0px 7px 0px;
+	height: 14px;
+	margin-left: 12px;
+	min-width: 18px;
+}
+
+a.popup.small, 
+a.dropdown.small {
+	display: -moz-inline-box;
+	display: inline-block;
+	height: 19px;
+	padding-right: 32px;
+	text-align: center;
+	margin-left: 2px;
+	margin-right: 2px ;
+}
+
+a.dropdown.small {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1488px;
+}
+
+a.popup.small {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1560px;
+}
+
+
+a.dropdown.small span.button-inner,
+a.popup.small span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -960px;
+	display: block ;
+	height: 19px;
+}
+
+a.dropdown.small span.label,
+a.popup.small span.label {
+ 	background: transparent url('/me/images/controls.png') repeat-x 0px -1152px;
+ 	display: block ;
+	font-weight: normal;
+	text-align: left;
+	padding: 1px 0px 6px 0px;
+	height: 12px;
+	margin-left: 9px;
+	min-width: 0px;
+}
+
+
+/* @end */
+
+/* @group active */
+
+a.dropdown.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -552px;
+}
+
+a.popup.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -624px;
+}
+
+a.dropdown.active span.button-inner,
+a.popup.active span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -24px;
+}
+
+a.dropdown.active span.label,
+a.popup.active span.label {
+ 	background: transparent url('/me/images/controls.png') repeat-x 0px -216px;
+}
+
+a.dropdown.small.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1512px;
+}
+
+a.popup.small.active {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1584px;
+}
+
+a.dropdown.small.active span.button-inner,
+a.popup.small.active span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -984px;
+}
+
+a.dropdown.small.active span.label,
+a.popup.small.active span.label {
+ 	background: transparent url('/me/images/controls.png') repeat-x 0px -1176px;
+}
+
+/* @end */
+
+/* @group disabled */
+
+a.dropdown.disabled {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -576px;
+}
+
+a.popup.disabled {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -648px;
+}
+
+a.dropdown.disabled span.button-inner,
+a.popup.disabled span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -96px;
+}
+
+a.dropdown.disabled span.label,
+a.popup.disabled span.label {
+ 	background: transparent url('/me/images/controls.png') repeat-x 0px -288px;
+ 	color: #999;
+}
+
+a.dropdown.small.disabled {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1536px;
+}
+
+a.popup.small.disabled {
+	background: transparent url('/me/images/controls.png') no-repeat scroll right -1608px;
+}
+
+a.dropdown.small.disabled span.button-inner,
+a.popup.small.disabled span.button-inner {
+	background: url('/me/images/controls.png') no-repeat 0px -1056px;
+}
+
+a.dropdown.small.disabled span.label,
+a.popup.small.disabled span.label {
+ 	background: transparent url('/me/images/controls.png') repeat-x 0px -1248px;
+ 	color: #999;
+}
+
+/* @end */
+
+/* @end */
+
+
+
+
+
+/* End ------------------------------------------------------- buttons.css*/
+
+/* Start ----------------------------------------------------- panes.css*/
+
+/* dotmac theme */
+/* @override http://localhost/static/_raw/vendor/plugins/sprout_core/parts/sproutcore/english.lproj/panes.css */
+
+/************************ over-write global setting **************************/
+#panes a.button:link, a.button:visited, a.button:active {
+  text-decoration: none ;
+  color: #282929 ;
+}
+
+#panes a.checkbox:link, a.checkbox:visited, a.checkbox:active,
+#panes a.radio:link, a.radio:visited, a.radio:active {
+  text-decoration:none;
+  color: #000;;
+}
+
+#panes a.button:hover,
+#panes a.checkbox:hover,
+#panes a.radio:hover {
+  text-decoration:none;
+}
+
+#panes a.checkbox, #panes a.radio {
+margin-left:0px;
+margin-right:0px;
+}
+
+/************************ panel form field tunning **************************/
+#panes a.checkbox img.button, 
+#panes a.radio img.button {
+  margin-right: 3px;
+  margin-left: -1px;
+}
+
+#panes textarea {
+  resize: none; 
+}
+
+/************************ dotmac panel components **************************/
+#panes .seperator { 
+  height: 2px;
+  background: url('/me/images/controls.png') repeat-x left -5600px;
+  margin:8px 0px;
+}
+
+#panes .footerseperator { 
+  height: 2px;
+  background: url('/me/images/controls.png') repeat-x left -5600px;
+  margin:9px -19px 14px -19px;
+}
+
+.ie #panes .scrollable .footerseperator { 
+  margin:9px 1px 14px 1px;
+}
+
+.ie #panes .pane-wrapper .scrollable .buttons {
+	margin-right: 20px;
+}
+
+#panes .scrollable_content {
+	margin: -18px -20px -9px -20px;  
+	padding: 18px 20px 9px 20px;
+	overflow-x: hidden;
+	overflow-y:auto;
+	max-height: 445px;
+}
+
+.ie #panes .scrollable_content {
+	margin: 0px 0px -9px 0px;  
+}
+
+/************************ over-write sc-theme **************************/
+/* @group Core */
+#panes {
+	position: absolute ;
+	position: fixed ;
+	z-index: 10000001 ;
+	overflow: hidden ;
+	top:  0;
+	left:  0;
+	width: 100%;
+	height: 100%;
+}
+
+#panes .pane-wrapper .buttons {
+	text-align: right ;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: -2px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+#panes .pane .shadow {
+	position: relative ;
+	border: none ;
+	background-color: #ffffff; 
+}
+
+#panes .pane .shadow .top-left-edge {
+	position: absolute ;
+	width: 40px;
+	height: 40px;
+	top: -20px;
+	left: -20px;
+}
+
+#panes .pane .shadow .bottom-left-edge {
+	position: absolute ;
+	width: 40px;
+	height: 40px;
+	bottom: -20px;
+	left: -20px;
+}
+
+#panes .pane .shadow .top-right-edge {
+	position: absolute ;
+	width: 40px;
+	height: 40px;
+	top: -20px;
+	right: -20px;
+}
+
+#panes .pane .shadow .bottom-right-edge {
+	position: absolute ;
+	width: 40px;
+	height: 40px;
+	bottom: -20px;
+	right: -20px;
+}
+
+#panes .pane .shadow .top-edge {
+	position: absolute ;
+	height: 20px;
+	top: -20px;
+	right: 20px;
+	left: 20px;
+}
+
+#panes .pane .shadow .bottom-edge {
+	position: absolute ;
+	height: 20px;
+	bottom: -20px;
+	right: 20px;
+	left: 20px;
+}
+
+#panes .pane .shadow .left-edge {
+	position: absolute ;
+	width: 20px;
+	top: 20px;
+	bottom: 20px;
+	left: -20px;
+}
+
+#panes .pane .shadow .right-edge {
+	position: absolute ;
+	width: 20px;
+	top: 20px;
+	bottom: 20px;
+	right: -20px;
+}
+
+/* @end */
+
+/* @group Panels */
+
+#panes .panel-pane {
+	position: absolute ;
+	top: 0;
+	left:  0;
+	width: 100%;
+	height: 100%;
+	background: url('/me/images/overlay.png') repeat;
+}
+
+#panes .panel-pane .pane-wrapper {
+	top: 73px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+}
+
+#panes .panel-pane .pane-wrapper .pane-root img.panel_grad_bg {
+  position:absolute;
+  width: 100%;
+  height: 100%; 
+  z-index: 0;
+}
+
+.ie #panes .panel-pane .pane-wrapper .pane-root img.panel_grad_bg {
+  display: none;
+}
+
+.ie #panes .panel-pane .shadow {
+	background: #ffffff url('/me/images/panel_grad_bg.png') repeat-x bottom left;
+}
+
+#panes .panel-pane .pane-wrapper .pane-root .panel_content {
+  position: relative ;
+	padding: 18px 20px 14px 20px;
+}
+
+.ie #panes .panel-pane .pane-wrapper .pane-root .panel_content.scrollable {
+  position: relative ;
+	padding: 0px 0px 14px 0px;
+}
+
+#panes .panel-pane .shadow .top-left-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px 0px;
+}
+
+#panes .panel-pane .shadow .bottom-left-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -40px;
+}
+
+#panes .panel-pane .shadow .top-right-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -80px;
+}
+
+#panes .panel-pane .shadow .bottom-right-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -120px;
+}
+
+#panes .panel-pane .shadow .top-edge {
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px 0px;
+}
+
+#panes .panel-pane .shadow .bottom-edge {
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px -30px;
+}
+
+#panes .panel-pane .shadow .left-edge {
+	background: url('/me/images/shadows_repeat_y.png') repeat-y 0px 0px;
+}
+
+#panes .panel-pane .shadow .right-edge {
+	background: url('/me/images/shadows_repeat_y.png') repeat-y -30px 0px;
+}
+
+/* @end */
+
+/* @group Dialogs */
+
+#panes .dialog-pane {
+	position: absolute ;
+	top: 0;
+	left:  0;
+	width: 100%;
+	height: 100%;
+	background: url('/me/images/overlay.png') repeat;
+}
+
+#panes .dialog-pane .pane-wrapper {
+	margin-left: auto ;
+	margin-right: auto ;
+	border: 6px #888 solid ;
+	background: #e8e8e8 url('/me/images/background-thin.jpg') repeat-x left -1px; 
+	padding: 10px 14px;
+	position: relative ;
+	top: 75px;
+}
+
+#panes .dialog-pane .shadow .top-left-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px 0px;
+}
+
+#panes .dialog-pane .shadow .bottom-left-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -40px;
+}
+
+#panes .dialog-pane .shadow .top-right-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -80px;
+}
+
+#panes .dialog-pane .shadow .bottom-right-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -120px;
+}
+
+#panes .dialog-pane .shadow .top-edge {
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px 0px;
+}
+
+#panes .dialog-pane .shadow .bottom-edge {
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px -30px;
+}
+
+#panes .dialog-pane .shadow .left-edge {
+	background: url('/me/images/shadows_repeat_y.png') repeat-y 0px 0px;
+}
+
+#panes .dialog-pane .shadow .right-edge {
+	background: url('/me/images/shadows_repeat_y.png') repeat-y -30px 0px;
+}
+
+/* @end */
+
+/* End ------------------------------------------------------- panes.css*/
+
+/* Start ----------------------------------------------------- drag_icon.css*/
+
+.drag-icon
+{
+  position: absolute;
+  width: 32px;
+  height: 32px;
+ 
+}
+.drag-icon .badge
+{
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  width: 26px;
+  height: 22px;
+  padding-top: 4px;
+  text-align: center;
+  background: transparent url('/me/images/shared_single.png') no-repeat 0px -576px;
+}
+
+.ie .drag-icon .badge {
+	padding-top: 3px;
+}
+
+.drag-icon.single-select .badge {
+  display: none;
+}
+
+.drag-icon.two-digits .badge
+{
+  background-position: 0px -24px;
+ 
+}
+.drag-icon.three-digits .badge
+{
+  background-position: 0px -608px;
+  width: 36px;
+}
+.drag-icon.four-digits .badge
+{
+  background-position: 0px -640px;
+  width: 41px;
+}
+
+.drag-icon.five-digits .badge
+{
+  background-position: 0px -672px;
+  width: 46px;
+}
+
+
+/* End ------------------------------------------------------- drag_icon.css*/
+
+/* Start ----------------------------------------------------- type_shared_new.css*/
+
+/*******************SHARED TYPE STYLES *****************************/
+body, div, select, textarea,input {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body.firefox.mac,
+body.firefox.mac div,
+body.firefox.mac select,
+body.firefox.mac textarea,
+body.firefox.mac input {
+	font-family: Arial, sans-serif;
+}
+
+
+body {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+
+select, textarea, input {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+
+
+
+
+a:link, 
+a:visited
+{
+  color: #1c4fad;
+  text-decoration: none;
+}
+
+
+a:hover, a:active
+
+{
+  text-decoration: underline;
+}
+
+
+.light /*shared_light*/ {
+	color: #999999
+}
+.empty, .placeholder /*shared_empty*/ {
+	font-style: italic;
+	font-size: 13px;
+	color: #666666
+}
+
+
+.sel /*shared_selected*/ {
+	color: #ffffff;
+	text-shadow: rgba(255,255,255,.75) 0px 1px 0px;
+}
+
+
+.small {
+	/* was shared_small*/
+	font-size: 11px ! important ;
+}
+
+
+
+.text /*shared_text*/ {
+	font-size: 13px;
+	color: #000;
+}
+
+/******************* DIALOGS / SHEETS *****************************/
+
+.dialog h1 {
+  margin: 4px 0;
+}
+
+.dialog .title {
+	font-size: 17px;
+	font-weight: bold;
+	color: #313131;
+	text-shadow: rgba(255,255,255,.8) 0px 1px 0px;
+}
+
+.dialog .title.truncate {
+  overflow:hidden;
+	text-overflow: ellipsis;
+	height:18px;
+	white-space:nowrap;
+}
+
+.dialog .title.small {
+  font-size: 15px;
+}
+
+.dialog .caption {
+	font-size: 11px;
+	color: #313131;
+	font-weight: normal;
+}
+
+.dialog .description {
+	font-size: 13px;
+	color: #313131;
+	font-weight: normal;
+}
+
+.dialog .text {
+	font-size: 13px;
+	color: #313131;
+	font-weight: normal;
+}
+
+.dialog .textshadow{
+	text-shadow: rgba(255, 255, 255, 0.8) 0px 1px 0px;
+}
+
+.dialog .inlineaction {
+	font-size: 11px;
+	color: #666;
+	font-weight: normal;
+}
+
+
+
+.dialog .well .label {
+	font-size: 13px;
+	color: #000;
+	font-weight: bold;
+}
+.dialog .table .text {
+	font-size: 13px;
+	color: #000;
+	font-weight: normal;
+}
+.dialog .table .label {
+	font-size: 13px;
+	color: #666;
+	font-weight: bold;
+}
+
+.dialog .warningtext {
+	font-size: 13px;
+	color: #313131;
+	font-weight: normal;
+}
+
+.dialog .warninginfo {
+	font-size: 13px;
+	color: #686a6c;
+	font-weight: normal;
+}
+
+
+
+
+
+/***************** SOURCE LISTS *****************************/
+.sourcelist a.inlineaction:hover,
+.sourcelist a.inlineaction:active {
+	text-decoration: underline;
+}
+
+.sourcelist .shadow {
+	text-shadow: rgba(225,225,225,.8) 0px -1px 0px;
+}
+.sourcelist a.inlineaction {
+	font-size: 11px;
+	color: #40474d;
+	font-weight: bold;
+	text-decoration: none;
+
+	/* need <a> state*/
+}
+
+.sourcelist .info {
+	font-size: 11px;
+	color: #40474d;
+	font-weight: normal;
+	text-shadow: rgba(255,255,255,.8) 0px 1px 0px;
+}
+
+.sourcelist .dropshadow /*in Specs*/ {
+}
+.sourcelist .dropshadow .sel {
+}
+.sourcelist .row .title{
+	font-size: 12px;
+	color: #40474d;
+	font-weight: bold;
+	text-shadow: rgba(255, 255, 255, 0.75) 0px 1px 0px;
+}
+.sourcelist .row.sel .title{
+	color: #fff;
+	text-shadow: rgba(0,0,0,.3) 0px 1px 0px;
+}
+
+
+.sourcelist .row .unread {
+	font-size: 11px;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: none;
+}
+.sourcelist .row.sel .unread {
+	font-size: 11px;
+	color: #5f7181;
+	font-weight: bold;
+	text-shadow: none;
+}
+.sourcelist .section-label {
+	font-size: 11px;
+	font-weight: bold;
+	color: #667281;
+	text-shadow: rgba(255, 255, 255, 0.75) 0px 1px 0px;
+		
+}
+.sourcelist .textfield {
+	font-weight: normal;
+}
+
+
+
+/********** Menus ***********/
+
+
+
+.menu .button.regular.menu-item .label,
+.menu .button.regular.menu-item a span.sel {
+	font-size: 13px;
+	color: #000;
+	white-space: nowrap;
+}
+
+
+.menu .button.regular.menu-item.def .label,
+.menu .button.regular.menu-item.def a span.sel {
+	font-size: 13px;
+	color: #fff;
+	text-shadow: none;
+}
+
+.menu .button.regular.menu-item.disabled .label,
+.menu .button.regular.menu-item.dim .label {
+	color: #999999;
+	text-shadow: #999999 0px 0px 0px ;
+}
+
+.menu .shortcut {
+	font-size: 13px;
+}
+
+.menu .button.regular.menu-item.disabled .shortcut,
+.menu .button.regular.menu-item.dim .shortcut {
+	
+}
+
+.menu .shortcut .symbol /*(Mac only) */ {
+	font-size: 13px;
+}
+
+.menu .button.regular.menu-item.disabled .shortcut .symbol,
+.menu .button.regular.menu-item.dim .shortcut .symbol  /* (Mac only)*/ {	
+}
+
+.menu .subgroup {
+		color: #999999;
+}
+
+/*small menus */
+
+.menu.small .button.regular.menu-item .label {
+	font-size: 11px;
+	color: #fff;
+}
+
+.menu.small .button.regular.menu-item.sel .label,
+.menu.small .button.regular.menu-item.def .label {
+}
+
+.menu.small .button.regular.menu-item.disabled .label,
+.menu.small .button.regular.menu-item.dim .label {
+}
+
+.menu.small .shortcut {
+	font-size: 11px;
+}
+
+.menu.small .button.regular.menu-item.disabled .shortcut,
+.menu.small .button.regular.menu-item.dim .shortcut {
+}
+
+.menu.small .shortcut .symbol /*(Mac only) */ {
+	font-size: 11px;
+}
+
+.menu.small .button.regular.menu-item.disabled .shortcut .symbol,
+.menu.small .button.regular.menu-item.dim .shortcut .symbol  /* (Mac only)*/ {	
+}
+
+
+/******************* PREFERENCES **************************/
+.prefs a.regular.segment.sel span.label {
+	font-size: 11px;
+	color: #ffffff;
+	font-weight: bold ! important ;
+	text-shadow: rgba(0,0,0,.50) 0px -1px 0px;
+}
+.prefs a.regular.segment span.label {
+	font-size: 11px;
+	color: #2c4865;
+	font-weight: bold ! important ;
+	text-shadow: rgba(250,250,250,.5) 0px 1px 0px;
+}
+
+.prefs .nav.sel {
+	font-size: 11px;
+	color: #ffffff;
+	font-weight: bold ! important ;
+	text-shadow: rgba(0,0,0,.50) 0px -1px 0px;
+}
+.prefs .nav {
+	font-size: 11px;
+	color: #2c4865;
+	font-weight: bold ! important ;
+	text-shadow: rgba(250,250,250,.5) 0px 1px 0px;
+}
+
+.prefs .text {
+	font-size: 13px;
+	color: #000;
+}
+.prefs .caption {
+	font-size: 11px;
+	color: #888;
+}
+.prefs .title {
+	font-size: 17px;
+	color: #2c4865;
+	font-weight: bold;
+	text-shadow: rgba(250,250,250,.5) 0px 1px 0px;
+}
+.prefs .label {
+	font-size: 13px;
+	color: #666;
+	font-weight: bold;
+	text-shadow: rgba(255,255,255,.8) 0px 1px 0px;
+}
+
+/******************* MISCELLANEOUS STYLES **************************/
+
+.pagination {
+	font-size: 11px;
+	color: #666;
+}
+
+
+
+.uploader .title {
+	font-size: 17px;
+	font-weight: bold;
+	color: #000;
+	text-shadow: rgba(255,255,255,.8) 0px 1px 0px;
+}
+.uploader .filename {
+	font-size: 13px;
+	color: #000;
+	text-shadow: rgba(255,255,255,.8) 0px 1px 0px;
+}
+.caption /*shared_caption*/ {
+	font-size: 11px;
+	color: #434343;
+}
+
+.invalid {
+	background-color: #fee5e5;
+}
+
+ul.errors, .error /*shared_error*/ {
+	color: #ad0000 ! important;
+	font-weight: bold ! important;
+	font-size: 11px;
+	list-style-type:none;
+	margin:0pt;
+	padding:0pt;
+}
+
+.list .zebra {
+	font-size: 13px;
+	color: #000;
+}
+.list .zebra .meta {
+	font-size: 13px;
+	color: #999;
+}
+
+
+.loading-text {
+    color: #333;
+    font-size: 15px;
+    text-shadow: rgba(255,255,255,.9) 0px 1px 0px;
+    font-weight: bold;
+}
+
+.checkbox .label /*shared_text*/ {
+	font-size: 13px;
+	color: #000;
+	font-weight: normal;
+	text-shadow: none;
+}
+
+.checkbox.small .label {
+  font-size: 11px;
+}
+
+.checkbox.disabled .label /*shared_text*/ {
+/*  opacity: .65;*/
+	color: #999;
+}
+
+.radio .label /*shared_text*/ {
+	font-size: 13px;
+	color: #000;
+	font-weight: normal;
+}
+
+.inlineaction {
+	/*was shared_inline_action*/
+	font-size: 11px;
+	color: #666;
+	font-weight: normal;
+}
+
+/********** DOCK ***********/
+
+.dock-badge {
+  color: white;
+	text-align: center ;
+	font-size: 9px;
+	text-shadow: rgba(0,0,0,.4) 0px 1px 0px ;
+	font-weight: bold;
+	opacity: .999;
+}
+
+/************************* FORMS & INPUTS *****************************/
+
+.form .text {
+	font-size: 13px;
+	color: #000;
+}
+
+textarea {
+/*	font-size: 13px;*/
+}
+
+
+.form .ghost, .show-hint {
+	/*was label_ghost */
+	font-size: 13px;
+	color: #666;
+}
+
+.ghost, .show-hint, .text.show-hint{
+	/*was label_ghost */
+	color: #888;
+}
+.search .label /*Search Type Label*/ {
+	font-size: 11px;
+	color: #fff
+}
+.search .label.ghost /*Search Type Label*/ {
+	font-size: 11px;
+	color: #999
+}
+
+.disabled {
+	/*We can use this as an addative style for checkbox labels
+	for disabled checkboxes and blocks of text that don't apply. */
+	color: #999 ! important;
+}
+.form input.disabled {
+	color: #666;
+	/*
+	could also be:
+	.form input[type=text]:disabled
+	*/
+}
+
+
+
+.dragcount, .drag-icon .badge
+/*mail_dragcount*/ {
+	font-size: 11px;
+	color: #fff;
+	font-weight: bold;
+}
+
+/** REVEALS */
+.reveal .inlineaction {
+	font-size: 11px;
+	font-weight: bold;
+	color: #666;
+	text-shadow: rgba(255,255,255,.8) 0px 1px 0px;
+}
+
+
+
+
+/********* Buttons ********/
+a.button.regular .label,
+a.button.capsule .label,
+a.button.dropdown .label,
+a.button.popup .label {
+	font-size: 13px;
+	color: #000000;
+	text-shadow: rgba(255,255,255,.75) 0px 1px 0px;
+	font-weight: normal !important;
+	white-space: nowrap;
+}
+
+
+a.button.regular.def .label,
+a.button.capsule.def .label,
+a.button.dropdown.def .label,
+a.button.popup.def .label,
+
+a.button.regular.sel .label,
+a.button.capsule.sel .label,
+a.button.dropdown.sel .label,
+a.button.popup.sel .label
+ {
+  color: #000000;
+  text-shadow: rgba(206,214,221,.75) 0px 1px 0px;
+}
+
+
+.button.regular.sel .label,
+.button.capsule.sel .label {
+	color: #1a1e22;
+}
+
+.toolbar .button .label,
+.toolbar .button.active .label,
+.toolbar .button.sel .label {
+  color: #f0f0f0;
+	text-shadow: rgba(0,0,0,.75) 0px 1px 1px;
+	font-weight: bold ! important;
+	font-size: 11px ! important;
+	-webkit-text-stroke-width: thin;
+	-webkit-text-stroke-color: rgba(0,0,0,.45);
+}
+
+.toolbar .button.disabled .label, .toolbar .button.sel.disabled .label {
+  color: #888b8e ! important;
+  text-shadow: rgba(0,0,0,.4) 0px 1px 0px;
+  font-weight: bold ! important;
+  font-size: 11px ! important;
+  -webkit-text-stroke-width: thin;
+  -webkit-text-stroke-color: rgba(0,0,0,.25);
+}
+
+.firefox .toolbar .button .label {
+	opacity: .999;
+}
+
+.button.regular.small .label,
+.button.capsule.small .label,
+.button.dropdown.small .label,
+.button.popup.small .label {
+	font-size: 11px;
+	
+	text-shadow: rgba(255,255,255,.75) 0px 1px 0px;
+}
+
+.button.checbox .label {
+  text-shadow: none;
+}
+
+.button.checkbox.small .label {
+  font-size: 11px;
+}
+
+
+.button.regular.mini .label,
+.button.capsule.mini .label,
+.button.dropdown.mini .label,
+.button.popup.mini .label {
+	font-size: 11px;
+	color: #000;
+	text-shadow: rgba(255,255,255,.75) 0px 1px 0px;
+}
+.button.active .label,
+.button.pressed .label {
+	color: #000;
+	text-shadow: rgba(255,255,255,.5) 0px 1px 0px;
+}
+.button.small.active .label,
+.button.small.pressed .label {
+	color: #000;
+	text-shadow: rgba(255,255,255,.75) 0px 1px 0px;
+}
+.button.mini.active .label,
+.button.mini.pressed .label {
+	color: #000;
+	text-shadow: rgba(255,255,255,.75) 0px 1px 0px;
+}
+a.button.regular.disabled .label,
+a.button.capsule.disabled .label, 
+a.button.dropdown.disabled .label,
+a.button.popup.disabled .label,
+a.button.regular.disabled.def .label,
+a.button.capsule.disabled.def .label, 
+a.button.dropdown.disabled.def .label,
+a.button.popup.disabled.def .label {
+	color: #9a9a9a;
+}
+.button.small.disabled .label {
+}
+.button.mini.disabled .label {
+}
+
+a.button.link .label {
+    color: #1c4fad ! important;
+}
+
+a.button.link:hover .label, a.button.link.hover .label,
+a.button.link:active .label, a.button.link.active .label {
+    text-decoration: underline ! important;
+}
+
+/****** Combo Boxes ********/
+.combo .label {
+	font-size: 13px;
+	color: #000;
+}
+.combo.small .label {
+	font-size: 11px;
+	color: #000;
+}
+
+.combo .disabled .label {
+}
+
+.combo.small .disabled .label {
+}
+
+
+
+/******** Column Headers *********/
+
+
+.columnheader .label /*shared_label_column_sorted*/ {
+	font-size: 11px;
+	font-weight: bold;
+	color: #535353;
+	text-shadow: rgba(255,255,255,.8) 0px 1px 0px;
+}
+
+.columnheader.sel .label /*shared_label_column_sorted*/ {
+	font-size: 11px;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: rgba(0,0,0,.25) 0px -1px 0px;
+}
+
+
+
+.column .label {
+	font-size: 11px;
+	color: #666;
+	font-weight: bold;
+	text-shadow: rgba(255,255,255,.8) 0px 1px 0px;
+}
+
+.column.sel label {
+	font-size: 11px;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: rgba(0,0,0,.25) 0px -1px 0px;
+}
+
+
+/* End ------------------------------------------------------- type_shared_new.css*/
+
+/* Start ----------------------------------------------------- buttons_lang.css*/
+
+/************************ fix button label center by content+languages **************************/
+a.capsule.fixOKBtn span.label,
+a.capsule.fixCancelBtn span.label,
+a.capsule.fixDoneBtn span.label,
+a.capsule.fixEditBtn span.label {
+	width: 48px;
+}
+a.capsule.fixMoveBtn span.label {
+}
+
+
+#header .search_wrapper {
+	right:  84px;
+}
+
+/* Help Button */
+
+
+#header a.help_button {
+  display: block ;
+  width: 30px;
+  height: 43px;
+	padding: 0;
+	right: 48px;
+	position: absolute;
+	top: 0;
+	background: url('/me/images/shared_single.png') no-repeat left -1280px;
+	margin-left: 12px;
+	cursor: pointer;
+}
+
+#header a.help_button:hover, 
+#header a.help_button.hover {
+	background-position: left -1344px;
+}
+
+#header a.help_button.sel.disabled,
+#header a.help_button.disabled {
+  background-position: left -1344px;
+}
+
+#header a.help_button.active,
+#header a.help_button.sel,
+#header a.help_button.hover.active,
+#header a.help_button.hover.sel,
+#header a.help_button.active:hover,
+#header a.help_button.sel:hover {
+  background-position: left -1408px ;
+}
+
+
+#header a.help_button .inner-button,
+#header a.help_button img {
+  display: none ;
+}
+
+
+
+
+
+
+/* Logout Buttons */
+
+#header a.logout_button {
+  display: block ;
+  width: 51px;
+  height: 43px;
+	padding: 0;
+	right: -3px;
+	position: absolute;
+	top: 0;
+	background: url('/me/images/shared_single.png') no-repeat -100px -1280px ;
+	margin-left: 12px;
+	cursor: pointer;
+}
+
+#header a.logout_button:hover, 
+#header a.logout_button.hover {
+	background-position: -100px -1344px;
+}
+
+#header a.logout_button.sel.disabled,
+#header a.logout_button.disabled {
+  background-position: -100px -1344px;
+}
+
+#header a.logout_button.active,
+#header a.logout_button.sel,
+#header a.logout_button.hover.active,
+#header a.logout_button.hover.sel,
+#header a.logout_button.active:hover,
+#header a.logout_button.sel:hover {
+  background-position: -100px -1408px ;
+}
+
+
+#header a.logout_button .inner-button,
+#header a.logout_button img {
+  display: none ;
+}
+
+
+/* @end */
+
+
+/* End ------------------------------------------------------- buttons_lang.css*/
+
+/* Start ----------------------------------------------------- picker.css*/
+
+/* dotmac theme */
+/* @override http://localhost/static/_raw/vendor/plugins/sprout_core/parts/sproutcore/english.lproj/picker.css */
+
+/************************ over-write sc-theme **************************/
+/* @group Core */
+ 
+.picker-pane {
+	position: absolute ;
+	top:  0;
+	left:  0;
+	width: 100%;
+	height: 100%;	
+}
+
+/* @end */
+
+/* @group Theme */
+
+#panes .picker-pane .shadow .top-left-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -160px;
+}
+
+#panes .picker-pane .shadow .bottom-left-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -200px;
+}
+
+#panes .picker-pane .shadow .top-right-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -240px;
+}
+
+#panes .picker-pane .shadow .bottom-right-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -280px;
+}
+
+#panes .picker-pane .shadow .top-edge {
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px -60px;
+}
+
+#panes .picker-pane .shadow .bottom-edge {
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px -90px;
+}
+
+#panes .picker-pane .shadow .left-edge {
+	background: url('/me/images/shadows_repeat_y.png') repeat-y -60px 0px;
+}
+
+#panes .picker-pane .shadow .right-edge {
+	background: url('/me/images/shadows_repeat_y.png') repeat-y -90px 0px;
+}
+
+/* @end */
+
+/* End ------------------------------------------------------- picker.css*/
+
+/* Start ----------------------------------------------------- cursors.css*/
+
+/** TODO -- define all cursor types and move to shared framework css? **/
+
+.grab-cursor {
+cursor: url('/my/shared/en/198g/images/cursors/grab.cur'), move;
+}
+
+.grabbing-cursor {
+cursor: url('/my/shared/en/198g/images/cursors/grabbing.cur'), move;
+cursor: -moz-grabbing;
+}
+
+.vertical-drag-cursor {
+  cursor: row-resize ! important;
+}
+
+
+.copy-cursor {
+  cursor: copy;
+  cursor: -moz-copy;
+}
+
+.nodrop-cursor {
+  cursor: no-drop;
+}
+
+/* End ------------------------------------------------------- cursors.css*/
+
+/* Start ----------------------------------------------------- panels.css*/
+
+#panes .yellow_alert.dialog .alert_icon_content,
+#error_panel .alert_icon_content,
+#confirm_panel .alert_icon_content,
+#choice_panel .alert_icon_content  {
+  margin-top: -2px;
+  padding-top: 2px;
+  padding-left: 45px;
+}
+
+#panes .yellow_alert.dialog .alert_icon,
+#error_panel .alert_icon,
+#confirm_panel .alert_icon,
+#choice_panel .alert_icon {
+	position: absolute ;
+	left: 20px;
+	top:  16px;
+  width: 32px;
+  height: 32px;
+  background: transparent url('/me/images/shared_single.png')  no-repeat 0px -512px;
+}
+
+#panes .yellow_alert.dialog .msg_line1,
+#error_panel .msg_line1,
+#confirm_panel .msg_line1,
+#choice_panel .msg_line1 {
+  margin-top: 8px;
+  margin-bottom: 4px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.ie #error_panel .panel_content .buttons {
+  width: 450px;
+}
+
+
+.dialog h1, .dialog p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* @end */
+
+
+/* End ------------------------------------------------------- panels.css*/
+
+/* Start ----------------------------------------------------- menupopup.css*/
+
+/* mobileme theme */
+/* menupopup: with all css from menu-pane + the follow
+/* @group Core */
+#panes .pane.menu-pane.menupopup-pane .shadow .top-left-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat -10px -650px;
+}
+
+#panes .pane.menu-pane.menupopup-pane .shadow .top-right-edge {
+	background: url('/me/images/shadow_corners.png') no-repeat 0px -730px;
+}
+
+#panes .pane.menu-pane.menupopup-pane .shadow .top-edge {
+	background: url('/me/images/shadows_repeat_x.png') repeat-x 0px -240px;
+}
+
+/* Popup menu interaction & behavior */
+.menupopup,
+.menupopup-pane {
+  -webkit-user-select: none;
+  -moz-user-select: none; 
+  cursor: default;
+}
+
+/* @end */
+
+/* End ------------------------------------------------------- menupopup.css*/
+
+/* Start ----------------------------------------------------- branch_drag_icon.css*/
+
+.branch-drag-icon
+{
+	position: relative;
+	width: 32px;
+	height: 32px;
+}
+
+.ie8 .branch-badge
+{
+	position: relative;
+	top: -14px;
+}
+
+.ie8 .branch-badge-medium
+{
+	position: relative;
+	top: -14px;
+}
+
+.ie8 .branch-badge-large
+{
+	position: relative;
+	top: -14px;
+}
+
+.branch-badge
+{
+	position: absolute;
+	top: 18px;
+	left: 18px;
+	width: 48px;
+	height: 24px;
+	line-height: 24px;
+	padding-left: 8px;
+	background: transparent url('/me/images/shared_single.png') no-repeat 0px -577px;
+	color: #fff;
+
+}
+
+.branch-item-badge
+{
+	position: absolute;
+	top: 0px;
+	left: 20px;
+	color: "grey";
+}
+
+.branch-badge-medium
+{
+	position: absolute;
+	top: 18px;
+	left: 18px;
+	width: 48px;
+	height: 24px;
+	line-height: 24px;
+	padding-left: 4px;
+	background: transparent url('/me/images/shared_single.png') no-repeat 0px -577px;
+	color: #fff;
+
+}
+
+.branch-badge-large
+{
+	position: absolute;
+	top: 18px;
+	left: 18px;
+	width: 48px;
+	height: 24px;
+	line-height: 24px;
+	padding-left: 8px;
+	background: transparent url('/me/images/shared_single.png') no-repeat 2px -601px;
+	color: #fff;
+}
+
+/* End ------------------------------------------------------- branch_drag_icon.css*/
+

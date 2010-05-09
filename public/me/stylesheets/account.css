@@ -1,0 +1,2282 @@
+/*
+ * IMPORTANT NOTE: This file is licensed only for use in providing the MobileMe service,
+ * or any part thereof, and is subject to the MobileMe Terms and Conditions. You may not
+ * port this file to another platform without Apple's written consent.
+ */
+
+/* Start ----------------------------------------------------- styles/account_firefox.css*/
+
+.firefox .glyph_transfer {
+	width: 16px;
+	height: 11px;
+	background: transparent url('/me/images/acct_sprite.png') -32px -96px no-repeat;
+	margin-top:10px;
+}  
+
+.firefox .glyph_cancel {
+	width: 16px;
+	height: 10px;
+	background: transparent url('/me/images/acct_sprite.png') -32px -112px no-repeat;
+	margin-top:10px;
+}
+
+.firefox .renewal_td1 {
+	width: 162px;
+}
+
+.firefox .renewal_td2 {
+	width: 494px;
+}
+
+.firefox .renewal_td3 {
+	width: 476px;
+}
+
+
+/* End ------------------------------------------------------- styles/account_firefox.css*/
+
+/* Start ----------------------------------------------------- styles/type_account.css*/
+
+/*** Section Styles ***/
+
+.account .section .head {
+	font-size: 17px;
+	color: #2c4865;
+	font-weight: bold;
+}
+.account .section .subhead {
+	font-size: 13px;
+	color: #666;
+	font-weight: bold;
+}
+.account .section .table .label {
+	font-size: 13px;
+	color: #666;
+	font-weight: bold;
+}
+
+.account .section .table .label.light {
+	font-size: 13px;
+	color: #888;
+	font-weight: normal;
+}
+.account .section .form .label {
+	font-size: 11px;
+	color: #333;
+	font-weight: bold;
+}
+.account .section .caption {
+	font-size: 11px;
+	color: #666;
+	font-weight: normal;
+}
+.account .section .text.secureCertificateMessage {
+	color:#666666;
+}
+.account .section .text {
+	font-size: 13px;
+	color: #000;
+	font-weight: normal;
+}
+.account .section .table .text {
+	font-size: 13px;
+	color: #000;
+	font-weight: normal;
+}
+.account .section .form .label .caption {
+	font-size: 13px;
+	color: #666;
+	font-weight: normal;
+}
+.account .section .inlineaction {
+	font-size: 11px;
+	color: #666;
+	font-weight: normal;
+}
+
+/*** Groups Styles ***/
+
+.account .groups a.action {
+	font-size: 11px;
+	color: #000 ! important;
+	font-weight: normal;
+}
+
+.account .groups a.action:hover {
+	font-size: 11px;
+	color: #000;
+	font-weight: normal;
+	text-decoration: underline;
+}
+/* # need <a> hover underline*/
+.account .groups .groupname {
+	font-size: 13px;
+	color: #000;
+	font-weight: bold;
+}
+
+/*** Error Styles ***/
+
+.account .error .description {
+	font-size: 11px;
+	color: #000;
+	text-shadow: rgba(255,255,255,.8) 0px 1px 0px;
+	font-weight: normal;
+}
+.account .error .title {
+	font-size: 11px;
+	color: #000;
+	text-shadow: rgba(255,255,255,.8) 0px 1px 0px;
+	font-weight: bold;
+}
+
+/** account summary */
+
+.account .summary .name  {
+	font-size: 17px;
+	color: #2c4865;
+	font-weight: bold;
+}
+.account .summary .username  {
+	font-size: 13px;
+	color: #333;
+	font-weight: bold;
+}
+.account .summary .status  {
+	font-size: 13px;
+	color: #666;
+	font-weight: normal;
+}
+.account .summary .sectiontitle  {
+	font-size: 13px;
+	color: #333;
+	font-weight: bold;
+}
+.account .summary .caption  {
+	font-size: 13px;
+	color: #666;
+	font-weight: normal;
+}
+ .account .summary .storage  {
+	font-size: 11px;
+	color: #333;
+	font-weight: normal;
+}
+ .account .summary .storage .strong  {
+	font-size: 11px;
+	color: #333;
+	font-weight: bold;
+}
+.account .summary .table .label  {
+	font-size: 13px;
+	color: #666;
+	font-weight: normal;
+}
+
+.account .summary .table .text  {
+	font-size: 13px;
+	color: #000;
+	font-weight: normal;
+}
+
+.account .summary .photoerror {
+    font-size:   11px;
+    color: #535353;
+    text-shadow: rgba(255,255,255,.9) 0px 1px 0px;
+
+}
+
+/** account summary sidebar */
+.account .summary .sidebar .text {
+	font-size: 11px;
+	color: #111;
+	font-weight: normal;
+}
+.account .summary .sidebar .download {
+	font-size: 13px;
+	color: #111;
+	font-weight: bold;
+	/*need underline on hover behavior*/
+}
+.account .summary .sidebar .sectiontitle {
+	font-size: 14px;
+	color: #333;
+	font-weight: bold;
+}
+
+.account .summary .sidebar .anntitle {
+	font-size: 11px;
+	color: #333;
+	font-weight: bold;
+}
+
+.account .summary .sidebar .anndate {
+	font-size: 11px;
+	color: #999;
+	font-weight: normal;
+}
+
+.account .summary .sidebar .announcement {
+	font-size: 11px;
+	color: #000;
+	font-weight: normal;
+	line-height: 14px;
+}
+
+.account .summary .sidebar .inlineaction {
+	font-size: 11px;
+	color: #111;
+	font-weight: normal;
+	/* need underline on hover behavior*/
+}
+.account .summary .sidebar .caption {
+	font-size: 11px;
+	color: #666;
+	font-weight: normal;
+	line-height: normal;
+}
+
+/** account dialog */
+
+
+.account .dialog .text {
+	font-size: 13px;
+	color: #000;
+	font-weight: normal;
+}
+.account .dialog .form .label {
+	font-size: 11px;
+	color: #333;
+	font-weight: bold;
+}
+.account .text  {
+	font-size: 11px;
+	color: #000;
+	font-weight: normal;
+}
+
+.upgrade.priceDisplay{
+	width:120px;
+}
+
+.norenew.priceDisplay{
+	width:120px;
+}
+
+/** account upgrade module */
+
+.account .upgrade .title  {
+	font-size: 15px;
+	color: #000;
+	font-weight: bold;
+}
+.account .upgrade .text  {
+	font-size: 13px;
+	color: #000;
+	font-weight: normal;
+}
+.account .upgrade .caption  {
+	font-size: 11px;
+	color: #666;
+	font-weight: normal;
+}
+
+.account .upgrade .progress {
+font-size: 11px;
+font-weight: bold;
+color: #2c4865;
+text-shadow: rgba(255,255,255,.5) 0px 1px 0px;
+}
+
+.account .upgrade .text .description  {
+	font-size: 13px;
+	color: #666;
+	font-weight: normal;
+}
+.account .upgrade .form .label  {
+	font-size: 11px;
+	color: #333;
+	font-weight: bold;
+}
+.account .upgrade .price  {
+	font-size: 15px;
+	color: #000;
+	font-weight: bold;
+	width:95px;
+}
+.account .upgrade .price .zero  {
+	font-size: 15px;
+	color: #7a7a7a;
+	font-weight: bold;	
+}
+.account .upgrade .announcement  {
+	font-size: 17px;
+	color: #000;
+	font-weight: bold;
+}
+.account .upgrade .announcement .info  {
+	font-size: 17px;
+	color: #666;
+	font-weight: bold;
+}
+/* Account options styles */
+
+.account .options .upgrade .freq {
+	font-size:   11px;
+	color:       #666666;
+}
+
+.account .options .upgrade .price {
+	font-size:   13px;
+	color:       #000000;
+	font-weight :normal;
+}
+
+.account .options .upgrade .norenew .title {
+	font-size:   13px;
+	color:       #666;
+}
+
+.account .options .upgrade .norenew .freq {
+	font-size:   11px;
+	color:       #666666;
+}
+
+.account .options .upgrade .norenew .price {
+	font-size:   13px;
+	color:       #666666;
+}	
+
+.account .options .upgrade .norenew .description {
+	font-size:   11px;
+	color:       #666666;
+}	
+
+.account .options .upgrade .norenew .title {
+	font-size:   13px;
+	color:       #666666;
+	font-weight: bold;
+}
+
+.account .options .upgrade .warning {
+	font-size:   11px;
+	color:       #ad0000;
+}
+
+.account .options .upgrade .warningColorChange {
+	font-size: 11px;
+	color:black;
+}
+
+.account .options .upgrade .description {
+	font-size:   11px;
+	color:       #000;
+}
+.account .options .upgrade .title {
+	font-size:   13px;
+	color:       #000;
+	font-weight: bold;
+}
+.account .options .total .title {
+	font-size:   13px;
+	color:       #000;
+	font-weight: bold;	
+}
+.account .options .total .description {
+	font-size:   11px;
+	color:       #000;
+	font-weight: normal;
+}
+.account .options .total .freq {
+	font-size:   11px;
+	color:       #666;
+	font-weight: normal;	
+}
+.account .options .total .price {
+	font-size:   13px;
+	color:       #000;
+	font-weight: bold;	
+}
+.account .options .total .caption {
+	font-size:   11px;
+	color:       #666;
+	font-weight: normal;	
+	
+}
+.account .options .total .warning {
+	font-size:   11px;
+	color:       #ad0000;
+	font-weight: normal;		
+}
+
+.account .summary .dialog .caption {
+	font-size: 11px;
+	color: #313131;
+	font-weight: normal;
+}
+
+/** account miscellaneous */
+
+.strong  {
+	font-weight: bold;
+}
+
+
+/* End ------------------------------------------------------- styles/type_account.css*/
+
+/* Start ----------------------------------------------------- styles/account.css*/
+
+html {
+	overflow: hidden ! important;
+}
+
+body.account {
+	margin: 0px;
+	padding: 0px;
+	background-color: #f2f2f2;
+	overflow: hidden ! important;
+	min-width: 1072px;
+	min-height: 780px;
+}
+
+a.navlight:link, a.navlight:visited, a.navlight:active {
+	color: #fff ! important;
+	text-decoration: none;
+}
+
+a.navdark:link, a.navdark:visited, a.navdark:active {
+	color: #000 ! important;
+	text-decoration: none;
+}
+
+.line {
+	text-decoration: underline ! important;
+}
+
+.color_error_form {
+	background-color: #fee5e5;
+}
+
+.accountOptionAlertFirst {
+	text-align: right; 
+	padding-right: 7px;
+	margin-bottom: 0px;
+	width:450px;
+	float:right;
+ 
+}
+.accountOptionAlertSecond {
+	text-align: right; 
+	padding-right: 7px;
+	margin-bottom: 0px;
+	width:450px;
+	float:right;
+}
+
+.divclear {
+	position: relative;
+	clear: both;
+	height: 1px;
+	line-height: 0px;
+	font-size: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.contentSpace {
+	width: 100%;
+	height: 100%;
+	overflow: hidden ! important;
+}
+
+.leftView {
+	width: 209px;
+	min-width: 209px;
+	height: 100%;
+	background-color: #dfe1e3;
+	vertical-align:top;	
+}
+
+.leftViewTable {
+	width: 209px;
+	min-width: 209px;
+	height: 100%;
+	background-color: #dfe1e3;
+	border-right: 1px solid #bcc2c7;
+}  
+  
+.leftContent {
+	width: 209px;
+	min-width: 209px;
+	margin: 0px;
+	vertical-align:top;
+}
+
+.leftContent.sourcelist {
+	padding: 0px;
+	margin: 0px;
+	background-color: #dfe1e3;
+	width: 209px;
+	height: 20px;
+}
+
+.sourcelist div {
+	margin: 0px;
+	background-color: #dfe1e3;
+	border-top: 1px solid #e9eaeb;
+	border-bottom: 1px solid #c7ccd1;	
+	width: 209px;
+	height: 32px;
+	list-style-type: none;
+	font-size: 12px;
+	font-weight: bold;
+	color: #40474d;
+	cursor: default;
+}
+.sourcelistBorderNone{
+	border-bottom: 1px #dfe1e3 !important;
+}
+
+.sourcelist .imageSpan {float: left; width:32px; position : absolute; left: 0px;}
+
+.sourcelist .title { width :172px; line-height:32px; padding-left:37px;padding-top:-1px;position:absolute;}
+
+#contentDiv {
+	background-color: #fff;
+	vertical-align:top;
+}
+
+#announceBoxDiv.support{
+	background: #ffffff url('/me/images/bg_support.gif') repeat-y scroll right top;
+}
+
+.rightView {
+	height:100%;
+	vertical-align:top;
+}
+.rightViewTable {
+	float:left;
+	width:100%;
+	margin-bottom: 10px;
+}  
+
+.rightContent {
+	vertical-align:top;
+}
+
+.mainBox {
+	float:left;
+	width:100%;
+}
+
+.defaultBox {
+	width:721px;
+	padding-left:33px;
+	padding-right:33px;
+}
+
+.smallBox {
+	width:548px;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.bigBox {
+	width:708px;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.largeBox {
+	width:847px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+}
+
+.infoBox {
+	padding-top:26px;
+	padding-bottom:13px;
+}
+
+.summaryBox table {
+	width: 100%;
+}
+
+.announceBox {
+	width:312px;
+	min-width:252px;
+}
+
+.buttonDiv {
+	float: right;
+	margin-right: 4px;
+	padding-bottom:12px;
+}			
+
+body.account .srclist {
+	width: 100% ! important;
+	height: 33px;
+	background: #95a3b2 url('/me/images/controls.png') 0px -4208px repeat-x;
+	text-shadow: rgba(0,0,0,.3) 0px 2px 0px;
+	border-top: 1px solid #87929c ! important;
+	border-right: 1px solid #87929c ! important;
+	border-bottom: 1px solid #677482 ! important;
+}
+
+body.account .srclist2 {
+	width: 100% ! important;
+	height: 32px;
+	background: #95a3b2 url('/me/images/controls.png') 0px -4209px repeat-x;
+	text-shadow: rgba(0,0,0,.3) 0px 2px 0px;
+	border-top: 0px solid #bcc6d0 ! important;
+	border-right: 1px solid #87929c ! important;
+	border-bottom: 1px solid #677482 ! important;
+	padding-top:1px;
+}
+
+.srclistSelected{
+	height: 32px !important;
+	padding-top:1px;
+	
+}
+.srclistimg_1 {
+	width: 32px;
+	height: 32px;
+	background: transparent url('/me/images/acct_sprite.png') 5px 0px no-repeat;
+}
+
+.srclistimg_2 {
+	width: 32px;
+	height: 32px;	
+	background: transparent url('/me/images/acct_sprite.png') 5px -32px no-repeat;
+}
+
+.srclistimg_4 {
+	width: 32px;
+	height: 32px;
+	background: transparent url('/me/images/acct_sprite.png') 5px -64px no-repeat;
+}
+
+.srclistimg_5 {
+	width: 32px;
+	height: 32px;
+	background: transparent url('/me/images/acct_sprite.png') 5px -96px no-repeat;
+}
+
+.srclistimg_6 {
+	width: 32px;
+	height: 32px;
+	background: transparent url('/me/images/acct_sprite.png') 5px -128px no-repeat;
+}
+
+.srclistimg_7 {
+	width: 32px;
+	height: 32px;
+	background: transparent url('/me/images/acct_sprite.png') 5px -160px no-repeat;
+}
+
+.srclistimg_8 {
+	width: 32px;
+	height: 32px;
+	background: transparent url('/me/images/acct_sprite.png') 5px -192px no-repeat;
+}
+
+.srclistimg_3 {
+	width: 32px;
+	height: 32px;
+	background: transparent url('/me/images/acct_sprite.png') 5px -256px no-repeat;
+}
+
+.srclistimg_9 {
+	width: 32px;
+	height: 32px;
+	background: transparent url('/me/images/acct_sprite.png') 5px -256px no-repeat;
+}
+
+.srclistimg_10 {
+	width: 32px;
+	height: 32px;
+	background: transparent url('/me/images/acct_sprite.png') -31px -224px no-repeat;
+}
+
+.storage_meter_outer {
+	width:392px;
+	text-align:center;
+}
+
+.storage_meter {
+	text-align:left;
+}
+
+.storage_meter_gray {
+	width: 392px;
+	height: 18px;
+	background: url('/me/images/meter_sprite.png') 0px 0px no-repeat;
+	overflow:hidden;
+}
+
+.storage_meter_gray2 {
+	width: 0px;
+	height: 18px;
+	background: url('/me/images/meter_sprite.png') 0px 0px no-repeat;
+	overflow:hidden;
+}
+
+.storage_meter_orange {
+	width: 0px;
+	height: 18px;
+	background: url('/me/images/meter_sprite.png') 0px -24px no-repeat;
+	overflow:hidden;
+}
+
+.storage_meter_orange_end {
+	width: 2px;
+	height: 18px;
+	background: url('/me/images/meter_sprite.png') 0px -96px no-repeat;
+	margin-top:-18px;
+	overflow:hidden;	
+}
+
+.storage_meter_blue {
+	width: 0px;
+	height: 18px;
+	background: url('/me/images/meter_sprite.png') 0px -48px no-repeat;
+	overflow:hidden
+}
+
+.storage_meter_blue_end {
+	width: 2px;
+	height: 18px;
+	background: url('/me/images/meter_sprite.png') 0px -120px no-repeat;
+	overflow:hidden;
+	float:right;
+}
+
+.storage_meter_purple {
+	width: 0px;
+	height: 18px;
+	background: url('/me/images/meter_sprite.png') 0px -72px no-repeat;
+	overflow:hidden;
+}
+
+.storage_meter_purple_end {
+	width: 2px;
+	height: 18px;
+	background: url('/me/images/meter_sprite.png') 0px -144px no-repeat;
+	overflow:hidden;
+	float:right;
+}
+
+.storage_meter_divider {
+	width: 22px;
+	height: 18px;
+	background: url('/me/images/meter_sprite.png') -3px -168px no-repeat;
+	float:right;
+}
+
+.storage_meter_divider2 {
+	width: 11px;
+	height: 18px;
+	background: url('/me/images/meter_sprite.png') -2px -168px no-repeat;
+	float:right;
+}
+
+.storage_meter_divider_left {
+	width: 13px;
+	height: 18px;
+	background: url('/me/images/meter_sprite.png') 0px -168px no-repeat;
+	float:right;
+}
+
+.storage_meter_divider_right {
+	width: 13px;
+	height: 18px;
+	background: url('/me/images/meter_sprite.png') -13px -168px no-repeat;
+	margin-top:-18px;
+	z-index:999;
+}
+
+.caption.totalSummary{
+	margin-left:-31px;
+}
+
+.ie .caption.totalSummary{
+	margin-left:10px;
+}
+
+#meter_bar,
+#meter_text {
+	display: none;
+}
+
+.glyph_next {
+	width: 16px;
+	height: 13px;
+	background: transparent url('/me/images/acct_sprite.png') -32px 0px no-repeat;
+	margin-bottom:-3px;
+}  
+
+.glyph_next.hover {
+	width: 16px;
+	height: 13px;
+	background: transparent url('/me/images/acct_sprite.png') -32px -16px no-repeat;
+	margin-bottom:-3px;
+}
+
+.glyph_next.active {
+	width: 16px;
+	height: 13px;
+	background: transparent url('/me/images/acct_sprite.png') -47px 0px no-repeat;
+	margin-bottom:-3px;
+}
+
+.glyph_download {
+	width: 16px;
+	height: 13px;
+	background: transparent url('/me/images/acct_sprite.png') -48px -32px no-repeat;
+	margin-bottom:-3px;
+}
+
+.glyph_download.hover {
+	width: 16px;
+	height: 13px;
+	background: transparent url('/me/images/acct_sprite.png') -48px -48px no-repeat;
+	margin-bottom:-3px;
+}
+
+.glyph_download.active {
+	width: 16px;
+	height: 13px;
+	background: transparent url('/me/images/acct_sprite.png') -48px -64px no-repeat;
+	margin-bottom:-3px;
+} 
+
+.glyph_orange {
+	width: 16px;
+	height: 16px;
+	background: transparent url('/me/images/acct_sprite.png') -32px -32px no-repeat;
+}  
+
+.glyph_blue {
+	width: 16px;
+	height: 16px;
+	background: transparent url('/me/images/acct_sprite.png') -32px -48px no-repeat;
+}
+
+.glyph_purple {
+	width: 16px;
+	height: 16px;
+	background: transparent url('/me/images/acct_sprite.png') -32px -64px no-repeat;
+}  
+
+.glyph_gray {
+	width: 16px;
+	height: 16px;
+	background: transparent url('/me/images/acct_sprite.png') -32px -80px no-repeat;
+}
+
+.glyph_transfer {
+	width: 16px;
+	height: 16px;
+	background: transparent url('/me/images/acct_sprite.png') -32px -96px no-repeat;
+}  
+
+.glyph_cancel {
+	width: 16px;
+	height: 16px;
+	background: transparent url('/me/images/acct_sprite.png') -32px -112px no-repeat;
+}
+.useExistingCardText{
+	float:left;
+	height:25px;
+	width:26px;
+}
+.safari .useExistingCardText{	
+	width:22px;
+}
+.ie .useExistingCardText{	
+	width:24px;
+}
+
+.status_green {
+	width: 16px;
+	height: 16px;
+	background: transparent url('/me/images/acct_sprite.png') -32px -128px no-repeat;
+	float:left;
+	margin-top:5px;
+	padding-right:3px;  
+} 
+
+.status_yellow {
+	width: 16px;
+	height: 16px;
+	background: transparent url('/me/images/acct_sprite.png') -32px -144px no-repeat;
+	float:left;
+	margin-top:5px;
+	padding-right:3px;  
+}  
+
+.status_red {
+	width: 16px;
+	height: 16px;
+	background: transparent url('/me/images/acct_sprite.png') -32px -160px no-repeat;
+	float:left;
+	margin-top:5px;
+	padding-right:3px;  
+}
+
+.mini_alert {
+	width: 14px;
+	height: 12px;
+	background: transparent url('/me/images/acct_sprite.png') -32px -192px no-repeat;	
+}
+
+.reg_alert {
+	width: 16px;
+	height: 16px;
+	background: transparent url('/me/images/shared_single.png') 0px -480px no-repeat;	
+}
+
+.big_alert {
+	width: 32px;
+	height: 32px;
+	background: transparent url('/me/images/shared_single.png') 0px -512px no-repeat;	
+}
+
+.photo_default {
+	width: 64px;
+	height: 64px;
+	background: transparent url('/me/images/acct_sprite.png') 0px -680px no-repeat;	
+}
+
+.rss_icon {
+	width: 27px;
+	height: 15px;
+	background: transparent url('/me/images/acct_sprite.png') 0px -624px no-repeat;	
+}
+
+.controlPanel {
+	width: 40px;
+	height: 43px;
+	background: transparent url('/me/images/acct_sprite.png') 0px -576px no-repeat;	
+}
+
+.cc_master {
+	width: 42px;
+	height: 28px;
+	background: transparent url('/me/images/acct_sprite.png') 0px -288px no-repeat;	
+}
+
+.cc_diners {
+	width: 42px;
+	height: 28px;
+	background: transparent url('/me/images/acct_sprite.png') 0px -336px no-repeat;	
+}
+
+.cc_bankcard {
+	width: 42px;
+	height: 28px;
+	background: transparent url('/me/images/acct_sprite.png') 0px -336px no-repeat;	
+}
+
+.cc_carteblanche {
+	width: 42px;
+	height: 28px;
+	background: transparent url('/me/images/acct_sprite.png') 0px -336px no-repeat;	
+}
+
+.cc_visa {
+	width: 42px;
+	height: 28px;
+	background: transparent url('/me/images/acct_sprite.png') 0px -384px no-repeat;	
+}
+
+.cc_jcb {
+	width: 42px;
+	height: 28px;
+	background: transparent url('/me/images/acct_sprite.png') 0px -432px no-repeat;	
+}
+
+.cc_discover {
+	width: 42px;
+	height: 28px;
+	background: transparent url('/me/images/acct_sprite.png') 0px -480px no-repeat;	
+}
+
+.cc_amex {
+	width: 42px;
+	height: 28px;
+	background: transparent url('/me/images/acct_sprite.png') 0px -528px no-repeat;	
+}
+
+.at_icon {
+	width: 18px;
+	height: 19px;
+	background: transparent url('/me/images/acct_sprite.png') 0px -656px no-repeat;	
+}
+
+.error_panel_acct {
+	width: 100%;
+	height: 42px;
+	background: transparent url('/me/images/acct_sprite.png') 0px -748px repeat-x;	
+}
+
+.detail_well_top {
+	width: 291px;
+	height: 8px;
+	background: transparent url('/me/images/detail_well_sprite.png') 0px 0px no-repeat;
+}
+
+.detail_well_middle {
+	width: 291px;
+	height: 100%;
+	background: transparent url('/me/images/detail_well_sprite.png') -296px 0px repeat-y;
+}
+
+.detail_well_bottom {
+	width: 291px;
+	height: 8px;
+	background: transparent url('/me/images/detail_well_sprite.png') -592px 0px no-repeat;
+}
+
+.detail_well_hr {
+	width: 267px;
+	height: 1px;
+	background: transparent url('/me/images/detail_well_hr.png') 0px 0px repeat-x;
+}
+
+.safari4 #accountOptionsButtons.buttons{
+	padding-top:15px !important;
+	height:25px;
+}
+
+#overlay1, #overlay2, #overlay3, #overlay4, #overlay5, #overlay6, #overlay7, #overlay8, #overlay9, #overlay10, #overlay11, #overlay12, #overlay13, #overlay14, #overlay15, #overlay16, #overlay17, #overlay18 {
+	position: absolute ;
+	top: 0;
+	left:  0;
+	width: 100%;
+	height: 100%;
+	z-index: 90;
+	background: transparent url('/my/shared/en/198g/images/panels/overlay.png') repeat scroll 0% ;
+}
+
+* html #overlay {
+	background-color: #333;
+	background-color: transparent;
+	background-image: url('/me/images/spacer.gif');
+}
+
+#photomatonDiv, #confirmRevoke1Div, #confirmRevoke2Div, #confirmFPRemovalDiv, #confirmEORemovalDiv, #confirmConversionDiv, #confirmDomainRemovalDiv, #noCCDisplayDiv {
+	width: 430px;
+}
+
+#dataTransferDiv {
+	width: 631px;
+}
+
+#orderInformationDiv, #optionsOrderInformationDiv {
+	width: 560px;
+}
+
+#flickerDiv {
+	display: none;
+	width: 430px;
+}
+
+#orderInformationDiv #panes .panel-pane .pane-wrapper, #optionsOrderInformationDiv #panes .panel-pane .pane-wrapper {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -280px;
+	z-index: 9999;
+}
+
+#AKonHoldSkipTrialId #panes .panel-pane .pane-wrapper{
+	position: absolute;
+	top: 73px;
+	left: 50%;
+	margin-left: -280px;
+	z-index: 9999;
+	
+}
+
+
+
+#orderInformationDiv #panes .panel-pane .pane-wrapper.dialogBoxSize{
+	width:537px;
+}
+
+.prefs .pref_title {
+	margin-top: -18px;
+	margin-left: -20px;
+	padding-top: 17px;
+	padding-left: 20px;
+	width: 540px;
+	height: 44px;
+	background: url('/me/images/prefs.png') repeat-x 0px 0px;
+}
+
+.ie .prefs .pref_title,
+.ie #panes .scrollable_content
+{
+	position: relative;
+	top: -18px;
+}
+
+#panes .scrollable_content.upgrade {
+	width:540px;
+	height:459px;
+	max-height:459px;
+	margin:0px;
+	padding:0px;	
+}
+
+.ie #panes .scrollable_content.upgrade {
+	width:540px;
+	height:421px;
+	max-height:421px;
+	margin:0px;
+	padding:0px;
+}
+
+#SetupAccount #panes .panel-pane .pane-wrapper {
+	height:540px;
+}
+
+.ie #SetupAccount #panes .panel-pane .pane-wrapper {
+	height:554px;
+}
+
+.ie8 #SetupAccount #panes .panel-pane .pane-wrapper{
+	height:554px;
+}
+
+#SetupAccountTD1 {
+	height: 20px;
+}
+
+.ie #SetupAccountTD1 {
+	height: 15px;
+}
+
+#SetupAccountTD2 {
+	height: 20px;
+}
+
+.ie #SetupAccountTD2 {
+	height: 15px;
+}
+
+#NewAccountDiv {
+	height:435px;
+	max-height:435px;
+}
+
+.ie #NewAccountDiv {
+	height:435px;
+	max-height:435px;
+}
+
+.ie8 #NewAccountDiv {
+	height:auto !important;
+	margin-bottom:15px !important;
+}
+
+.ie8 #acctOptionsDiv #accountOptionsForm .total .description{
+	margin-top:0px !important;
+}
+
+#convertAccountDiv #panes .panel-pane .pane-wrapper {
+	height:535px;
+}
+
+.ie #convertAccountDiv #panes .panel-pane .pane-wrapper {
+	height:554px;
+}
+
+#showAltUserDiv #panes .panel-pane .pane-wrapper {
+	height:544px;
+}
+
+.ie #showAltUserDiv #panes .panel-pane .pane-wrapper {
+	height:559px;
+}
+
+.showAltUserSpacer1 {
+	height:32px;
+}
+
+.showAltUserSpacer2 {
+	height:27px; 
+}
+
+.ie .showAltUserSpacer1 {
+	height:20px;
+}
+
+.ie .showAltUserSpacer2 {
+	height:20px; 
+}
+
+.prefs .headerseperator { 
+  border-bottom: 1px solid #fbfbfb;
+  margin-bottom:16px;
+}
+
+
+.separator {
+	border-bottom:1px solid #FBFBFB;
+	border-top:1px solid #CCCCCC;
+	margin: 13px 0px 13px 0px;
+}
+
+.ie .separator {
+	border-bottom:1px solid #FBFBFB;
+	border-top:1px solid #CCCCCC;
+	margin: 13px 0px 13px 0px;
+	height:1px;
+}
+
+#ccInfo a.radio img.button {
+	background:transparent url('/me/images/controls.png') no-repeat scroll 0px -2688px;
+	height:16px;
+	position:relative;
+	top:-1px;
+	vertical-align:bottom;
+	margin-bottom:4px;
+	width:16px;
+}
+.firefox #ccInfo a.radio img.button {
+	margin-bottom:8px;
+}
+
+#ccInfo a.radio.sel img.button {
+	background:transparent url('/me/images/controls.png') no-repeat scroll -16px -2688px;
+}
+
+#ccInfo a.radio {
+	margin-right:0px;
+	margin-left:0px;
+}
+
+.aruba_icon {
+	width: 48px;
+	height: 50px;
+	background: transparent url('/me/images/acct_sprite.png') 0px -876px no-repeat;	
+	margin-left:12px;
+	padding-right:10px;
+}
+
+.bg_panel {
+	background: transparent url('/my/shared/en/198g/images/panels/panel_grad_bg.png') repeat scroll 50% 50%;
+}
+
+table.options {
+	border-collapse: collapse;
+}
+
+#confirm_panel .alert_icon_content {
+	margin-top:-2px;
+	padding-left:45px;
+	padding-top:2px;
+}
+
+#confirm_panel .alert_icon_content_centre_align {
+	margin-top:-2px;
+	padding-top:2px;
+}
+
+.ie #confirm_panel .alert_icon_content.topSpacing {
+	margin-top:-18px !important;
+}
+
+#confirm_panel .alert_icon_acct.removeIcon{
+	margin-left:-45px !important;
+}
+
+.ie #confirm_panel .alert_icon_acct.removeIcon{
+	margin-top:14px !important;
+}
+
+#confirm_panel .alert_icon_acct {
+	background: transparent url('/me/images/shared_single.png') no-repeat scroll 0px -512px;
+	float:left;
+	height:32px;
+	margin-left:0px;
+	margin-top:-2px;
+	width:32px;
+}
+
+.inlineSeperator {
+ height: 2px;
+ width:498px;
+ background:transparent url('/me/images/controls.png') repeat-x 0px -5600px;	
+ margin-top:12px;
+ margin-bottom:11px;
+}
+
+.subAccountSeperator{
+ height: 2px;
+ width:498px;
+ background:transparent url('/me/images/controls.png') repeat-x 0px -5600px;	
+ margin-top:9px;
+ margin-bottom:15px;
+}
+
+.subAccountInlineSeperator{
+ height: 2px;
+ width:498px;
+ background:transparent url('/me/images/controls.png') repeat-x 0px -5600px;	
+ margin-top:16px;
+ margin-bottom:9px;
+}
+
+.panelBackground {
+ height:100%;
+ position:absolute;
+ width:100%;
+ z-index:0;
+}
+
+.ie .panelBackground {
+	display:none;
+}
+
+.subAccountDivider{
+ height: 2px;
+ width:534px;
+ background:transparent url('/me/images/controls.png') repeat-x 0px -5600px;
+ margin:12px 0px 11px -19px;
+	
+}
+
+.divider {
+ height: 2px;
+ width:534px;
+ background:transparent url('/me/images/controls.png') repeat-x 0px -5600px;
+ margin:12px 0px 15px -19px;
+}
+
+.contentHeight {
+	height:421px;
+}
+
+.createdTextPos {
+	margin-top:10px;
+}
+
+#subAccount .namePos {
+	margin-bottom:3px;
+}
+
+#subAccount .memberNamePos {
+	margin:3px 0px 3px 0px;
+}
+
+#subAccount .emailPos {
+	margin:3px 0px 15px 0px;
+}
+
+#subAccount .nameRightcol {
+	margin-left:93px;
+}
+
+#subAccount .memberNameRightcol {
+	margin-left:42px;
+}
+
+#subAccount .memberEMailRightcol {
+	margin-left:42px;
+}
+
+
+#subAccount .passwdRightcol {
+	margin-left:70px;
+}
+
+#subAccount .securityQRightcol{
+	margin-left:23px;
+}
+
+#subAccount .securityAnsRightcol{
+	margin-left:32px;
+}
+
+#subAccount .securityInfoRightcol{
+	margin-left:134px;
+}
+
+.setupPos {
+	margin-top:14px;
+}
+
+.photomaton {
+	color:#1C4FAD;
+	font-size:11px;
+	text-shadow:none;
+}
+
+.account .wrapper {
+	overflow:hidden;
+}
+
+.account .wrapper .main_container {
+	overflow:visible;
+}
+
+/* English style for Progress Bar*/
+#progressBar{
+	float:right;
+	margin-top:4px;
+	padding-right:52px;
+	margin-left:32px;
+	width:194px;
+}
+
+.acct_meter_white1_blue {
+	background:transparent url('/me/images/acct_meter_sprite.png') no-repeat scroll 0px 0px;
+	float:left;
+	height:10px;
+	width:42px;
+}
+
+.ie .acct_meter_white1_blue, .ie .acct_meter_white1_white {
+	position: relative;
+	left: 42px;
+}
+
+.acct_meter_blue2_blue {
+	background:transparent url('/me/images/acct_meter_sprite.png') no-repeat scroll -73px -48px;
+	height:10px;
+	width:110px;
+}
+.acct_meter_blue3 {
+	background:transparent url('/me/images/acct_meter_sprite.png') no-repeat scroll -214px -144px;
+	float:right;
+	height:10px;
+	width:42px;
+	margin-top: -10px;
+}
+.acct_meter_white1_white {
+	background:transparent url('/me/images/acct_meter_sprite.png') no-repeat scroll 0px -24px;
+	float:left;
+	height:10px;
+	width:42px;
+}
+.acct_meter_white2_blue {
+	background:transparent url('/me/images/acct_meter_sprite.png') no-repeat scroll -73px -72px;
+	height:10px;
+	width:110px;
+}
+.acct_meter_white2_white  {
+	height:10px;
+	width:110px;
+	background: transparent url('/me/images/acct_meter_sprite.png') -73px -96px no-repeat;	
+}
+
+.acct_meter_white3 {
+	float:right;
+	height:10px;
+	width:42px;
+	margin-top: -10px;
+	background: transparent url('/me/images/acct_meter_sprite.png') -214px -120px no-repeat;	
+}
+
+.textLeft {
+	position:relative;
+	left:-16px;
+	width:42px;
+}
+
+.ie .textLeft{
+	left: 22px;
+}
+.textCenter {
+	left:81px;
+	position:relative;
+	top:-18px;
+	width:35px;
+}
+
+.ie .textCenter {
+	left:100px;
+}
+
+.textRight {
+	left:156px;
+	position:relative;
+	top:-36px;
+}
+
+/* Dialog Classes*/
+.alert_icon_content {
+margin-top:-2px;
+padding-left:45px;
+padding-top:2px;
+}
+
+.alert_icon_acct {
+background:transparent url('/me/images/shared_single.png') no-repeat scroll 0px -512px;
+float:left;
+height:32px;
+margin-left:-45px;
+margin-top:-2px;
+width:32px;
+}
+
+#upgrade_panel .alert_icon_acct {
+background:transparent url('/me/images/shared_single.png') no-repeat scroll 0px -512px;
+float:left;
+height:32px;
+margin-left:0px;
+margin-top:1px;
+width:32px;
+}
+
+.alert_message1 {
+	margin-bottom: 4px;
+	margin-top: 8px;
+}
+
+#upgradeButton.label {
+	color :#000000;
+}
+
+body.account.safari input {
+	margin-top:-2px;
+}
+
+body.account.ie input[type=radio] {
+	border:none;
+	background-position-y:-2px;
+	background-color:transparent;
+}
+
+body.account.ie8 input[type=radio] {
+	border:none;
+	background-position-y:-2px;
+	background-color:transparent;
+}
+
+body.account.ie input[type=checkbox] {
+	border:none;
+	background-position-y:-2px;
+	background-color:transparent;
+}
+
+body.account.ie8 input[type=checkbox] {
+	border:none;
+	background-position-y:-2px;
+	background-color:transparent;
+}
+
+a.checkbox.subscriptionSelection img.button {
+top:-1px;
+}
+
+.safari .dialog .title {
+	font-family:Arial,sans-serif;
+}
+
+.safari .contentTable {
+	border-spacing : 2px 1px;
+}
+
+.email_margin {
+	margin-top:-8px;
+}
+
+.ie .email_margin {
+	margin-top:10px;
+}
+
+.warningIcon {
+	padding-bottom:13px;
+}
+
+.firefox .warningIcon {
+	padding-bottom:8px;
+}
+
+.ie .warningIcon {
+	padding-bottom:21px;
+}
+.convertAccountSpacer {
+	padding-top: 184px;
+} 
+
+/* For width of LightBox in Remove CC for trial Account */
+.shadow.pane-wrapper.lightboxSize{
+	width:429px;
+}
+
+.shadow.pane-wrapper.inactiveLightboxSize {
+	width : 500px;
+}
+/* For Inactive/deprovisioned account Light Box */ 
+
+#panes .panel-pane .pane-wrapper.inactiveAccountDialog{
+	margin-top: 79px;
+}
+
+.ie #panes .panel-pane .pane-wrapper.inactiveAccountDialog{
+	margin-top: 80px;
+}
+
+
+/* For width of Light Box in quick renew flow */
+
+#orderInformationDiv #panes .panel-pane .shadow.pane-wrapper.dialogBoxSize{
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -300px;
+	z-index: 9999;
+	width:600px;
+}
+
+.firefox .convertAccountSpacer {
+	padding-top: 184px;
+}
+
+.ie .convertAccountSpacer {
+	padding-top: 192px;
+}
+
+.systemStatusSpacer {
+	bottom :1px;
+	position : relative;
+}
+
+.ie .systemStatusSpacer {
+	bottom :1px;
+	position : static;
+}
+
+.ie a.radio img.button {
+	position : static;
+}
+
+.spinner {
+	background : transparent url('/me/images/spinner_small.gif') no-repeat scroll;
+}
+
+.ie .spinner {
+	background : transparent url('/me/images/spinner_small.gif') no-repeat scroll;
+	float:left;
+}
+
+.dialogDimension {
+	width : 288px;
+	height : 101px;
+}
+
+.panelDimension {
+	width : 287px;
+	height : 101px;
+}
+.firstErrorMessageReplacingPrice{
+	padding-top: 0px !important;
+}
+
+.ie .dialogDimension {
+	width : 290px;
+	height : 101px;
+}
+
+.ie .panelDimension {
+	width : 289px;
+	height : 101px;
+}
+
+.ie #panes .scrollable_content {
+	margin:-18px -20px -9px;
+	max-height:445px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	padding:18px 20px 9px;
+}
+.safari .dialogDimension {
+	width : 290px;
+	height : 101px;
+}
+
+.safari .panelDimension {
+	width : 289px;
+	height : 101px;
+}
+
+.dialog .title {
+	color:#313131;
+	font-size:17px;
+	font-weight:bold;
+	text-shadow:0px 1px 0px rgba(255, 255, 255, 0.8);
+}
+
+.firefox #convertAccountDiv .button .label {
+	padding : 2px 0px 7px;
+}
+
+.ie #convertAccountDiv .button {
+	margin-top : -1px;
+}
+
+.akHeader {
+	background:transparent url('/me/images/ak_header.png') 0px 0px no-repeat;
+	width:624px;
+	height:41px;
+}
+
+.akHeaderConfirmRenewal {
+	background:transparent url('/me/images/hdr_confirmrenewal.png') 0px 0px no-repeat;
+	width:624px;
+	height:41px;
+}
+
+.ie a.regular span.button-inner {
+	position : static;
+}
+
+.ie a.checkbox img.button {
+	position : static;
+}
+
+.account .dialog .text.error {
+		position : relative;
+}
+
+.ie.account .dialog .text.error {
+		position : static;
+}
+
+
+.firefox2 #convertAccountDiv .button .label, .firefox2 #SetupAccount .button .label  {
+	padding:2px 0px 7px;
+}
+
+.firefox2 #convertAccountDiv .panel-pane .pane-wrapper .pane-root .panel_content, .firefox2 #SetupAccount .panel-pane .pane-wrapper .pane-root .panel_content  {
+	position:absolute;
+}
+
+.firefox2 #SetupAccount .pane-wrapper .buttons {
+	padding-right:20px;
+}
+
+.firefox2 #convertAccountDiv .pane-wrapper .buttons {
+	padding-right:22px;
+}
+
+.firefox2 .fieldPadding {
+	padding-top : 5px;
+	padding-bottom :10px;
+}
+
+.fieldPadding {
+	padding-top : 6px;
+	padding-bottom :10px;
+}
+
+.firefox2 .convertAccountSpacer {
+	padding-top:185px;
+}
+
+.safari #billingInfoDiv select,.safari #orderInformationDiv select,.safari #optionsOrderInformationDiv select {
+	margin-top : -2px;
+}
+
+.firefox #billingInfoDiv select,.firefox #orderInformationDiv select, .firefox #optionsOrderInformationDiv select {
+	margin-top : 1px;
+}
+
+.ie #billingInfoDiv select,.ie #orderInformationDiv select,.ie #optionsOrderInformationDiv select {
+	margin-top : 2px;
+}
+
+.firefox #expirationDate select, .firefox #expiryDate select  {
+	margin-top : 1px;
+}
+
+#acctOptionsDiv .caption.error {
+	line-height : 14px;
+	float:right;
+	text-align: right; 
+	padding-right: 10px;
+	margin-bottom: 0px;
+	width:220px;
+}
+
+#acctOptionsDiv .caption.error.ccmsg {
+	padding-right: 0px;
+	width:500px;
+}
+
+#showRenewalMessage .firstErrorMessage{
+	padding-right:10px;
+}
+
+.ie #showRenewalMessage {
+	margin-right:-80px;
+}
+
+.ie .firstErrorMessageReplacingPrice{
+	margin-right: 0px !important;
+}
+
+
+.ie .account .options .upgrade .norenew .description
+{
+	position:static !important;
+}
+
+.ie .account .options .upgrade .description
+{
+	position:static !important;
+}
+
+.ie .account .options .total .description{
+	margin-top:-25px;
+}
+
+.ie8 #acctOptionsDiv .infoBox .buttons {
+	padding-top:10px;
+	height:20px;
+}
+
+.ie8 #orderInformationDiv #processingCompletedDiv .pane-wrapper{
+	height:600px !important;
+}
+
+.ie8 #optionsOrderInformationDiv #processingCompletedDiv .pane-wrapper{
+	height:600px !important;
+}
+
+.ie8 .priceDisplay.upgrade{
+	width:auto !important;
+}
+
+.ie .account .options .total .caption {
+	margin-left:10px !important;
+}
+
+.altUserHeight {
+	margin: 179px 0px 0px;
+}
+
+.safari .altUserHeight {
+	margin: 181px 0px 0px;
+}
+
+.ie .altUserHeight {
+	margin: 159px 0px 0px;
+}
+
+.ie #showAltUserNamesDiv .panel-pane .pane-wrapper .pane-root .panel_content {
+	position :static;
+}
+
+.storageDescriptionLeft {	
+	margin-left:-31px;
+}
+
+.ie .storageDescriptionLeft {	
+	margin-left: 10px;
+}
+
+.alert_icon_content .big_alert {
+	float:left;
+	margin-left:-45px;
+	margin-top:-2px;
+}
+
+.marginBottomUpper{
+	margin-top:-8px;
+	margin-bottom:10px;
+	border-bottom:1px solid #d9d9d9;
+}
+
+.marginBottomLower{
+	margin-top:-7px;
+	border-bottom:1px solid #d9d9d9;
+}
+
+.safari .marginBottomUpper{
+	margin-top : -8px;
+}
+
+.ie .marginBottomUpper{
+	margin-top:-6px;
+}
+
+.ie .marginBottomLower{
+	margin-top:-6px;
+	border-bottom:1px solid #d9d9d9;
+}
+
+.ie #removeDomainDiv .panel-pane .pane-wrapper .pane-root .panel_content, .ie #confirmDomainRemovalDiv .panel-pane .pane-wrapper .pane-root .panel_content {
+	position : static;
+}
+
+.safari .domainTopSpacing {
+	padding-top : 1px;
+}
+
+.domainImageTopPadding {
+	padding-top:7px;
+}
+
+.ie .domainImageTopPadding {
+	padding-top:3px;
+}
+
+.account .spinner.large {
+  background-repeat: none;
+  background-image: url('/my/shared/en/198g/images/spinners/spinner_32px_fafafa.gif');
+  background-attachment: scroll;
+	float : none;
+  width: 32px;
+  height: 32px;
+}
+
+.account #orderInformationDiv label input, .account #optionsOrderInformationDiv label input  {
+	vertical-align : middle;
+	margin-top : 0px;
+}
+
+.firefox .account #ccInfo img {
+	margin-bottom : -6px; 
+}
+
+.safari .account #ccInfo img {
+	margin-bottom : 5px; 
+}
+
+.ie .account #ccInfo input {
+ 	vertical-align: bottom; 
+}
+
+.firefox .shared .form .text input {
+	height	: 16px;
+}
+
+.dialog .warninginfo { 
+	color :#666666;
+}
+
+.errorText  {
+	font-size: 13px;
+	color: #888;
+	font-weight: normal;
+	font-style: italic;
+}
+
+.safari #personalDomainDiv .buttons{
+	height:25px !important;
+}
+
+.renewalDoneDescription{
+	padding-bottom:25px;
+	padding-top:25px;
+}
+
+
+.accountAlertIconContent {
+	margin-top:-2px;
+	padding-left:24px;
+	padding-top:2px;
+}
+
+.ie .deviceMgmtBtnSpacer {
+	margin-top:0px;
+	margin-bottom:15px;
+}
+
+.accountAcctAlertIcon {
+	background:transparent url('/me/images/acct_sprite.png') 0px -944px no-repeat;
+	width:43px;
+	height:41px;
+	float:left;
+	margin-left:-24px;	
+	margin-top:2px;
+	padding-right:14px;
+}
+
+
+.deviceMgmtBtnSpacer {
+	margin-top:-1px;
+	margin-bottom:15px;
+}
+
+#autoLogoutLightboxDiv #panes
+{
+	z-index:10000002 !important;
+}
+
+.ie #CCDetailsDiv #zipLabel
+{
+	white-space:nowrap;
+}
+
+.summaryLinkText {
+	color:#000000;
+	font-size:11px;
+}
+
+.firefox .account .summary .announcementDivPadding {
+	padding-top:2px;
+}
+
+.ie .account .summary .announcementDivPadding {
+	padding-top:5px;
+}
+
+.account .summary .announcementDescriptionPadding {
+	padding-top:1px;
+}
+
+.ie .account .summary .announcementDescriptionPadding {
+	padding-top:3px;
+}
+
+.removedDomainIndicator {
+	width: 16px;
+	height: 16px;
+	background: transparent url('/me/images/shared_single.png') -32px -1024px no-repeat;	
+}
+
+.firefox #removeDomainSpinner.spinner ,.safari #removeDomainSpinner.spinner {
+	position: relative;
+	padding-right:80px;
+	vertical-align:middle;
+}
+
+.firefox .removedDomainIndicator, .safari .removedDomainIndicator {
+	position: relative;
+	padding-right:80px;
+	vertical-align:middle;
+}
+
+.ie #removeDomainSpinner.spinner {
+	position: relative;
+	padding-right:65px;
+	margin-left : 10 px;
+	vertical-align:middle;
+}
+
+.ie .removedDomainIndicator {
+	position: relative;
+	padding-right:70px;
+	vertical-align:middle;
+	margin-bottom : 5px;
+}
+
+.ie8 .useExistingCardText{
+	width:23px;
+}
+
+.learnMoreText {
+	margin-right:260px ! important;
+}
+
+#ccValidationErrorDiv.firefox2 .learnMoreBtn{
+	left:20px;
+	position:absolute;
+	width:auto !important;
+}
+
+
+#passwordID, #usernameID{
+	width:175px;
+}
+
+#strengthIndicatorText{
+	font-size: 13px;
+	font-weight: bold;
+}
+
+div.rounded-box {
+    width: 9em;
+    background-color: #E6E6E6;
+    margin: 3px;
+}
+
+#strengthindi{
+	height:100%;
+}
+
+.maindiv
+{
+	border:1px solid black;
+	height:375px;
+	padding:11px;
+	width:600px;
+	background-color: #464d53;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	
+}
+
+#indicator{
+	width:175px;
+	height:16px;
+	border:1px solid black;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+}
+
+.tipbox{
+	width:570px;
+	padding:10px; 
+	border:2px solid #32373d;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	position: relative;
+	top:25px;
+}
+
+.passwordSuggest {
+	background: transparent url('/my/shared/en/198g/images/icons/48/key.png') no-repeat scroll 50% 50%;
+	height : 15px;
+	width : 15px;
+}
+
+/* Password Strength Checker Styles */
+
+.emptyPwd {
+	width: 20px;
+	height: 9px;
+	background: transparent url('/me/images/pwStrengthMeter.png') no-repeat scroll 0px 0px; 
+}
+
+.emptyFadePwd {
+	width: 20px;
+	height: 9px;
+	background: transparent url('/me/images/pwStrengthMeter.png') no-repeat scroll 0px 0px; 
+	opacity: .50;
+	-moz-opacity: 0.50;
+	filter: alpha(opacity = 50);
+}
+
+.tooShortPwd {
+	width: 20px;
+	height: 9px;
+	background: transparent url('/me/images/pwStrengthMeter.png') no-repeat scroll 0px 0px;
+}
+
+.notRecommendedPwd {
+	width: 20px;
+	height: 9px;
+	background: transparent url('/me/images/pwStrengthMeter.png') no-repeat scroll 0px -10px;
+}
+
+.weakPwd {
+	width: 20px;
+	height: 9px;
+	background: transparent url('/me/images/pwStrengthMeter.png') no-repeat scroll 0px -20px;
+}
+
+.okPwd {
+	width: 20px;
+	height: 9px;
+	background: transparent url('/me/images/pwStrengthMeter.png') no-repeat scroll 0px -30px;
+}
+
+.goodPwd {
+	width: 20px;
+	height: 9px;
+	background: transparent url('/me/images/pwStrengthMeter.png') no-repeat scroll 0px -40px;
+}
+
+.strongPwd {
+	width: 20px;
+	height: 9px;
+	background: transparent url('/me/images/pwStrengthMeter.png') no-repeat scroll 0px -50px;
+}
+
+.invalidPwd {
+	width: 20px;
+	height: 9px;
+	background: transparent url('/me/images/pwStrengthMeter.png') no-repeat scroll 0px -60px;
+}
+
+.pwdString {
+	font-size : 11px;
+	color : #333333;
+	line-height: 16px;
+}
+
+.cvvTextboxLength {
+	width: 93px;
+}
+
+.textlineheight {
+	line-height:9px;
+}
+
+.tdheightsubaccounts {
+	height:2px;
+}
+
+.safari .tdheightsubaccounts {
+	height:5px;
+}
+
+.tdheightpasswordsettings {
+	height:3px;
+}
+
+.safari .tdheightpasswordsettings {
+	height:5px;
+}
+
+.quespadding {
+	padding-top:4px;
+}
+
+.safari .quespadding {
+	padding-top:1px;
+}
+
+.caption_text
+{
+	color:#333333;
+	font-size:11px;
+	font-weight:normal;
+}
+.safari #birthDayPsswd
+{
+	margin-left = -4px;
+}
+.firefox #birthDayPsswd
+{
+	margin-left = -3px;
+}
+
+#afterLoadSecretQues{
+	margin-top:-1px;
+}
+#firstLoadSecretQues{
+	margin-top:-1px;
+}
+
+.safari #afterLoadSecretQues
+{
+	margin-top:-4px !important;
+}
+
+.safari #firstLoadSecretQues
+{
+	margin-top:-4px !important;
+}
+
+
+#ccRenewalLightBox .pane .shadow {
+	width:500px;
+}
+
+#renewal_lightboxCC .pane .shadow {
+	width:500px;
+}
+
+/* End ------------------------------------------------------- styles/account.css*/
+
