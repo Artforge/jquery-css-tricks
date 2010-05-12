@@ -11,6 +11,12 @@
 
 <script type="text/javascript">
 
+	annotations = []
+	annotations.push(
+		{excerpt: 'There has been no "light at the end of the tunnel," no blessing in disguise and no valuable learning experience.', insights: ['Hopelessness'] },
+		{excerpt: 'I wonder about the things I don\'t realize that I\'ve lost.', insights: ['Loss'], comment: 'Wow, this is really good!'}
+	)
+
 	var system_insights = eval(['black', 'white', 'red', 'green', 'blue', 'yellow', 'purple', 'brown', 'silver', 'magenta', 'cyan', 'gold', 'goldenrod']);
 
 	function getSelected() {
@@ -43,6 +49,12 @@
 				$("#dropzone").append($('<div>').annotation(selection,{template: tmp_note, available_insights: "tokens.js", onMouseOver: hilite, onMouseOut: unHilite }).fadeIn());
 			}
 		});
+		
+		jQuery.each(annotations,function(){
+			$("#dropzone").append($('<div>').annotation(this.excerpt,{insights: this.insights, comment: this.comment, template: tmp_note, available_insights: "tokens.js", onMouseOver: hilite, onMouseOut: unHilite }).fadeIn());
+		})
+		
+		
 	});
 	
 </script> 
@@ -99,7 +111,7 @@
 				</div>
 				<div class="comment" style="display:none;">
 					<textarea></textarea>
-					<input type="button" class="comment_button" value="Submit Comment">
+					<input type="button" class="comment_button" value="Update">
 				</div>
 			</div>
 		</div>
