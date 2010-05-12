@@ -4,61 +4,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Drag & Drop Text</title>
 
-
-
 <script type="text/javascript" src="/javascripts/jquery-1.4.min.js"></script>
 <script type="text/javascript" src="/javascripts/jquery.highlight.js"></script>
-<script type="text/javascript"> 
-	var highlights = [];
-	
-	$(document).ready(function(){
+<script type="text/javascript" src="/javascripts/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.annotation.js"></script>
 
-		$("#dropzone .insight .trash").live("click", function(){
-			insightDiv = $(this).parents(".insight")
-			spanId = insightDiv.data("highlight");
-			highlightSpan = document.getElementById(spanId);
-			// console.log(highlightSpan);
-			$("#post").removeHighlight_with_id(spanId);
-			$(insightDiv).fadeOut();
-		});
-		
-		$("#dropzone .insight").live("mouseover", function(){
-			selection = $(this).find(".excerpt").html()
-			$("#post").highlight(selection);
-		});
-		
-		$("#dropzone .insight").live("mouseout", function(){
-			// selection = $(this).html();
-			$("#post").removeHighlight();
-		});
-		
-		
-		$('#post').mouseup(function(e){
-			var selection = getSelected();
-			// console.log(selection);
-			if (selection && (selection = new String(selection).replace(/^\s+|\s+$/g,''))) {
-				// highlights.push(selection);
-				insightDiv = $('<div>').attr({id: "insight_" + highlights.length, class: "insight"}).hide();
-				insightExcerpt = $('<span>').html(selection).attr({class: "excerpt"});
-				insightDiv.append(insightExcerpt);
-				// insightDiv.data("highlight", "highlight_" + highlights.length);
-				toolsDiv = $('<div>').attr({class: "actions"});
-				toolsDiv.append($('<span>').attr({class: "edit", title: "Edit this excerpt"}));
-				toolsDiv.append($('<span>').attr({class: "trash", title: "Delete this excerpt"}));
-				toolsDiv.append($('<span>').attr({class: "comment", title: "Comment on this excerpt"}));
-				insightDiv.append(toolsDiv);
-				$("#dropzone").append(insightDiv);
-				insightDiv.fadeIn();
-				// $("#post").highlight_with_id(selection, "highlight_" + highlights.length);
-			}
-		});
+<script type="text/javascript">
 
-	});
-	
+	var system_insights = eval(['black', 'white', 'red', 'green', 'blue', 'yellow', 'purple', 'brown', 'silver', 'magenta', 'cyan', 'gold', 'goldenrod']);
+
 	function getSelected() {
-		if(window.getSelection) { return window.getSelection(); }
-		else if(document.getSelection) { return document.getSelection(); }
-		else {
+		if (window.getSelection) { 
+			return window.getSelection(); 
+		} else if(document.getSelection) { 
+			return document.getSelection(); 
+		} else {
 			var selection = document.selection && document.selection.createRange();
 			if(selection.text) { return selection.text; }
 			return false;
@@ -66,36 +26,114 @@
 		return false;
 	}
 
-
+	function hilite(excerpt){
+		$("#post").highlight(excerpt);
+	}
+	
+	function unHilite(){
+		$("#post").removeHighlight();
+	}
+	
+	$(document).ready(function(){
+		var tmp_note = $('#hidden_templates .annotation');
+		
+		$('#post').mouseup(function(e){
+			var selection = getSelected();
+			if (selection && (selection = new String(selection).replace(/^\s+|\s+$/g,''))) {
+				$("#dropzone").append($('<div>').annotation(selection,{template: tmp_note, available_insights: "tokens.js", onMouseOver: hilite, onMouseOut: unHilite }).fadeIn());
+			}
+		});
+	});
+	
 </script> 
 
+<link rel="stylesheet" href="../stylesheets/jquery.autocomplete.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
 <style type="text/css">
-	#post{width:75%;float:left;}
-	#sidebar{width:25%;float:right;}
-	#dropzone{height:300px;border:3px double red;margin:10px;padding:10px;}
+	body{font-family:arial;font-size:10pt;}
+	.clr{clear:both;}
+	#page{width:1000px;}
+	#post{width:600px;float:left;padding:20px 10px 10px;}
+	#sidebar{width:350px;float:right;}
+	#dropzone{min-height:300px;border:1px dashed red;margin:10px;}
 	
-	.insight{border:1px dashed #ccc;padding:5px;margin:5px;}
+	.annotation{background:#fafafa;border:1px solid #ccc;margin:5px 5px 10px;}
 	
 	.highlight { background-color: yellow; padding:auto 3px;}
+	.excerpt_holder{padding:5px;}
 	.excerpt{margin-right:5px;}
 	.actions{display:inline-block;}
-	.actions span{display:inline-block;width:12px;height:14px;vertical-align:middle;margin:0px 3px 2px;}
-	.actions .edit{background:url(/images/insights/edit.gif) no-repeat 1px 0px;}
-	.actions .trash{background:url(/images/insights/trash.gif) no-repeat 1px 2px;}
-	.actions .comment{background:url(/images/insights/comment.gif) no-repeat 1px 2px;}
+	.actions span{display:inline-block;width:12px;height:14px;vertical-align:middle;margin:0px 3px 2px;cursor:pointer;}
+	.actions span.edit{background:url(/images/insights/edit.gif) no-repeat 1px 0px;}
+	.actions span.trash{background:url(/images/insights/trash.gif) no-repeat 1px 2px;}
+	.actions span.comment{background:url(/images/insights/comment.gif) no-repeat 1px 2px;}
+	.actions span.attach{background:url(/images/insights/briefcase.gif) no-repeat 1px 2px;}
+	
+	.insight_form{border-top:1px dashed #ccc;padding:5px;}
+	
+	.insights{background:#fff;border-top:1px dashed #ccc;padding:2px 5px;}
+	.insight{float:left;margin-right:5px;padding:3px;}
+	.insight a{cursor:pointer;display:inline-block;color:transparent;width:10px;margin-right:3px;background:url("/images/insights/x-ind.gif") no-repeat 0px 5px;}
+	.insight a:hover{background:url("/images/insights/x-ind.gif") no-repeat -10px 5px;}
+	
+	div.comment{border-top:1px dashed #ccc;padding:5px 8px 5px 6px;text-align:right;}
+	div.comment textarea{width:100%;height:50px;margin-bottom:5px;padding:1px;}
+	div.comment .comment_button{}
 </style>
 </head>
 
 <body id="home">
-	<div id="post">
-		<p>My experiences have all been awful.  There has been no "light at the end of the tunnel," no blessing in disguise and no valuable learning experience.  It's all very negative.  It has been a terrible, terrible experience.  This disease is really one of the worst.  It hits during the dead center of the prime of life and just slowly destroys us.  The old term of creeping paralysis is very appropriate.  I spend hours thinking about all this disease has stolen from me and worse yet, I wonder about the things I don't realize that I've lost.  What would life be like had this not happened?  What experiences have I missed?  There's a whole world out there and I can scarcely take part in it.</p>
-		<p>If I had to find a specific experience, or set of experiences, that defined my MS struggle it would be the month I spent in Baltimore being treated.  It took part in a risky, difficult trial involving high doses of chemotherapy.  This is an example of the lengths I was willing to go to preserve functioning.  I told the doctor at JH that I'd drink a gallon of gasoline if it would preserve the use of my body.</p>
-	</div>
-	<div id="sidebar">
-		<div id="dropzone">
-		
+	<div id="page">
+		<div id="post">
+			<p>My experiences have all been awful.  There has been no "light at the end of the tunnel," no blessing in disguise and no valuable learning experience.  It's all very negative.  It has been a terrible, terrible experience.  This disease is really one of the worst.  It hits during the dead center of the prime of life and just slowly destroys us.  The old term of creeping paralysis is very appropriate.  I spend hours thinking about all this disease has stolen from me and worse yet, I wonder about the things I don't realize that I've lost.  What would life be like had this not happened?  What experiences have I missed?  There's a whole world out there and I can scarcely take part in it.</p>
+			<p>If I had to find a specific experience, or set of experiences, that defined my MS struggle it would be the month I spent in Baltimore being treated.  It took part in a risky, difficult trial involving high doses of chemotherapy.  This is an example of the lengths I was willing to go to preserve functioning.  I told the doctor at JH that I'd drink a gallon of gasoline if it would preserve the use of my body.</p>
 		</div>
+		<div id="sidebar">
+			<div id="clicker">Click</div>
+			<div id="dropzone">
+		
+			</div>
+		</div>
+		<div class="clr"></div>
 	</div>
+	
+	<div id="hidden_templates" style="display:none;">
+		
+		<div class="annotation">
+			<div class="excerpt_holder">
+				<span class="excerpt"></span>
+				<div class="actions">
+					<span title="Delete this excerpt" class="trash"></span>
+					<span title="Comment on this excerpt" class="comment"></span>
+					<span title="Attach an Insight to this excerpt" class="attach"></span>
+				</div>
+			</div>
+			<div>
+				<div class="insight_form" style="display:none;">
+					<input type="text" class="insight_field">
+					<input type="button" class="insight_button" value="Add Insight">
+				</div>
+				<div class="insights" style="display:none;">
+					<span class="empty_message">no insights attached</span>
+					<div class="clr"></div>
+				</div>
+				<div class="comment" style="display:none;">
+					<textarea></textarea>
+					<input type="button" class="comment_button" value="Submit Comment">
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
 </body>
 </html>
+
+<script>
+	
+	$("#clicker").click(function(){
+		$("#dropzone").append($('<div>').annotation("MS struggle it would be the month I spent in Baltimore being treated",{insights: ["pain","misery"], comment: "This is a comment", template: $('#hidden_templates .annotation'), available_insights: system_insights,onMouseOver: hilite, onMouseOut: unHilite}));
+	});
+	
+</script>
 
