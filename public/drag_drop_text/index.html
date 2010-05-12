@@ -40,21 +40,22 @@
 		$("#post").removeHighlight();
 	}
 	
+	
 	$(document).ready(function(){
 		var tmp_note = $('#hidden_templates .annotation');
 		
+		// Render existing Annotations (from pre-defined or loaded json)
+		jQuery.each(annotations,function(){
+			$("#dropzone").append($('<div>').annotation(this.excerpt,{insights: this.insights, comment: this.comment, template: tmp_note, available_insights: "tokens.js", onMouseOver: hilite, onMouseOut: unHilite }).fadeIn());
+		})
+		
+		// Add text selection handler
 		$('#post').mouseup(function(e){
 			var selection = getSelected();
 			if (selection && (selection = new String(selection).replace(/^\s+|\s+$/g,''))) {
 				$("#dropzone").append($('<div>').annotation(selection,{template: tmp_note, available_insights: "tokens.js", onMouseOver: hilite, onMouseOut: unHilite }).fadeIn());
 			}
 		});
-		
-		jQuery.each(annotations,function(){
-			$("#dropzone").append($('<div>').annotation(this.excerpt,{insights: this.insights, comment: this.comment, template: tmp_note, available_insights: "tokens.js", onMouseOver: hilite, onMouseOut: unHilite }).fadeIn());
-		})
-		
-		
 	});
 	
 </script> 
