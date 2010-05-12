@@ -1,0 +1,22 @@
+.annotation{background:#fafafa;border:1px solid #ccc;margin:5px 5px 10px 5px;}
+
+.highlight { background-color: yellow; padding:auto 3px;}
+.excerpt_holder{padding:5px;}
+.excerpt{margin-right:5px;}
+.actions{display:inline-block;}
+.actions span{display:inline-block;width:12px;height:14px;vertical-align:middle;margin:0px 3px 2px;cursor:pointer;}
+.actions span.edit{background:url(/images/insights/edit.gif) no-repeat 1px 0px;}
+.actions span.trash{background:url(/images/insights/trash.gif) no-repeat 1px 2px;}
+.actions span.comment{background:url(/images/insights/comment.gif) no-repeat 1px 2px;}
+.actions span.attach{background:url(/images/insights/briefcase.gif) no-repeat 1px 2px;}
+
+.insight_form{border-top:1px dashed #ccc;padding:5px;}
+
+.insights{background:#fff;border-top:1px dashed #ccc;padding:2px 5px;}
+.insight{float:left;margin-right:5px;padding:3px;}
+.insight a{cursor:pointer;display:inline-block;color:transparent;width:10px;margin-right:3px;background:url("/images/insights/x-ind.gif") no-repeat 0px 5px;}
+.insight a:hover{background:url("/images/insights/x-ind.gif") no-repeat -10px 5px;}
+
+div.comment{border-top:1px dashed #ccc;padding:5px 8px 5px 6px;text-align:right;}
+div.comment textarea{width:100%;height:50px;margin-bottom:5px;padding:1px;}
+div.comment .comment_button{}
