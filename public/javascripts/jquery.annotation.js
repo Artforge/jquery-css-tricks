@@ -61,7 +61,7 @@
 			container.find("span.trash").click(function(){container.fadeOut()});
 			container.find("span.comment").click(function(){attachComment()});
 			container.find("span.attach").click(function(){attachInsights()});
-			container.find("span.insight_button").click(function(){addTags();})
+			container.find("insight_button").click(function(){addTags();})
 		}
 	
 		function attachInsights(){
