@@ -1,0 +1,166 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+		<title>$('element').slider( options );</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+		<script type="text/javascript" src="slider.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+
+		<h2>$('element').slider( options );</h2>
+
+		<br/>
+
+		<h3>Example 1</h3>
+		<div class="example">
+			<div>
+				<div>
+					<div>
+						<style type="text/css">
+						.slider div.c1 {
+							background:#faa; 
+						}
+						.slider div.c2 { 
+							background:#ffa; 
+						}
+						.slider div.c3 { 
+							background:#afa; 
+						}
+						.slider div.c4 { 
+							background:#aff; 
+						}
+						.slider div.c5 { 
+							background:#aaf; 
+						}
+						.slider div.c6 { 
+							background:#faf; 
+						}
+
+						#slider2 { width:500px; }
+						</style>
+						<div id="slider2" class="slider">
+							<div class="c1">C1</div>
+							<div class="c2">C2</div>
+							<div class="c3">C3</div>
+							<div class="c4">C4</div>
+							<div class="c5">C5</div>
+							<div class="c6">C6</div>
+						</div>
+
+						<script type="text/javascript">
+						$('#slider2').slider({
+							direction: 'rtl'
+						});
+						</script>
+
+						<div style="clear:both;"></div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+
+		<br/>
+
+		<h3>Example 2</h3>
+		<div class="example">
+			<div>
+				<div>
+					<div>
+						<style type="text/css">
+						.slider div.c1 {
+							background:#faa; 
+						}
+						.slider div.c2 { 
+							background:#ffa; 
+						}
+						.slider div.c3 { 
+							background:#afa; 
+						}
+						.slider div.c4 { 
+							background:#aff; 
+						}
+						.slider div.c5 { 
+							background:#aaf; 
+						}
+						.slider div.c6 { 
+							background:#faf; 
+						}
+
+						#slider3 { width:500px; height:200px; }
+						</style>
+
+						<div id="slider3" class="slider">
+							<div class="c1">C1</div>
+							<div class="c2">C2</div>
+							<div class="c3">C3</div>
+							<div class="c4">C4</div>
+							<div class="c5">C5</div>
+							<div class="c6">C6</div>
+						</div>
+
+						<script type="text/javascript">$('#slider3').slider({
+							vertical: true
+						});
+						</script>
+						<div style="clear:both;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+
+		<br/>
+
+		<h3>Example 3</h3>
+		<div class="example">
+			<div>
+				<div>
+					<div>
+						<style type="text/css">
+						.slider div.c1 {
+							background:#faa; 
+						}
+						.slider div.c2 { 
+							background:#ffa; 
+						}
+						.slider div.c3 { 
+							background:#afa; 
+						}
+						.slider div.c4 { 
+							background:#aff; 
+						}
+						.slider div.c5 { 
+							background:#aaf; 
+						}
+						.slider div.c6 { 
+							background:#faf; 
+						}
+						</style>
+
+						<div id="slider4" class="slider">
+							<div class="c1">C1</div>
+							<div class="c2">C2</div>
+							<div class="c3">C3</div>
+							<div class="c4">C4</div>
+							<div class="c5">C5</div>
+							<div class="c6">C6</div>
+						</div>
+						<script type="text/javascript">$('#slider4').slider({
+							direction: 'rtl',
+							vertical: true
+						});
+						</script>
+						<div style="clear:both;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+
+
+	</body>
+	</html>

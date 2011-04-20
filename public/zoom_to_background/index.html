@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Zoom to Background</title>
+
+		<script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+		<script type="text/javascript" src="/javascripts/jquery-ui.min.js"></script>
+
+		<style>
+			#actions{
+				position:absolute;
+				top:25px;
+				right:25px;
+			}
+			#container{
+				position:relative;
+				width:960px;
+				height:500px;
+				border:1px solid #ccc;
+				margin:50px auto;
+				overflow:hidden;
+			}
+			#boots{
+				position:absolute;
+				top:150px;
+				left:150px;
+			}
+			.has_background:hover{
+				background:url(boots_glow.png);
+			}
+			#boots:hover{
+/*				background:url(boots_glow.png);*/
+			}
+			
+			#explore_header{
+				display:block;
+				position:relative;
+				margin:50px auto 0;
+				opacity:0.0;
+			}
+			
+			.post-its{
+				position:relative;
+				width:585px;
+				text-align:center;
+				margin:50px auto 0;
+				left:800px;
+			}
+			
+			.post-it{
+				width:195px;
+				height:170px;
+				float:left;
+				margin-left:-0px;
+			}
+			
+			#post_it_1 img{
+				-webkit-transform:rotate(6deg);
+				-moz-transform:rotate(6deg);
+			}
+			
+			#post_it_2 img{
+				-webkit-transform:rotate(0deg);
+				-moz-transform:rotate(0deg);
+			}
+			
+			#post_it_3 img{
+				-webkit-transform:rotate(-6deg);
+				-moz-transform:rotate(-6deg);
+			}
+			.clr{
+				clear:both;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div id="container">
+			
+			<img src="explore_header.png" width="753" height="92" alt="Explore Header" id="explore_header">
+			
+			<div class="post-its">
+				<div id="post_it_1">
+					<img src="post_it_blue.png" alt="Post It Blue" class="post-it">
+				</div>
+				<div id="post_it_2">
+					<img src="post_it_yellow.png" alt="Post It Yellow" class="post-it">
+				</div>
+				<div id="post_it_3">
+					<img src="post_it_pink.png" alt="Post It Pink" class="post-it">
+				</div>
+				<div class="clr"></div>
+			</div>
+			
+			<img id="boots" src="boots.png" width="250" height="250" alt="Boots" class="has_background">
+		</div>
+	</body>
+	
+	<div id="actions">
+	<div id="clickback">Close</div>
+	<div id="fade">Fade</div>
+	</div>
+	
+	<script type="text/javascript">
+
+		$('#boots').click(function() {
+			if ($(this).css("opacity") == 1){
+				moveBootsToBackground();
+			}
+		});
+		
+		$('#fade').click(function(){
+			if ($("#boots").css("opacity") == 0){
+				fadeInBoots();
+			}else{
+				fadeOutBoots();
+			}
+		});
+		
+		$('#clickback').click(function() {
+			if ($("#boots").css("opacity") != 1){
+				returnBootsToForeground();
+				slideOutPostIts();
+				fadeOutExploreHeader();
+			}
+		});
+		
+		function fadeOutBoots(){
+			$('#boots').removeClass("has_background");
+			$('#boots').animate({opacity: 0.0},
+			{queue:false, duration:350, easing: "easeOutSine"});
+		}
+		
+		function fadeInBoots(){
+			$('#boots').addClass("has_background");
+			$('#boots').animate({opacity: 1},
+			{queue:false, duration:350, easing: "easeInSine"});
+		}
+		
+		function moveBootsToBackground(){
+			$('#boots').removeClass("has_background");
+			$('#boots').animate({opacity: 0.5, height: '+=450',	width: '+=450',	left: '-=550', top: '-=225'},
+			{queue:false, duration:1000, easing: "easeOutSine", complete: slideInPostIts});
+		}
+		
+		function returnBootsToForeground(){
+			$('#boots').addClass("has_background");
+			$('#boots').animate({opacity: 1.0, height: '-=450',	width: '-=450',	left: '+=550', top: '+=225'},
+			{queue:false, duration:1000, easing: "easeOutBounce"});
+		}
+		
+		function slideInPostIts(){
+			console.log("slide In Post-Its");
+			$(".post-its").animate({left: '-=800'},
+			{queue:false, duration:500, easing: "easeOutSine", complete: fadeInExploreHeader});
+		}
+		
+		function slideOutPostIts(){
+			$(".post-its").animate({left: '+=800'},
+			{queue:false, duration:500, easing: "easeOutSine"});
+		}
+		
+		function fadeInExploreHeader(){
+			console.log("fade In ExploreHeader");	
+			$("#explore_header").animate({opacity: 0.8},
+			{queue:false, duration:250, easing: "easeOutSine", complete: exploreLoadComplete});
+		}
+		
+		function fadeOutExploreHeader(){
+			$("#explore_header").animate({opacity: 0.0},
+			{queue:false, duration:250, easing: "easeOutSine"});
+		}
+		
+		function exploreLoadComplete(){
+			console.log("Explore Load Complete");	
+		}
+		
+	</script>
+	
+</html>

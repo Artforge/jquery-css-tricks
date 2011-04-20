@@ -28,11 +28,16 @@
 			// work out how far through the day we are as a percentage - e.g. 6pm = 75%
 			var hourpercent = now.getHours() / 24 * 100;
 			var percentofday = Math.round(hourpercent);
+			
+			console.log("now.getHours()",now.getHours());
+			console.log("hourpercent",hourpercent)
 
 			// calculate pixel offset based on how far through the day we are
 			var offset = (backgroundheight / 100) * percentofday;
 			// graphic starts at approx 6am, so adjust offset by 1/2
-			var offset = offset - (backgroundheight / 2);
+			console.log("offset",offset)
+			var offset = offset - (backgroundheight / 4);
+			console.log("offset",offset)
 
 			function scrollbackground() {
 		   		offset = (offset < 1) ? offset + (backgroundheight - 1) : offset - 1;

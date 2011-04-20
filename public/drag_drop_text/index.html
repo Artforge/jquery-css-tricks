@@ -19,7 +19,7 @@
 
 	var system_insights = eval(['black', 'white', 'red', 'green', 'blue', 'yellow', 'purple', 'brown', 'silver', 'magenta', 'cyan', 'gold', 'goldenrod']);
 
-	function getSelected() {
+	function captureSelectedText() {
 		if (window.getSelection) { 
 			return window.getSelection(); 
 		} else if(document.getSelection) { 
@@ -32,28 +32,36 @@
 		return false;
 	}
 
-	function hilite(excerpt){
+	function highlightText(excerpt){
 		$("#post").highlight(excerpt);
 	}
 	
-	function unHilite(){
+	function removeHighlights(){
 		$("#post").removeHighlight();
+	}
+	
+	function renderAnnotation(elTarget, excerpt, insights, comment, tmp_note){
+		$(elTarget).append($('<div>').annotation(excerpt,{insights: insights, comment: comment, template: tmp_note, available_insights: "tokens.js", onMouseOver: highlightText, onMouseOut: removeHighlights }).fadeIn());
+	}
+	
+	function renderAnnotationFromJson(elTarget, json, template){
+		renderAnnotation(elTarget, json.excerpt, json.insights, json.comment, template)
 	}
 	
 	
 	$(document).ready(function(){
-		var tmp_note = $('#hidden_templates .annotation');
+		var note_template = $('#hidden_templates .annotation');
 		
 		// Render existing Annotations (from pre-defined or loaded json)
 		jQuery.each(annotations,function(){
-			$("#dropzone").append($('<div>').annotation(this.excerpt,{insights: this.insights, comment: this.comment, template: tmp_note, available_insights: "tokens.js", onMouseOver: hilite, onMouseOut: unHilite }).fadeIn());
+			renderAnnotationFromJson("#dropzone", this, note_template)
 		})
 		
 		// Add text selection handler
 		$('#post').mouseup(function(e){
-			var selection = getSelected();
+			var selection = captureSelectedText();
 			if (selection && (selection = new String(selection).replace(/^\s+|\s+$/g,''))) {
-				$("#dropzone").append($('<div>').annotation(selection,{template: tmp_note, available_insights: "tokens.js", onMouseOver: hilite, onMouseOut: unHilite }).fadeIn());
+				renderAnnotation("#dropzone",selection,[],"",note_template)
 			}
 		});
 	});
