@@ -37,9 +37,17 @@
 			}
 			
 			#logo_menu{
-				margin-left:125px;
+				margin-left:70px;
 				opacity:0.0;
 			}
+			
+			#explore_header{
+				display:block;
+				position:relative;
+				margin:25px 0 0 90px;
+				opacity:0.0;
+			}
+			
 			#boots{
 				position:absolute;
 				top:130px;
@@ -75,42 +83,37 @@
 			#plane.has_background:hover{
 				background:url(plane_hover_410.png);
 			}
-		
-			#explore_header{
-				display:block;
-				position:relative;
-				margin:25px auto 0;
-				opacity:0.0;
-			}
 			
 			.post-its{
 				position:relative;
-				width:585px;
+/*				width:585px;*/
 				text-align:center;
-				margin:50px auto 0;
-				left:1200px;
+				margin:-20px auto 0;
+				left:1000px;
 			}
 			
 			.post-it{
-				width:190px;
-				height:175px;
+				position:relative;
 				float:left;
 				margin-left:-0px;
 			}
 			
-			#post_it_1 img{
-				-webkit-transform:rotate(6deg);
-				-moz-transform:rotate(6deg);
+			#post_it_1{
+				z-index:9;
+				position:absolute;
+				left:100px;
 			}
 			
-			#post_it_2 img{
-				-webkit-transform:rotate(0deg);
-				-moz-transform:rotate(0deg);
+			#post_it_2{
+				z-index:8;
+				position:absolute;
+				left:340px;
 			}
 			
-			#post_it_3 img{
-				-webkit-transform:rotate(-6deg);
-				-moz-transform:rotate(-6deg);
+			#post_it_3{
+				z-index:7;
+				position:absolute;
+				left:570px;
 			}
 			.clr{
 				clear:both;
@@ -128,19 +131,14 @@
 	<body>
 		<div id="canvas">
 			<div id="container">
-				<img src="logo_menu.png" width="500" height="41" alt="Logo Menu" id="logo_menu" class="header">
-				<img src="explore_header.png" width="753" height="92" alt="Explore Header" id="explore_header" class="header">
+				<img src="logo_nav.png" alt="Logo Menu" id="logo_menu" class="header">
+				<img src="explore_header.png" alt="Explore Header" id="explore_header" class="header">
 
 				<div class="post-its">
-					<div id="post_it_1">
-						<img src="post_it_blue.png" alt="Post It Blue" class="post-it">
-					</div>
-					<div id="post_it_2">
-						<img src="post_it_yellow.png" alt="Post It Yellow" class="post-it">
-					</div>
-					<div id="post_it_3">
-						<img src="post_it_pink.png" alt="Post It Pink" class="post-it">
-					</div>
+						<img id="post_it_1" src="post_it_blography.png" alt="Post It Blue" class="post-it">
+						<img id="post_it_2" src="post_it_io.png" alt="Post It Yellow" class="post-it">
+						<img id="post_it_3" src="post_it_humanity.png" alt="Post It Pink" class="post-it">
+
 					<div class="clr"></div>
 				</div>
 
@@ -223,12 +221,12 @@
 		
 		function slideInPostIts(){
 			console.log("slide In Post-Its");
-			$(".post-its").animate({left: '-=1200'},
+			$(".post-its").animate({left: '-=1000'},
 			{queue:false, duration:500, easing: "easeOutSine", complete: fadeInExploreHeader});
 		}
 		
 		function slideOutPostIts(){
-			$(".post-its").animate({left: '+=1200'},
+			$(".post-its").animate({left: '+=1000'},
 			{queue:false, duration:500, easing: "easeOutSine"});
 		}
 		
