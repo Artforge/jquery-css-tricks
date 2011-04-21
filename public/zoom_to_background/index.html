@@ -20,7 +20,7 @@
 			#canvas{
 				background:url(home_bkg.jpg);
 				position:relative;
-				width:1100px;
+				width:1000px;
 /*				height:600px;*/
 				border:1px dashed #ccc;
 				margin:0 auto;
@@ -212,12 +212,12 @@
 		
 		function moveBootsToBackground(){
 			$('#boots').removeClass("has_background");
-			$('#boots').animate({opacity: 0.7, height: '+=450',	width: '+=450',	left: '+=750', top: '-=150'},
+			$('#boots').animate({opacity: 0.7, height: '+=450',	width: '+=450',	left: '+=700', top: '-=150'},
 			{queue:false, duration:1000, easing: "easeOutSine", complete: slideInPostIts});
 		}
 		
 		function returnBootsToForeground(){
-			$('#boots').animate({opacity: 1.0, height: '-=450',	width: '-=450',	left: '-=750', top: '+=150'},
+			$('#boots').animate({opacity: 1.0, height: '-=450',	width: '-=450',	left: '-=700', top: '+=150'},
 			{queue:false, duration:1000, easing: "easeInSine", complete: returnBootBackground});
 		}
 		
