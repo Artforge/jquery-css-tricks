@@ -8,19 +8,32 @@
 		<script type="text/javascript" src="/javascripts/jquery.easing.1.3.js"></script>
 
 		<style>
+			body{
+				
+			}
 			#actions{
 				position:absolute;
 				top:25px;
 				right:25px;
 			}
+			
+			#canvas{
+				background:url(home_bkg.jpg);
+				position:relative;
+				width:1100px;
+/*				height:600px;*/
+				border:1px dashed #ccc;
+				margin:0 auto;
+				overflow:hidden;
+			}
 			#container{
-				background:#fafafa;
+/*				background:#fafafa;*/
 				position:relative;
 				width:960px;
-				height:500px;
-				border:1px solid #ccc;
-				margin:50px auto;
-				overflow:hidden;
+				height:550px;
+				border:1px dashed #ccc;
+				margin:25px auto 0;
+/*				overflow:hidden;*/
 			}
 			
 			#logo_menu{
@@ -29,16 +42,40 @@
 			}
 			#boots{
 				position:absolute;
-				top:150px;
-				left:150px;
+				top:130px;
+				left:25px;
 			}
-			.has_background:hover{
-				background:url(boots_glow.png);
+			#boots.has_background{
+				background:url(boots_bkg_350.png);
 			}
-			#boots:hover{
-/*				background:url(boots_glow.png);*/
+			#boots.has_background:hover{
+				background:url(boots_hover_350.png);
 			}
 			
+			#brain{
+				position:absolute;
+				top:40px;
+				left:350px;
+			}
+			#brain.has_background{
+				background:url(brain_bkg_450.png);
+			}
+			#brain.has_background:hover{
+				background:url(brain_hover_450.png);
+			}
+			
+			#plane{
+				position:absolute;
+				top:275px;
+				left:550px;
+			}
+			#plane.has_background{
+				background:url(plane_bkg_410.png);
+			}
+			#plane.has_background:hover{
+				background:url(plane_hover_410.png);
+			}
+		
 			#explore_header{
 				display:block;
 				position:relative;
@@ -51,7 +88,7 @@
 				width:585px;
 				text-align:center;
 				margin:50px auto 0;
-				left:800px;
+				left:1200px;
 			}
 			
 			.post-it{
@@ -78,29 +115,41 @@
 			.clr{
 				clear:both;
 			}
+			
+			#logo{
+				position:absolute;
+				left:270px;
+				top:240px;
+			}
 		</style>
 
 	</head>
 
 	<body>
-		<div id="container">
-			<img src="logo_menu.png" width="500" height="41" alt="Logo Menu" id="logo_menu" class="header">
-			<img src="explore_header.png" width="753" height="92" alt="Explore Header" id="explore_header" class="header">
-			
-			<div class="post-its">
-				<div id="post_it_1">
-					<img src="post_it_blue.png" alt="Post It Blue" class="post-it">
+		<div id="canvas">
+			<div id="container">
+				<img src="logo_menu.png" width="500" height="41" alt="Logo Menu" id="logo_menu" class="header">
+				<img src="explore_header.png" width="753" height="92" alt="Explore Header" id="explore_header" class="header">
+
+				<div class="post-its">
+					<div id="post_it_1">
+						<img src="post_it_blue.png" alt="Post It Blue" class="post-it">
+					</div>
+					<div id="post_it_2">
+						<img src="post_it_yellow.png" alt="Post It Yellow" class="post-it">
+					</div>
+					<div id="post_it_3">
+						<img src="post_it_pink.png" alt="Post It Pink" class="post-it">
+					</div>
+					<div class="clr"></div>
 				</div>
-				<div id="post_it_2">
-					<img src="post_it_yellow.png" alt="Post It Yellow" class="post-it">
-				</div>
-				<div id="post_it_3">
-					<img src="post_it_pink.png" alt="Post It Pink" class="post-it">
-				</div>
-				<div class="clr"></div>
+
+				<img id="boots" src="boots_350.png" width="350" height="350" alt="Boots" class="has_background not_brain">
+				<img id="brain" src="brain_450.png" width="450" height="290" alt="Brain" class="has_background not_boots">
+				<img id="plane" src="plane_410.png" width="410" height="220" alt="Plane" class="has_background not_boots">
+				
+				<img id="logo" src="home_logo.png" width="401" height="309" alt="Home Logo" class="not_brain not_boots">
 			</div>
-			
-			<img id="boots" src="boots_med.png" width="250" height="250" alt="Boots" class="has_background">
 		</div>
 	</body>
 	
@@ -113,6 +162,7 @@
 
 		$('#boots').click(function() {
 			if ($(this).css("opacity") == 1){
+				fadeOutLogo();
 				moveBootsToBackground();
 			}
 		});
@@ -129,9 +179,19 @@
 			if ($("#boots").css("opacity") != 1){
 				returnBootsToForeground();
 				slideOutPostIts();
-				fadeOutExploreHeader();
+				
 			}
 		});
+		
+		function fadeOutLogo(){
+			$('.not_boots').animate({opacity: 0.0},
+			{queue:false, duration:350, easing: "easeOutSine"});
+		}
+		
+		function fadeInLogo(){
+			$('.not_boots').animate({opacity: 1.0},
+			{queue:false, duration:500, easing: "easeOutSine"});
+		}
 		
 		function fadeOutBoots(){
 			$('#boots').removeClass("has_background");
@@ -140,31 +200,35 @@
 		}
 		
 		function fadeInBoots(){
-			$('#boots').addClass("has_background");
 			$('#boots').animate({opacity: 1},
-			{queue:false, duration:350, easing: "easeInSine"});
+			{queue:true, duration:350, easing: "easeInSine",complete: returnBootBackground});
+		}
+		
+		function returnBootBackground(){
+			$('#boots').addClass("has_background");
+			fadeOutExploreHeader();
+			fadeInLogo();
 		}
 		
 		function moveBootsToBackground(){
 			$('#boots').removeClass("has_background");
-			$('#boots').animate({opacity: 0.5, height: '+=450',	width: '+=450',	left: '-=550', top: '-=225'},
+			$('#boots').animate({opacity: 0.7, height: '+=450',	width: '+=450',	left: '+=750', top: '-=150'},
 			{queue:false, duration:1000, easing: "easeOutSine", complete: slideInPostIts});
 		}
 		
 		function returnBootsToForeground(){
-			$('#boots').addClass("has_background");
-			$('#boots').animate({opacity: 1.0, height: '-=450',	width: '-=450',	left: '+=550', top: '+=225'},
-			{queue:false, duration:1000, easing: "easeOutBounce"});
+			$('#boots').animate({opacity: 1.0, height: '-=450',	width: '-=450',	left: '-=750', top: '+=150'},
+			{queue:false, duration:1000, easing: "easeInSine", complete: returnBootBackground});
 		}
 		
 		function slideInPostIts(){
 			console.log("slide In Post-Its");
-			$(".post-its").animate({left: '-=800'},
+			$(".post-its").animate({left: '-=1200'},
 			{queue:false, duration:500, easing: "easeOutSine", complete: fadeInExploreHeader});
 		}
 		
 		function slideOutPostIts(){
-			$(".post-its").animate({left: '+=800'},
+			$(".post-its").animate({left: '+=1200'},
 			{queue:false, duration:500, easing: "easeOutSine"});
 		}
 		
